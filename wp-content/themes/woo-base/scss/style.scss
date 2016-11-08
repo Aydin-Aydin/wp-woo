@@ -15,27 +15,9 @@ Tags: starter theme, light, sass, gulp, livereload
 // Import Bourbon mixin lib
 @import 'bourbon';
 
-/* Vendor */
-@import "susy";
-@import "su";
-
-
-/* Setup */
-@import "reset";
-@import "mixins";
-@import "variables";
-@import "fonts";
-@import "globals";
-
-
-/* WP parts */
-@import "header";
-@import "homepage";
-@import "sidebar";
-@import "footer";
-
-// Import custom
-@import 'custom/**/*';
+// /* Vendor */
+// @import "susy";
+// @import "su";
 
 // Neat should be imported after variable, reset and mixin declaration.
 @import 'neat';
@@ -46,6 +28,24 @@ Tags: starter theme, light, sass, gulp, livereload
 
 // Import normalize
 @import 'normalize';
+
+/* Setup */
+// @import "reset";
+// @import "mixins";
+// @import "variables";
+// @import "fonts";
+// @import "globals";
+
+
+// /* WP parts */
+// @import "header";
+// @import "homepage";
+// @import "sidebar";
+// @import "footer";
+
+// Import custom
+@import 'custom/**/*';
+
 
 
 
