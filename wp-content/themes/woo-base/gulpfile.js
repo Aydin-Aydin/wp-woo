@@ -46,7 +46,7 @@ gulp.task('svg2png', function () {
 
 // Compile sass
 gulp.task('sass', function () {
-  return gulp.src(['./scss/main.scss'])
+  return gulp.src(['./scss/style.scss'])
     .pipe(cssGlobbing({
       extensions: ['.scss']
     }))
@@ -54,8 +54,7 @@ gulp.task('sass', function () {
       includePaths: [
         'node_modules/bourbon/app/assets/stylesheets/',
         'node_modules/bourbon-neat/app/assets/stylesheets/',
-        'node_modules/normalize.css/',
-        'node_modules/Stratagem/'
+        'node_modules/normalize.css/'
       ]
     }).on('error', sass.logError))
     .pipe(gulp.dest('./dist/css'));
