@@ -1,4 +1,6 @@
 <?php
+// Require config.php 
+require_once 'woocommerce/config/config.php';
 
 // Add woocommerce theme support
 add_action('after_setup_theme', 'woocommerce_support');
@@ -6,8 +8,8 @@ function woocommerce_support() {
     add_theme_support('woocommerce');
 }
 
-/*  Register Scripts and Style */
 
+/*  Register Scripts and Style */
 function theme_register_scripts() {
     wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
     wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
@@ -18,7 +20,17 @@ add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
 /* Add menu support */
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
+    register_nav_menus([
+      'primary' => __('Primary Menu'),
+      'footer' => __('Footer Menu'),
+    ]);
 }
+
+// // Register main menu
+// function register_main_menu() {
+//     register_nav_menus(['main_menu' => __('Main Menu', 'woo-base')]);
+// }
+// add_action('init', 'register_main_menu');
 
 /* Add post image support */
 add_theme_support( 'post-thumbnails' );
@@ -33,7 +45,7 @@ if ( function_exists( 'add_image_size' ) ) {
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'SidebarOne',
-	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+      'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
@@ -42,7 +54,7 @@ if ( function_exists('register_sidebar') )
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'SidebarTwo',
-	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+      'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
