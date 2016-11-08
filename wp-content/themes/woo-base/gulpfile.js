@@ -14,7 +14,7 @@ const watchify = require('watchify');
 // Browserify
 const b = browserify({
   basedir: './js',
-  entries: './main.js',
+  entries: './css',
   cache: {},
   packageCache: {}
 });
