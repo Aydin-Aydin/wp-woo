@@ -1,15 +1,9 @@
 #left-sidebar {
-  position: relative;
 	display: block;
 	float: left;
 	height: 100vh;
 	background-color: $side-menu-color;
-  width: 100px;
   padding: 1rem;
-
-  @include media($sidebar-main-menu-medium) {
-    width: 50%;
-  }
 
   .toggle-menu-open {
     display: block;
@@ -41,10 +35,17 @@
     transform: translate(-200px);
     padding: 1rem;
     background-color: #000;
+    visibility: hidden;
+
+    @include media($sidebar-main-menu-medium) {
+      width: 50%;
+    } 
   }
 
   .is-open {
-    transform: translate(0) !important;
+    transform: translate(0);
+    transition: all 300ms linear;
+    visibility: visible;
   }
 
   .sidebar-widget {
