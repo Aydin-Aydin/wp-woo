@@ -1,8 +1,63 @@
 #left-sidebar {
+  position: relative;
 	display: block;
 	float: left;
 	height: 100vh;
 	background-color: $side-menu-color;
+  width: 100px;
+  padding: 1rem;
+
+  .toggle-menu-open {
+    display: block;
+    width: 40px;
+    height: 50px;
+    background-image: url('../graphics/icons/open-icon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0 auto;
+  }
+
+  .toggle-menu-close {
+    display: block;
+    width: 30px;
+    height: 50px;
+    background-image: url('../graphics/icons/close-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    float: right;
+  }
+
+  .side-left-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transform: translate(-200px);
+    padding: 1rem;
+    background-color: #000;
+
+    @include media($sidebar-main-menu-medium) {
+      right: 50%;
+    }
+  }
+
+  .is-open {
+    transform: translate(0) !important;
+  }
+
+  .sidebar-widget {
+    margin-top: 1rem;
+  }
+
+  #menu-primary {
+
+    li {
+      padding: 1rem;
+      border-bottom: 1px solid $white;
+    }
+  }
 
 	a {
 		color: $white;

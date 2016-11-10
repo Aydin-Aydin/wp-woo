@@ -11,5 +11,9 @@ if ( ! is_active_sidebar( 'sidebar-first' ) ) {
 ?>
 
 <aside id="left-sidebar" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-first' ); ?>
-</aside><!-- #secondary -->
+  <span class="toggle-menu toggle-menu-open"></span>
+  <div class="side-left-wrapper">
+  <span class="toggle-menu toggle-menu-close"></span>  
+	 <?php dynamic_sidebar( 'sidebar-first' ); ?>
+  </div><!-- end side-left-wrapper -->
+</aside><!-- left-sidebar -->
