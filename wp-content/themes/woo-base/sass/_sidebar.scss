@@ -1,9 +1,16 @@
+.sidebar-left-container {
+  overflow: auto;
+  display: block;
+  float: left;
+}
+
 #left-sidebar {
 	display: block;
 	float: left;
 	height: 100vh;
 	background-color: $side-menu-color;
   padding: 1rem;
+  position: fixed;
 
   .toggle-menu-open {
     display: block;
@@ -28,7 +35,7 @@
   }
 
   .side-left-wrapper {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     top: 0;
