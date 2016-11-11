@@ -46,9 +46,13 @@ a {
 .clr{clear:both;}
 
 // Woocommerce template
-.woo-content {
-	display: block;
-	float: right;
+.container {
+	overflow: auto;
+	
+	.woo-content {
+		display: block;
+		float: right;
+	}
 }
 
 
