@@ -59,12 +59,12 @@ if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'sidebar-first',
         'id' => 'sidebar-first',
-	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
     ));
-    
+
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'sidebar-second',
@@ -77,9 +77,9 @@ if ( function_exists('register_sidebar') )
 
 
 
-/*  EXCERPT 
+/*  EXCERPT
     Usage:
-    
+
     <?php echo excerpt(100); ?>
 */
 
@@ -90,7 +90,48 @@ function excerpt($limit) {
     $excerpt = implode(" ",$excerpt).'...';
     } else {
     $excerpt = implode(" ",$excerpt);
-    } 
+    }
     $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
     return $excerpt;
 }
+
+// Custom Post Type (Front Page)
+
+function slider_post_type() {
+    $labels = [
+        'name' => 'Slider',
+        'singular_name' => 'Slider',
+        'add_new' => 'Add Item',
+        'all_item' => 'All Item',
+        'edit_item' => 'Edit Item',
+        'new_item' => 'New Item',
+        'view_item' => 'View Item',
+        'search_item' => 'Search Referens',
+        'not_found' => 'No item found',
+        'not_found_in_trash' => 'No item found in trash',
+        'parent_item_colon' => 'Parent Item'
+    ];
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query-var' => true,
+        'rewrite' => true,
+        'hierarchical' => true,
+        'supports' => [
+            'title',
+            'editor',
+            'thumbnail',
+            'revisions',
+        ],
+        'taxonomies' => ['category', 'post_tag'],
+        'menu_position' => 4,
+        'execlude_from_search' => false
+    ];
+    register_post_type('slider',$args);
+}
+add_action('init','slider_post_type');
+
+
+
