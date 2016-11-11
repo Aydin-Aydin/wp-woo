@@ -45,13 +45,14 @@ a {
 
 .clr{clear:both;}
 
-// Woocommerce template
-.container {
-	overflow: auto;
-	
-	.woo-content {
+
+.grid {
+	width: 100%;
+	.grid-sizer,
+	.grid-item {
 		display: block;
-		float: right;
+		float: left;
+		width: 50%;
 	}
 }
 
