@@ -41,9 +41,9 @@ gulp.task('sass', function() {
 
 
 gulp.task('uglify', function() {
-  gulp.src('./lib/*.js')
-    .pipe(uglify('woo-base.min.js'))
-    .pipe(gulp.dest('./js'))
+  gulp.src(['./lib/*.js', './node_modules/masonry-layout/dist/*.js'])
+  .pipe(uglify('woo-base.min.js'))
+  .pipe(gulp.dest('./js'))
 });
 
 gulp.task('watch', function() {
