@@ -47,12 +47,15 @@ a {
 
 
 .grid {
-	width: 100%;
 	.grid-sizer,
 	.grid-item {
 		display: block;
 		float: left;
-		width: 50%;
+		@include span-columns(2);
+
+		@include media($breakpoint-medium) {
+			@include span-columns(3);
+		}
 	}
 }
 

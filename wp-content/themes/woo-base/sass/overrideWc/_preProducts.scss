@@ -9,7 +9,10 @@
 	}
 	
 	.products {
-		display: block;
-		float: left;
+		@include span-columns(12);
+		.product {
+			display: block;
+			float: left;
+		}
 	}
 }
