@@ -1,13 +1,21 @@
-// import $ from 'jquery';
-// //   Import libs
-// // import $ from 'jquery';
-// import toggleMenu from 'toogle-main-menu';
+import $ from 'jquery';
+import toggleMenu from './custom/toggle-main-menu';
+import masonGrid from './custom/masonry-grid';
+
 (function() {
   //   Run when DOM is ready
-  jQuery(function() {
-    // toggleMenu.init();
-    jQuery('.toggle-menu').on('click', function() {
-      jQuery('.side-left-wrapper').toggleClass('is-open');
-    });
+  $(function() {
+
+    $('.sidebar-left-container').css({width: $('#left-sidebar').outerWidth() + 'px'});
+    $('.woo-content').css({left: $('.sidebar-left-container').outerWidth() + 'px'});
+    toggleMenu.init();
+    masonGrid.init();
+
+    $(".imgLiquidFill").imgLiquid({
+        fill: true,
+        horizontalAlign: "center",
+        verticalAlign: "top"
+    });     
+    
   });
 })();

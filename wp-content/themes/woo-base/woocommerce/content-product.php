@@ -27,7 +27,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php post_class(); ?>>
+<?php $classes[] = 'grid-item'; ?>
+<li <?php post_class($classes); ?>>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
