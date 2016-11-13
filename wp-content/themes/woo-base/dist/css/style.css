@@ -7,8 +7,8 @@ Author: MI wp-woo group
 Author URI: http://www.watch-learn.com/
 Tags: starter theme, light, sass, gulp, livereload
 
-        The CSS, XHTML is released under GPL:
-        http://www.opensource.org/licenses/gpl-license.php
+The CSS, XHTML is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
 
 */
 /* Vendor */
@@ -65,7 +65,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 html {
-  font-size: 100%; }
+  overflow-y: scroll; }
 
 body {
   -webkit-font-smoothing: antialiased; }
@@ -141,6 +141,9 @@ html, body {
 
 .grid-sizer {
   width: 19%; }
+  @media screen and (max-width: 1400px) {
+    .grid-sizer {
+      width: 24%; } }
   @media screen and (max-width: 1100px) {
     .grid-sizer {
       width: 24%; } }
@@ -152,11 +155,14 @@ html, body {
       width: 99%; } }
 
 .grid-item {
-  border: 1px solid green;
+  border: 1px solid #ccc;
   display: block;
   float: left;
   width: 19%;
   margin-bottom: 1%; }
+  @media screen and (max-width: 1400px) {
+    .grid-item {
+      width: 24%; } }
   @media screen and (max-width: 1100px) {
     .grid-item {
       width: 24%; } }
@@ -215,3 +221,6 @@ html, body {
     border-bottom: 1px solid #fff; }
   #left-sidebar a {
     color: #fff; }
+
+.woo-content .product {
+  padding: 1rem; }

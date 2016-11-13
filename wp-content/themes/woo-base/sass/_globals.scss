@@ -46,7 +46,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 html{
-    font-size: 100%;
+  overflow-y: scroll;
 }
 
 body{
@@ -147,6 +147,10 @@ html, body {
 .grid-sizer {
   width: 19%;
 
+  @include media($breakpoint-xlarge) {
+   width: 24%;
+  } 
+
   @include media($breakpoint-large) {
    width: 24%;
   }  
@@ -161,11 +165,15 @@ html, body {
 }
 
 .grid-item {
-  border: 1px solid green;
+  border: 1px solid #ccc;
   display: block;
   float: left;
   width: 19%;
   margin-bottom: 1%;
+
+  @include media($breakpoint-xlarge) {
+   width: 24%;
+  } 
 
   @include media($breakpoint-large) {
    width: 24%;

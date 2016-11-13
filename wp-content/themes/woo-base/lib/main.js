@@ -1,23 +1,18 @@
 import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
+import containerMargin from './custom/container-margin';
+import liquidImg from './custom/liquid-img';
 
 (function() {
   //   Run when DOM is ready
   $(function() {
-
-    $('.sidebar-left-container').css({width: $('#left-sidebar').outerWidth() + 'px'});
-    $('.woo-content').css({left: $('.sidebar-left-container').outerWidth() + 'px'});
     toggleMenu.init();
     masonGrid.init();
+    containerMargin.init();
+    liquidImg.init();
 
-    $(".imgLiquidFill").imgLiquid({
-        fill: true,
-        horizontalAlign: "center",
-        verticalAlign: "top"
-    });
-
-$('.grid-item.product').matchHeight();        
+$('.grid-item.product').matchHeight(); 
     
   });
 })();
