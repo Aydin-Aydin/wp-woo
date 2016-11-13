@@ -18,17 +18,29 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/* Setup */
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0; }
+  vertical-align: baseline; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
@@ -40,42 +52,15 @@ ol, ul {
 blockquote, q {
   quotes: none; }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
   content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* =======================================================================
-## ++ Media Queries
-========================================================================== */
-/* 
-    Used for media queries. 
-    Add these mixins in your normal scss flow.
-    
-    Eg.
-    .container{
-        width:1024px;
-        
-        @include tablets{
-            width:90%;
-        }
-    }
-*/
-/* =======================================================================
-## ++ Unit transform
-========================================================================== */
-/*  
-    Used for making containers have width in percentages. 
-    Usage: define elemnt width in px and the width of parent elemnt in px. 
-    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}   
-*/
-/*  
-    Used for making px values convert to rem values
-    Usage: define font-size in px and it will convert to rems
-    eg. font-size: rem(14px);
-*/
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
@@ -112,36 +97,70 @@ a {
   visibility: hidden;
   font-size: 0; }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  position: relative; }
+
 .clr {
   clear: both; }
 
-.grid .grid-sizer,
-.grid .grid-item {
-  display: block;
-  float: left;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .grid .grid-sizer:last-child,
-  .grid .grid-item:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 880px) {
-    .grid .grid-sizer,
-    .grid .grid-item {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%; }
-      .grid .grid-sizer:last-child,
-      .grid .grid-item:last-child {
-        margin-right: 0; } }
-
-/* WP parts */
-.sidebar-left-container {
+.container {
+  position: relative;
+  width: 100%;
   overflow: auto;
+  height: 100vh;
+  border: 1px solid blue; }
+  .container .woo-content {
+    border: 1px solid red;
+    position: absolute;
+    right: 0; }
+  .container .sidebar-left-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border: 1px solid green; }
+
+.grid {
+  width: 100%; }
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both; }
+
+.gutter-sizer {
+  width: 1%; }
+
+.grid-sizer {
+  width: 19%; }
+  @media screen and (max-width: 1100px) {
+    .grid-sizer {
+      width: 25%; } }
+  @media screen and (max-width: 880px) {
+    .grid-sizer {
+      width: 50%; } }
+  @media screen and (max-width: 600px) {
+    .grid-sizer {
+      width: 100%; } }
+
+.grid-item {
   display: block;
-  float: left; }
+  float: left;
+  width: 19%;
+  margin-bottom: 1%; }
+  @media screen and (max-width: 1100px) {
+    .grid-item {
+      width: 25%; } }
+  @media screen and (max-width: 880px) {
+    .grid-item {
+      width: 50%; } }
+  @media screen and (max-width: 600px) {
+    .grid-item {
+      width: 100%; } }
 
 #left-sidebar {
   display: block;
@@ -191,21 +210,3 @@ a {
     border-bottom: 1px solid #fff; }
   #left-sidebar a {
     color: #fff; }
-
-.container {
-  overflow: auto;
-  width: 100%; }
-  .container .woo-content {
-    display: block;
-    float: right;
-    width: 100%; }
-  .container .products {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .container .products:last-child {
-      margin-right: 0; }
-    .container .products .product {
-      display: block;
-      float: left; }

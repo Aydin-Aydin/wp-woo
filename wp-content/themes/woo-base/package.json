@@ -34,14 +34,15 @@
     "bourbon": "^4.2.7",
     "bourbon-neat": "^1.7.2",
     "enquire.js": "^2.1.1",
-    "normalize.css": "^3.0.3",
-    "jquery-bridget": "desandro/jquery-bridget",
-    "slick-carousel": "1.6.0",
     "googlemaps": "moshen/node-googlemaps",
-    "jquery-match-height": "liabru/jquery-match-height",
-    "masonry-layout": "desandro/masonry",
+    "imagesloaded": "^4.1.1",
     "isotope-fit-columns": "metafizzy/isotope-fit-columns",
-    "jquery.transition": "nielse63/jquery.transition"
+    "jquery-bridget": "desandro/jquery-bridget",
+    "jquery-match-height": "liabru/jquery-match-height",
+    "jquery.transition": "nielse63/jquery.transition",
+    "masonry-layout": "desandro/masonry",
+    "normalize.css": "^3.0.3",
+    "slick-carousel": "1.6.0"
   },
   "browserify-shim": {
     "jquery": "global:jQuery",

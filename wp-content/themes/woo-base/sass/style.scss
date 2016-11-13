@@ -13,24 +13,25 @@ Tags: starter theme, light, sass, gulp, livereload
 */
 
 /* Vendor */
-@import "susy";
-@import "su";
+// @import "susy";
+// @import "su";
 @import 'bourbon';
 @import 'neat';
 @import 'neat-helpers';
 
 
-/* Setup */
-@import "reset";
-@import "mixins";
+
+// /* Setup */
+// @import "reset";
+// @import "mixins";
 @import "variables";
-@import "fonts";
+// @import "fonts";
 @import "globals";
 
 
-/* WP parts */
-@import "header";
-@import "homepage";
+// /* WP parts */
+// @import "header";
+// @import "homepage";
 @import "sidebar";
-@import "footer";
+// @import "footer";
 @import "overrideWc/**/*";

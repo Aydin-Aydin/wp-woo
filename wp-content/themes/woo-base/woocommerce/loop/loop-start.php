@@ -18,3 +18,4 @@
 ?>
 <ul class="products grid">
 <div class="grid-sizer"></div>
+<div class="gutter-sizer"></div>

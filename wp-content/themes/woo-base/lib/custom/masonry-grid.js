@@ -7,7 +7,8 @@ const masonGrid = {
 		$('.grid').masonry({
 			itemSelector: '.grid-item',
 			columnWidth: '.grid-sizer',
-			precentPosition: true
+			precentPosition: true,
+			gutter: '.gutter-sizer'
 		});
 	}
 };
