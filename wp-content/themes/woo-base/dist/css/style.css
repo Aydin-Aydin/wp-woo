@@ -126,6 +126,9 @@ html, body {
     bottom: 0;
     border: 1px solid green; }
 
+.onsale {
+  position: absolute; }
+
 .grid {
   width: 100%; }
   .grid:after {
@@ -149,6 +152,7 @@ html, body {
       width: 99%; } }
 
 .grid-item {
+  border: 1px solid green;
   display: block;
   float: left;
   width: 19%;

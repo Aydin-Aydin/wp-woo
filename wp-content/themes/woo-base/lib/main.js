@@ -15,7 +15,9 @@ import masonGrid from './custom/masonry-grid';
         fill: true,
         horizontalAlign: "center",
         verticalAlign: "top"
-    });     
+    });
+
+$('.grid-item.product').matchHeight();        
     
   });
 })();

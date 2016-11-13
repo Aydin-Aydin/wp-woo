@@ -123,6 +123,10 @@ html, body {
   }
 }
 
+.onsale {
+  position: absolute;
+}
+
 
 
 .grid {
@@ -156,7 +160,7 @@ html, body {
 }
 
 .grid-item {
-  // border: 1px solid green;
+  border: 1px solid green;
   display: block;
   float: left;
   width: 19%;
