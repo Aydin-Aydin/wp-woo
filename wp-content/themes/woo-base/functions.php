@@ -78,9 +78,14 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
  }
 
  // Remove sale icon
-
  add_filter('woocommerce_sale_flash', 'woo_hide_sale_icon');
  function woo_hide_sale_icon() {
+    return false;
+ }
+
+// Remove add to card link
+add_filter('woocommerce_loop_add_to_cart_link', 'woo_hide_add_to_card_link');
+ function woo_hide_add_to_card_link() {
     return false;
  }
 

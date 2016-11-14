@@ -155,7 +155,6 @@ html, body {
       width: 99%; } }
 
 .grid-item {
-  border: 1px solid #ccc;
   display: block;
   float: left;
   width: 19%;
@@ -224,3 +223,12 @@ html, body {
 
 .woo-content .product {
   padding: 1rem; }
+  .woo-content .product .text-wrapper {
+    text-align: center;
+    margin-top: 1rem; }
+    .woo-content .product .text-wrapper h3, .woo-content .product .text-wrapper a {
+      color: #555; }
+    .woo-content .product .text-wrapper del {
+      color: #bbb; }
+    .woo-content .product .text-wrapper ins {
+      color: #f44336; }

@@ -2,5 +2,23 @@
 
 	.product {
 		padding: 1rem;
+
+		.text-wrapper {
+
+			text-align: center;
+			margin-top: 1rem;
+
+			h3, a {
+				color: $dark-gray;
+			}
+
+			del {
+				color: $light-gray;
+			}
+
+			ins {
+				color: $orange-red;
+			}
+		}
 	}
 }
