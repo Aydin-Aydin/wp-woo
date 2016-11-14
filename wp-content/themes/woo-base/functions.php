@@ -75,7 +75,25 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
             
             return $output;
     }
- } 
+ }
+
+ // Remove sale icon
+
+ add_filter('woocommerce_sale_flash', 'woo_hide_sale_icon');
+ function woo_hide_sale_icon() {
+    return false;
+ }
+
+// Wrap product details that located in shop page in a div
+ add_action('woocommerce_before_shop_loop_item_title', 'product_teaser_text_wrapper_start', 10);
+ add_action('woocommerce_after_shop_loop_item','product_teaser_text_wrapper_end', 10);
+function product_teaser_text_wrapper_start() {
+    echo '<div class="text-wrapper">';
+}
+
+function product_teaser_text_wrapper_end() {
+    echo '</div>';
+}
 // End woocommerce hooks
 
 
