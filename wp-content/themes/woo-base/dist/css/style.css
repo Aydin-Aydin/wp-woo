@@ -209,6 +209,9 @@ html, body {
     @media screen and (max-width: 1300px) {
       #left-sidebar .side-left-wrapper {
         width: 50%; } }
+    @media screen and (max-width: 1100px) {
+      #left-sidebar .side-left-wrapper {
+        width: 100%; } }
   #left-sidebar .is-open {
     transform: translate(0);
     transition: all 300ms linear;
@@ -232,3 +235,8 @@ html, body {
       color: #bbb; }
     .woo-content .product .text-wrapper ins {
       color: #f44336; }
+    .woo-content .product .text-wrapper .woocommerce-Price-amount {
+      display: inline-block; }
+      .woo-content .product .text-wrapper .woocommerce-Price-amount .woocommerce-Price-currencySymbol {
+        float: right;
+        padding-left: .5rem; }

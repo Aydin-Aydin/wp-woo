@@ -46,7 +46,11 @@
 
     @include media($sidebar-main-menu-medium) {
       width: 50%;
-    } 
+    }
+
+     @include media($sidebar-main-menu-small) {
+      width: 100%;
+    }    
   }
 
   .is-open {

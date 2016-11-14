@@ -99,6 +99,16 @@ function product_teaser_text_wrapper_start() {
 function product_teaser_text_wrapper_end() {
     echo '</div>';
 }
+
+// Rating system
+add_action('woocommerce_after_shop_loop_item', 'get_star_rating' );
+function get_star_rating()
+{
+    global $woocommerce, $product;
+    $average = $product->get_average_rating();
+
+    echo '<div class="star-rating"><span data-rating="' . floor($average * 2) / 2 . '"</span></div>';
+}
 // End woocommerce hooks
 
 

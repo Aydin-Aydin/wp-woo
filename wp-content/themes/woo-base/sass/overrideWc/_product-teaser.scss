@@ -19,6 +19,14 @@
 			ins {
 				color: $orange-red;
 			}
+			.woocommerce-Price-amount {
+				display: inline-block;
+
+				.woocommerce-Price-currencySymbol {
+					float: right;
+					padding-left: .5rem;
+				}
+			}
 		}
 	}
 }
