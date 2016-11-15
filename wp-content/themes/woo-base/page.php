@@ -1,23 +1,27 @@
 <?php get_header(); ?>
 	<?php get_sidebar('sidebar-first'); ?>
-<?php
-  $args = ['post_type' => 'slider'];
-  $loop = new WP_Query( $args );
+<div class="slider-wrapper woo-content">
+  <?php
+    $args = ['post_type' => 'slider'];
+    $loop = new WP_Query( $args );
 
-  while ( $loop->have_posts() ) : $loop->the_post();
-?>
-  <div class="slider-wrapper" style="background-image: url(<?php the_field("front_slider_img"); ?>);">
-    <h1><?php the_title(); ?></h1>
+    while ( $loop->have_posts() ) : $loop->the_post();
+  ?>
+    <div class="slider-content" style="background-image: url(<?php the_field("front_slider_img"); ?>);">
+      <div class="entry-content">
+        <div class="overlay">
 
-    <div class="entry-content">
+          <h1><?php the_title(); ?></h1>
+          <?php the_content(); ?>
+          <a href="<?php the_field('front_slider_link');?>">Click</a>
 
-      <?php the_content(); ?>
-      <a href="<?php the_field('front_slider_link');?>">Click</a>
+        </div>
+      </div>
     </div>
-  </div>
 
 
 
   <?php endwhile; ?>
+</div>
 
 <?php get_footer(); ?>
