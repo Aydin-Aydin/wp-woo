@@ -4,7 +4,8 @@
   $args = ['post_type' => 'slider'];
   $loop = new WP_Query( $args );
 
-  while ( $loop->have_posts() ) : $loop->the_post(); ?>
+  while ( $loop->have_posts() ) : $loop->the_post();
+?>
   <div class="slider-wrapper" style="background-image: url(<?php the_field("front_slider_img"); ?>);">
     <h1><?php the_title(); ?></h1>
 
