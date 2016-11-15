@@ -183,7 +183,6 @@ if ( function_exists('register_sidebar') )
     ));
 
 
-
 /*  EXCERPT
     Usage:
 

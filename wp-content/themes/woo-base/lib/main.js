@@ -9,7 +9,6 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
-    liquidImg.init();
 		$('.grid-item.product').matchHeight();
     
   });
