@@ -2,7 +2,11 @@ import $ from 'jquery';
 const toggleMenu = {
   init() {
     $('.toggle-menu').on('click', function() {
-      $('.side-left-wrapper').toggleClass('is-open');
+    	  //console.log($(this).closest('.side-left-wrapper'));
+      $(this).next('.side-left-wrapper').toggleClass('is-open');
+      if ($(this).hasClass('toggle-menu-close')) {
+      	$(this).parent('.side-left-wrapper').toggleClass('is-open');
+      };
     });
   }
 };

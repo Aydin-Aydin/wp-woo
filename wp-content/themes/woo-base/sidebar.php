@@ -16,5 +16,13 @@ if ( ! is_active_sidebar( 'sidebar-first' ) ) {
 	  <span class="toggle-menu toggle-menu-close"></span>  
 		 <?php dynamic_sidebar( 'sidebar-first' ); ?>
 	  </div><!-- end side-left-wrapper -->
+		
+		<span class="filter-icon toggle-menu"></span>
+	  <div class="toggle-menu toggle-menu-filter side-left-wrapper">
+	  <span class="toggle-menu toggle-menu-close"></span>  
+		 <?php dynamic_sidebar( 'woo-products' ); ?>
+	  </div><!-- end side-left-wrapper -->	  
 	</aside><!-- left-sidebar -->
 </div>
+
+'woo-products'

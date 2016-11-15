@@ -4,7 +4,7 @@
 /*  Register Scripts and Style */
 function theme_register_scripts() {
     wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
-    wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
+    wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ), '', true);
     wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
     wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
     wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
@@ -60,9 +60,8 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
         // if ( ! $placeholder_height )
         //     $placeholder_height = $woocommerce->get_image_size( 'shop_catalog_image_height' );
             
-            $output = '<div class="imgLiquidFill imgLiquid">';
             if ( has_post_thumbnail() ) {
-                
+                $output = '<div class="imgLiquidFill imgLiquid" style="background-image: url(' . wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail-size', true)[0] . ')">';
                 $output .= get_the_post_thumbnail( $post->ID, $size ); 
                 
             } else {
