@@ -1,0 +1,23 @@
+.single-product {
+
+  .entry-summary {
+    @include span-columns(4 of 12);
+  }
+
+  .images {
+    @include span-columns(4 of 12);
+  }
+
+  .main-contnet-wrapper {
+    border: 1px solid red;
+    display: block;
+    float: left;
+  }
+
+  .related.products {
+    display: block;
+    float: left;
+    @include span-columns(12);
+  }
+}
+
