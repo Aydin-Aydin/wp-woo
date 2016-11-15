@@ -77,6 +77,9 @@ add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loo
     }
  }
 
+ // Remove default shop page sorting
+ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
  // Remove sale icon
  add_filter('woocommerce_sale_flash', 'woo_hide_sale_icon');
  function woo_hide_sale_icon() {
