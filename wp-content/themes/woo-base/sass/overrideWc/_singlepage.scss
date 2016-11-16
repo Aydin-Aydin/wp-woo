@@ -19,5 +19,11 @@
     float: left;
     @include span-columns(12);
   }
+
+  .woocommerce-pagination {
+  display: inline-block;
+  float: left;
+  @include span-columns(12);
+  }
 }
 
