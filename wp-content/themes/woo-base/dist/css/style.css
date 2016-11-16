@@ -256,3 +256,45 @@ html, body {
       .woo-content .product .text-wrapper .woocommerce-Price-amount .woocommerce-Price-currencySymbol {
         float: right;
         padding-left: .5rem; }
+
+.single-product .entry-summary {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .single-product .entry-summary:last-child {
+    margin-right: 0; }
+
+.single-product .images {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .single-product .images:last-child {
+    margin-right: 0; }
+
+.single-product .main-contnet-wrapper {
+  border: 1px solid red;
+  display: block;
+  float: left; }
+
+.single-product .related.products {
+  display: block;
+  float: left;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .single-product .related.products:last-child {
+    margin-right: 0; }
+
+.woocommerce-pagination .page-numbers {
+  display: inline-block;
+  text-align: center;
+  float: center;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .woocommerce-pagination .page-numbers:last-child {
+    margin-right: 0; }

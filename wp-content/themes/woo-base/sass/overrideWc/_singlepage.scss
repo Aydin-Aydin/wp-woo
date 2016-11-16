@@ -22,8 +22,9 @@
 
 }
 
-.woocommerce-pagination {
+.woocommerce-pagination .page-numbers {
   display: inline-block;
-  float: left;
-  @include span-columns(12);
+  text-align: center;
+  float: center;
+  @include span-columns(2);
 }
