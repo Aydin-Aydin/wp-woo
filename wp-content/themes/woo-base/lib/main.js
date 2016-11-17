@@ -20,5 +20,11 @@ $(".slider-wrapper").slick({
   speed: 500
 });
 
+// $("*").each(function() {
+//     if ($(this).width() > $(window).width()) {
+//         $(this).width() = 100;
+//     }
+// });
+
   });
 })();
