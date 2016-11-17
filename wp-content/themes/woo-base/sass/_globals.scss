@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -19,7 +19,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -149,11 +149,11 @@ html, body {
 
   @include media($breakpoint-xlarge) {
    width: 24%;
-  } 
+  }
 
   @include media($breakpoint-large) {
    width: 24%;
-  }  
+  }
 
   @include media($breakpoint-medium) {
    width: 49%;
@@ -161,7 +161,7 @@ html, body {
 
   @include media($breakpoint-small) {
    width: 99%;
-  }   
+  }
 }
 
 .grid-item {
@@ -173,11 +173,11 @@ html, body {
 
   @include media($breakpoint-xlarge) {
    width: 24%;
-  } 
+  }
 
   @include media($breakpoint-large) {
    width: 24%;
-  }    
+  }
 
   @include media($breakpoint-medium) {
     width: 49%;
@@ -185,7 +185,73 @@ html, body {
 
   @include media($breakpoint-small) {
     width: 99%;
-  }   
+  }
+}
+
+// Slider Front Page
+
+.container {
+
+  .slider-wrapper {
+
+    &.woo-content {
+      padding-left: 0;
+
+
+      .slider-content {
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100vh;
+
+        .entry-content {
+          position: relative;
+          font-family: arial;
+          font-size: 120%;
+          padding: 40px;
+          width: 75%;
+          color: white;
+          margin: 0 auto;
+          height: 100vh;
+          overflow: auto;
+
+          .overlay {
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+
+
+
+            h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+
+
+            }
+            p {
+              line-height: 1.2em;
+            }
+
+            a {
+              text-align: center;
+              margin-top: 40px;
+              padding: 20px;
+              width: 35%;
+              background: #000;
+              display: inline-block;
+              float: right;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
   .imgLiquidFill {
