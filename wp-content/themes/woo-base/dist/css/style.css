@@ -173,7 +173,9 @@ html, body {
       width: 99%; } }
 
 .container .slider-wrapper.woo-content {
-  padding-left: 0; }
+  padding-left: 0;
+  position: relative;
+  z-index: -1; }
   .container .slider-wrapper.woo-content .slider-content {
     background-size: cover;
     background-position: center;
