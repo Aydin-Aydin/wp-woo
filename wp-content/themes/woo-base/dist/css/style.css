@@ -172,12 +172,6 @@ html, body {
     .grid-item {
       width: 99%; } }
 
-
-.imgLiquidFill {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; }
-
 .container .slider-wrapper.woo-content {
   padding-left: 0; }
   .container .slider-wrapper.woo-content .slider-content {
@@ -216,6 +210,11 @@ html, body {
           display: inline-block;
           float: right;
           color: white; }
+
+.imgLiquidFill {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 #left-sidebar {
   display: block;
