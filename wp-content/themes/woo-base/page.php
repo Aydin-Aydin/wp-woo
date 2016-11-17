@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<?php get_sidebar('sidebar-first'); ?>
-<div class="slider-wrapper woo-content">
+<div class="slider-wrapper woo-content ">
   <?php
     $args = ['post_type' => 'slider'];
     $loop = new WP_Query( $args );

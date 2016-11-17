@@ -42,7 +42,7 @@
     "jquery.transition": "nielse63/jquery.transition",
     "masonry-layout": "desandro/masonry",
     "normalize.css": "^3.0.3",
-    "slick-carousel": "1.6.0",
+    "slick-carousel": "^1.6.0",
     "star-rating-svg": "^3.5.0"
   },
   "browserify-shim": {

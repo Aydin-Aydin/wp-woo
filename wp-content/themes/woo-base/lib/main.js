@@ -12,7 +12,13 @@ import liquidImg from './custom/liquid-img';
     containerMargin.init();
     liquidImg.init();
 
-$('.grid-item.product').matchHeight(); 
-    
+$('.grid-item.product').matchHeight();
+// $('.owl-carousel').owlCarousel();
+
+$(".slider-wrapper").slick({
+  dots: true,
+  speed: 500
+});
+
   });
 })();
