@@ -6,6 +6,11 @@
 
   .images {
     @include span-columns(4 of 12);
+<<<<<<< HEAD
+=======
+    display: inline-block;
+    float: left;
+>>>>>>> develop
   }
 
   .main-contnet-wrapper {
@@ -20,6 +25,7 @@
     @include span-columns(12);
   }
 
+<<<<<<< HEAD
   .woocommerce-pagination {
   display: inline-block;
   float: left;
@@ -27,3 +33,29 @@
   }
 }
 
+=======
+}
+
+.woocommerce-pagination .page-numbers {
+  display: inline-block;
+  text-align: center;
+  float: center;
+  @include span-columns(2);
+}
+
+.thumbnails.columns-3 {
+  @include span-columns(12);
+  padding: 15px;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid;
+}
+
+.thumbnails.columns-3.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+>>>>>>> develop
