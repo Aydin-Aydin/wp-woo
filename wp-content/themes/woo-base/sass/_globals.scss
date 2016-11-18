@@ -189,77 +189,10 @@ html, body {
 }
 
 
-<<<<<<< HEAD
-.container {
-
-  .slider-wrapper {
-
-    &.woo-content {
-      padding-left: 0;
-      position:relative;
-      z-index: 1;
-
-
-      .slider-content {
-        background-size: cover;
-        background-position:center;
-        background-repeat: no-repeat;
-        height: 100vh;
-
-        .entry-content {
-          position: relative;
-          font-family: arial;
-          font-size: 120%;
-          padding: 40px;
-          width: 75%;
-          color: white;
-          margin: 0 auto;
-          height: 100vh;
-          overflow: auto;
-
-          .overlay {
-            position: absolute;
-
-            top: 50%;
-
-            transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-
-
-
-            h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
-
-
-            }
-            p {
-              line-height: 1.2em;
-            }
-
-            a {
-              text-align: center;
-              margin-top: 40px;
-              padding: 20px;
-              width: 35%;
-              background: #000;
-              display: inline-block;
-              float: right;
-              color: white;
-            }
-          }
-        }
-      }
-    }
-  }
-=======
 .imgLiquidFill {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
->>>>>>> mohamad
 }
 
 
