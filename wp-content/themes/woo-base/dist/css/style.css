@@ -310,7 +310,9 @@ html, body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 31.76157%;
+  display: inline-block;
+  float: left; }
   .single-product .images:last-child {
     margin-right: 0; }
 
@@ -339,3 +341,22 @@ html, body {
   width: 14.70196%; }
   .woocommerce-pagination .page-numbers:last-child {
     margin-right: 0; }
+
+.thumbnails.columns-3 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  padding: 15px;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  border: 2px solid; }
+  .thumbnails.columns-3:last-child {
+    margin-right: 0; }
+
+.thumbnails.columns-3.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
