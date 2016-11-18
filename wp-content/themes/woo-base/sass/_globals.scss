@@ -106,10 +106,8 @@ html, body {
   width: 100%;
   overflow: auto;
   height: 100vh;
-  border: 1px solid blue;
 
-  .woo-content {
-    border: 1px solid red;
+  .woo-main-content {
     position: absolute;
     right: 0;
     padding-left: 1rem;
@@ -120,7 +118,6 @@ html, body {
     top: 0;
     left: 0;
     bottom: 0;
-    border: 1px solid green;
   }
 }
 
@@ -193,12 +190,40 @@ html, body {
 .container {
 
   .slider-wrapper {
+    padding-left: 0;
+    position:relative;
+    z-index: 0;
 
-    &.woo-content {
-      padding-left: 0;
-      position:relative;
-      z-index: 1;
+    &.woo-main-content {
+      vertical-align: middle;
+      height: 100%;
 
+      .slick-next, .slick-prev {
+        display: none !important;
+      }
+      .slick-dots {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        display: block;
+        width: 20px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: right;
+
+        transform: translateY(-25%);
+        -moz-transform: translateY(-25%);
+        -o-transform: translateY(-25%);
+        -ms-transform: translateY(-25%);
+
+        li {
+          margin: 5px 0;
+          button:before {
+            font-size: 20px;
+          }
+        }
+      }
 
       .slider-content {
         background-size: cover;
@@ -256,5 +281,30 @@ html, body {
   }
 }
 
+  .imgLiquidFill {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+// Front Widgets
+
+.front-widget {
+  ul {
+    li {
+      float: left;
+    }
+  }
+}
+
+.primary-wrapper{
+  padding-left: 72px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-open{
+  left: 280px !important;
+  transition: all 0.3s ease-in-out;
+}
 
 
