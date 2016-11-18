@@ -112,6 +112,59 @@ function get_star_rating()
 
     echo '<div class="star-rating"><span data-rating="' . floor($average * 2) / 2 . '"</span></div>';
 }
+
+
+// Start Advanced custom fields
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_front-page',
+    'title' => 'Front page',
+    'fields' => array (
+      array (
+        'key' => 'field_5824e7aa9780f',
+        'label' => 'Link',
+        'name' => 'front_slider_link',
+        'type' => 'page_link',
+        'post_type' => array (
+          0 => 'all',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+      array (
+        'key' => 'field_58259e2ef75b6',
+        'label' => 'Image',
+        'name' => 'front_slider_img',
+        'type' => 'image',
+        'save_format' => 'url',
+        'preview_size' => 'large',
+        'library' => 'all',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'slider',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'default',
+      'hide_on_screen' => array (
+        0 => 'custom_fields',
+        1 => 'comments',
+        2 => 'featured_image',
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}// End advanced custom fields
 // End woocommerce hooks
 
 
