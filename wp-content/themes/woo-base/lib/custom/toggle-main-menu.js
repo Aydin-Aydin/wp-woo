@@ -2,12 +2,15 @@ import $ from 'jquery';
 const toggleMenu = {
   init() {
     $('.toggle-menu').on('click', function() {
-    	  //console.log($(this).closest('.side-left-wrapper'));
-      $(this).next('.side-left-wrapper').toggleClass('is-open');
-      if ($(this).hasClass('toggle-menu-close')) {
-      	$(this).parent('.side-left-wrapper').toggleClass('is-open');
-      };
+
+      $('#left-sidebar').toggleClass('is-open');
+      $('.primary-wrapper').toggleClass('nav-open');
     });
+
+
+    $('.toggle-menu').click(function(){
+      $(this).toggleClass('open');
+      });
   }
 };
 export default toggleMenu;
