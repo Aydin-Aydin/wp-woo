@@ -172,47 +172,6 @@ html, body {
     .grid-item {
       width: 99%; } }
 
-.container .slider-wrapper.woo-content {
-  padding-left: 0;
-  position: relative;
-  z-index: 1; }
-  .container .slider-wrapper.woo-content .slider-content {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; }
-    .container .slider-wrapper.woo-content .slider-content .entry-content {
-      position: relative;
-      font-family: arial;
-      font-size: 120%;
-      padding: 40px;
-      width: 75%;
-      color: white;
-      margin: 0 auto;
-      height: 100vh;
-      overflow: auto; }
-      .container .slider-wrapper.woo-content .slider-content .entry-content .overlay {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        -ms-transform: translateY(-50%); }
-        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay h1 {
-          font-size: 60px;
-          margin-bottom: 20px; }
-        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay p {
-          line-height: 1.2em; }
-        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay a {
-          text-align: center;
-          margin-top: 40px;
-          padding: 20px;
-          width: 35%;
-          background: #000;
-          display: inline-block;
-          float: right;
-          color: white; }
-
 .imgLiquidFill {
   background-size: cover;
   background-repeat: no-repeat;
@@ -360,3 +319,42 @@ html, body {
   content: "";
   display: table;
   clear: both; }
+
+.container .slider-wrapper.woo-content {
+  padding-left: 0; }
+  .container .slider-wrapper.woo-content .slider-content {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; }
+    .container .slider-wrapper.woo-content .slider-content .entry-content {
+      position: relative;
+      font-family: arial;
+      font-size: 120%;
+      padding: 40px;
+      width: 75%;
+      color: white;
+      margin: 0 auto;
+      height: 100vh;
+      overflow: auto; }
+      .container .slider-wrapper.woo-content .slider-content .entry-content .overlay {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%); }
+        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay h1 {
+          font-size: 60px;
+          margin-bottom: 20px; }
+        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay p {
+          line-height: 1.2em; }
+        .container .slider-wrapper.woo-content .slider-content .entry-content .overlay a {
+          text-align: center;
+          margin-top: 40px;
+          padding: 20px;
+          width: 35%;
+          background: #000;
+          display: inline-block;
+          float: right;
+          color: white; }
