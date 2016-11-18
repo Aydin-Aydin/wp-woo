@@ -1,34 +1,8 @@
-<<<<<<< HEAD
-@charset "UTF-8";
-=======
->>>>>>> develop
 /* CSS Document */
 /*!
 Theme Name: woo-base
 Description: Blank Wordpress Theme
 Version: 3.0
-<<<<<<< HEAD
-Author: Ivan Dorić
-Author URI: http://www.watch-learn.com/
-Tags: starter theme, light, sass, gulp, livereload
-
-        The CSS, XHTML is released under GPL:
-        http://www.opensource.org/licenses/gpl-license.php
-
-*/
-/* Vendor */
-/* Setup */
-/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  margin: 0;
-  padding: 0; }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-=======
 Author: MI wp-woo group
 Author URI: http://www.watch-learn.com/
 Tags: starter theme, light, sass, gulp, livereload
@@ -67,7 +41,6 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
->>>>>>> develop
   display: block; }
 
 body {
@@ -79,13 +52,9 @@ ol, ul {
 blockquote, q {
   quotes: none; }
 
-<<<<<<< HEAD
-blockquote:before, blockquote:after, q:before, q:after {
-=======
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
->>>>>>> develop
   content: none; }
 
 table {
@@ -93,46 +62,10 @@ table {
   border-spacing: 0; }
 
 /* =======================================================================
-<<<<<<< HEAD
-## ++ Media Queries
-========================================================================== */
-/* 
-    Used for media queries. 
-    Add these mixins in your normal scss flow.
-    
-    Eg.
-    .container{
-        width:1024px;
-        
-        @include tablets{
-            width:90%;
-        }
-    }
-*/
-/* =======================================================================
-## ++ Unit transform
-========================================================================== */
-/*  
-    Used for making containers have width in percentages. 
-    Usage: define elemnt width in px and the width of parent elemnt in px. 
-    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}   
-*/
-/*  
-    Used for making px values convert to rem values
-    Usage: define font-size in px and it will convert to rems
-    eg. font-size: rem(14px);
-*/
-/* =======================================================================
-## ++ Globals
-========================================================================== */
-html {
-  font-size: 100%; }
-=======
 ## ++ Globals
 ========================================================================== */
 html {
   overflow-y: scroll; }
->>>>>>> develop
 
 body {
   -webkit-font-smoothing: antialiased; }
@@ -140,12 +73,9 @@ body {
 * {
   box-sizing: border-box; }
 
-<<<<<<< HEAD
-=======
 a {
   text-decoration: none; }
 
->>>>>>> develop
 /* =======================================================================
 ## ++ Cleafix
 ========================================================================== */
@@ -167,12 +97,6 @@ a {
   visibility: hidden;
   font-size: 0; }
 
-<<<<<<< HEAD
-.clr {
-  clear: both; }
-
-/* WP parts */
-=======
 html, body {
   margin: 0;
   padding: 0;
@@ -348,9 +272,7 @@ html, body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  display: inline-block;
-  float: left; }
+  width: 31.76157%; }
   .single-product .images:last-child {
     margin-right: 0; }
 
@@ -360,13 +282,23 @@ html, body {
   float: left; }
 
 .single-product .related.products {
+  float: left;
   display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: block;
+  float: left; }
+  .single-product .related.products:last-child {
+    margin-right: 0; }
+
+.single-product .woocommerce-pagination {
+  display: inline-block;
   float: left;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 100%; }
-  .single-product .related.products:last-child {
+  .single-product .woocommerce-pagination:last-child {
     margin-right: 0; }
 
 .woocommerce-pagination .page-numbers {
@@ -437,4 +369,3 @@ html, body {
           display: inline-block;
           float: right;
           color: white; }
->>>>>>> develop
