@@ -3,22 +3,16 @@
 /*  Register Scripts and Style */
 /*  Register Scripts and Style */
 function theme_register_scripts() {
-    wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
 
-    wp_enqueue_script( 'owl-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/owl.carousel/dist/owl.carousel.min.js' ), array( 'jquery' ), '1.0', false );
-    wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
-    wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
-    wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
-
-    // Stylesheets
-    wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
-    wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
-    wp_enqueue_style( 'owl-css', get_stylesheet_directory_uri() . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
-    wp_enqueue_style( 'slick-1-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
-    wp_enqueue_style( 'slick-2-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
-
-
-    //wp_enqueue_script( 'main-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'lib/main.js' ));
+  wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
+  wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
+  wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
+  wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
+  // Stylesheets
+  wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
+  wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
+  wp_enqueue_style( 'slick-1-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
+  wp_enqueue_style( 'slick-2-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
@@ -35,7 +29,7 @@ add_action('woocommerce_before_main_content', 'wp_woo_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'wp_woo_wrapper_end', 10);
 
 function wp_woo_wrapper_start() {
-  echo '<div class="woo-main-content">';
+  echo '<div class="woo-content">';
 }
 
 function wp_woo_wrapper_end() {
@@ -121,6 +115,59 @@ function get_star_rating()
 
     echo '<div class="star-rating"><span data-rating="' . floor($average * 2) / 2 . '"</span></div>';
 }
+
+
+// Start Advanced custom fields
+if(function_exists("register_field_group"))
+{
+  register_field_group(array (
+    'id' => 'acf_front-page',
+    'title' => 'Front page',
+    'fields' => array (
+      array (
+        'key' => 'field_5824e7aa9780f',
+        'label' => 'Link',
+        'name' => 'front_slider_link',
+        'type' => 'page_link',
+        'post_type' => array (
+          0 => 'all',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+      ),
+      array (
+        'key' => 'field_58259e2ef75b6',
+        'label' => 'Image',
+        'name' => 'front_slider_img',
+        'type' => 'image',
+        'save_format' => 'url',
+        'preview_size' => 'large',
+        'library' => 'all',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'slider',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'default',
+      'hide_on_screen' => array (
+        0 => 'custom_fields',
+        1 => 'comments',
+        2 => 'featured_image',
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+}// End advanced custom fields
 // End woocommerce hooks
 
 

@@ -9,6 +9,7 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+<<<<<<< HEAD
 
 		$('.grid-item.product').matchHeight();
 
@@ -18,11 +19,26 @@ $(".slider-wrapper").slick({
   speed: 500
 });
 
+// Front page category slider
+$('.product_list_widget').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 3
+});
+
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
 //         $(this).width() = 100;
 //     }
 // });
 
+=======
+    $('.grid-item.product').matchHeight();
+
+    $(".slider-wrapper").slick({
+      dots: true,
+      speed: 500
+    });
+>>>>>>> mohamad
   });
 })();
