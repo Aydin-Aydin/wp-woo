@@ -193,6 +193,7 @@ html, body {
   background-position: center;
 }
 
+<<<<<<< HEAD
 .woof_sid_auto_shortcode.woof {
   background-color: green;
 }
@@ -308,6 +309,14 @@ html, body {
 }
 
 // Align fix
+=======
+.woof_sid_auto_shortcode {
+  @include media($breakpoint-medium) {
+    display: none;
+  }
+}
+
+>>>>>>> mohamad
 
 .primary-wrapper{
   padding-left: 72px !important;
