@@ -455,10 +455,6 @@ nav ul {  display: block; }
     width: 170px;
 }
 
-.js_woof_options, .js_woof_add_options{
-    color: green !important;
-
-}
 
 #woof_options > li {
     position: relative;
