@@ -195,6 +195,12 @@ html, body {
   background-position: center;
 }
 
+.woof_sid_auto_shortcode {
+  @include media($breakpoint-medium) {
+    display: none;
+  }
+}
+
 
 
 
