@@ -18,6 +18,13 @@ $(".slider-wrapper").slick({
   speed: 500
 });
 
+// Front page category slider
+$('.product_list_widget').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 3
+});
+
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
 //         $(this).width() = 100;
