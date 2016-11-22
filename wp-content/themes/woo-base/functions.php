@@ -5,7 +5,6 @@
 function theme_register_scripts() {
     wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
 
-    wp_enqueue_script( 'owl-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/owl.carousel/dist/owl.carousel.min.js' ), array( 'jquery' ), '1.0', false );
     wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
     wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
     wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
@@ -13,7 +12,6 @@ function theme_register_scripts() {
     // Stylesheets
     wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
     wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
-    wp_enqueue_style( 'owl-css', get_stylesheet_directory_uri() . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css');
     wp_enqueue_style( 'slick-1-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
     wp_enqueue_style( 'slick-2-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
 
