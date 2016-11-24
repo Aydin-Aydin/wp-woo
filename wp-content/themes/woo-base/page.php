@@ -9,13 +9,15 @@
       while ( $loop->have_posts() ) : $loop->the_post();
     ?>
       <div class="slider-content" style="background-image: url(<?php the_field("front_slider_img"); ?>);">
-        <div class="entry-content">
-          <div class="overlay">
+        <div class="overlay-filter">
+          <div class="entry-content">
+            <div class="overlay">
 
-            <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
-            <a href="<?php the_field('front_slider_link');?>">Click</a>
+              <h1><?php the_title(); ?></h1>
+              <?php the_content(); ?>
+              <a href="<?php the_field('front_slider_link');?>">Click</a>
 
+            </div>
           </div>
         </div>
       </div>
