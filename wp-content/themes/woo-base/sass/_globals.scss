@@ -377,14 +377,12 @@ html, body {
 }
 
 // Align fix
-=======
 .woof_sid_auto_shortcode {
   @include media($breakpoint-medium) {
     display: none;
   }
 }
 
->>>>>>> mohamad
 
 .primary-wrapper{
   padding-left: 72px !important;
