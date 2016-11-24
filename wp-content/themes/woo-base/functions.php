@@ -221,8 +221,8 @@ if ( function_exists('register_sidebar') )
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'name' => 'sidebar-second',
-        'id' => 'sidebar-second',
+        'name' => 'Top Rated Products',
+        'id' => 'top-rated',
         'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
