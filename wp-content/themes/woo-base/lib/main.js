@@ -9,7 +9,6 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
-<<<<<<< HEAD
 
 		$('.grid-item.product').matchHeight();
 
@@ -32,13 +31,5 @@ $('.product_list_widget').slick({
 //     }
 // });
 
-=======
-    $('.grid-item.product').matchHeight();
-
-    $(".slider-wrapper").slick({
-      dots: true,
-      speed: 500
-    });
->>>>>>> mohamad
   });
 })();
