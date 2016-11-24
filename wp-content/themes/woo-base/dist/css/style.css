@@ -317,6 +317,37 @@ html, body {
 .product_list_widget:hover .slick-prev {
   left: 0; }
 
+.woocommerce-breadcrumb {
+  display: none; }
+
+.related h2 {
+  margin: 2px 0px 0px;
+  padding: 25px 0px 0px 0px;
+  color: #FFF;
+  background-color: black; }
+
+html, body {
+  margin-left: 37px;
+  padding-right: 20px;
+  width: 100%;
+  min-height: 100%;
+  position: relative; }
+
+.page-title {
+  display: none; }
+
+.woof_sid_auto_shortcode.woof {
+  background-color: #dedede; }
+
+.woo-content {
+  width: 1360px;
+  height: auto;
+  overflow: hidden; }
+
+ul .page-numbers {
+  border: 1px solid;
+  border-radius: 4px; }
+
 #left-sidebar {
   display: block;
   float: left;
