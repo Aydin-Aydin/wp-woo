@@ -28,7 +28,7 @@
   </div>
 
   <div class="front-widget">
-    <?php dynamic_sidebar( 'sidebar-second' ); ?>
+    <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 </section>
 <?php get_footer(); ?>
