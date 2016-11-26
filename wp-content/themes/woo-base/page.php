@@ -26,6 +26,7 @@
 
 
     <?php endwhile; ?>
+<<<<<<< HEAD
   </div><!-- end slider-wrapper woo-main-content -->
 <?php endif ?>
 <?php if (have_posts): ?>
@@ -38,4 +39,8 @@
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 </section>
+=======
+  <?php endif ?>
+</div><!-- end slider-wrapper woo-content -->
+>>>>>>> mohamad
 <?php get_footer(); ?>
