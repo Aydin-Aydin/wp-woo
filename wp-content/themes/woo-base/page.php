@@ -26,21 +26,11 @@
 
 
     <?php endwhile; ?>
-<<<<<<< HEAD
   </div><!-- end slider-wrapper woo-main-content -->
-<?php endif ?>
-<?php if (have_posts): ?>
-  <?php while (have_posts()): the_post(); ?>
-    <?php the_content(); ?>
-    <?php endwhile; ?>
-<?php endif ?>
 
   <div class="front-widget">
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 </section>
-=======
   <?php endif ?>
-</div><!-- end slider-wrapper woo-content -->
->>>>>>> mohamad
 <?php get_footer(); ?>
