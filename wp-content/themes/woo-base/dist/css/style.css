@@ -581,7 +581,7 @@ ul .page-numbers {
   width: 31.76157%;
   position: relative;
   margin: 0;
-  padding: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
   background-color: #bbb; }
   .summary-tabs-wrapper:last-child {
     margin-right: 0; }
