@@ -29,7 +29,7 @@ add_action('woocommerce_before_main_content', 'wp_woo_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'wp_woo_wrapper_end', 10);
 
 function wp_woo_wrapper_start() {
-  echo '<div class="woo-content">';
+  echo '<div class="woo-content primary-wrapper">';
 }
 
 function wp_woo_wrapper_end() {
