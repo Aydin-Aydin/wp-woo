@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product; ?>
 
-<li>
+<li class="imgLiquidFill imgLiquid" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($product->id), 'thumbnail-size', true)[0] ?>');">
 	<a href="<?php echo esc_url( get_permalink( $product->id ) ); ?>" title="<?php echo esc_attr( $product->get_title() ); ?>">
 		<?php echo $product->get_image(); ?>
 		<span class="product-title"><?php echo $product->get_title(); ?></span>
