@@ -52,7 +52,7 @@ $('.equal-height').matchHeight(options);
 
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
-//         $(this).width() = 100;
+//         console.log(this.attr('class') + "#" + this.id);
 //     }
 // });
 
