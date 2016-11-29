@@ -437,6 +437,8 @@ html, body {
   width: auto;
   height: auto;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 ul .page-numbers {

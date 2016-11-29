@@ -343,7 +343,9 @@ html, body {
 .woo-content {
   width: auto;
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
 
 ul .page-numbers {
   border: 1px solid;
@@ -356,7 +358,7 @@ ul .page-numbers {
   background-color: #000;
   padding: 1rem;
   position: fixed;
-  left: -395px;
+  left: -242px;
   z-index: 2;
   transition: all 0.3s ease-in-out; }
   #left-sidebar label {
