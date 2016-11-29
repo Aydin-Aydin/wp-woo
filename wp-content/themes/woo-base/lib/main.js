@@ -18,6 +18,10 @@ $(".slider-wrapper").slick({
   speed: 500
 });
 
+$('div.brand-widget ul').addClass('slider-wrapper');
+
+$('.yith-wcbr-thumbnail-list li').attr('style', '');
+
 // Front page category slider
 $('div.front-widget ul').addClass('cat-slider');
 

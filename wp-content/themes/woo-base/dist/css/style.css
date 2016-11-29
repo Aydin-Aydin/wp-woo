@@ -291,7 +291,7 @@ html, body {
   .front-widget ul li a:focus {
     outline: none; }
 
-.widget_top_rated_products h4.widgettitle {
+.front-widget h4.widgettitle {
   background-color: #000;
   padding: 20px;
   color: #fff;
