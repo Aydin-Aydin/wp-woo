@@ -387,6 +387,7 @@ html, body {
 .primary-wrapper{
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
+  overflow:hidden;
 }
 
 .nav-open{
@@ -416,10 +417,6 @@ html, body {
 }
 
 html, body {
-  margin-left: 47px;
-  margin-right: 0px;
-  padding-right: 20px;
-  width: 1382px;
   height: auto;
   position: relative;
 }
