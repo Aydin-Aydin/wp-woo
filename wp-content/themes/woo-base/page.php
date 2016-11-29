@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 	<?php get_sidebar('sidebar-first'); ?>
 <section class="primary-wrapper">
+<?php if (is_front_page()): ?>
   <div class="slider-wrapper woo-main-content">
     <?php
       $args = ['post_type' => 'slider'];
@@ -25,7 +26,7 @@
 
 
     <?php endwhile; ?>
-  </div>
+  </div><!-- end slider-wrapper woo-main-content -->
 
   <div class="front-widget">
     <?php dynamic_sidebar( 'top-rated' ); ?>
@@ -40,4 +41,5 @@
   </div>
 
 </section>
+  <?php endif ?>
 <?php get_footer(); ?>

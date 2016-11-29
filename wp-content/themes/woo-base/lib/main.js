@@ -27,11 +27,38 @@ $('.cat-slider').slick({
   slidesToScroll: 3
 });
 
+<<<<<<< HEAD
 
+=======
+// Options
+var options = {
+    max_value: 5,
+    step_size: 0.5,
+    initial_value: 0,
+    selected_symbol_type: 'utf8_star', // Must be a key from symbols
+    cursor: 'default',
+    readonly: true,
+}
+
+$(".rating").rate(options);
+
+$(".rating").rate("getValue");
+
+options = {
+  byRow: true,
+  property: 'height',
+  target: null,
+  remove: false  
+};
+
+$('.equal-height').matchHeight(options);
+
+// equal-height
+>>>>>>> Aydin
 
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
-//         $(this).width() = 100;
+//         console.log(this.attr('class') + "#" + this.id);
 //     }
 // });
 
