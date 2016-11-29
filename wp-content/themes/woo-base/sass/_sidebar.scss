@@ -8,13 +8,16 @@
 
 
 #left-sidebar {
+  @include media($breakpoint-large) {
+    left: -242px;
+  }
   display: block;
   float: left;
   height: 100vh;
   background-color: $side-menu-color;
   padding: 1rem;
   position: fixed;
-  left: -242px;
+  left: -393px;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
