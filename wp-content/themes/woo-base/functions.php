@@ -3,20 +3,17 @@
 /*  Register Scripts and Style */
 /*  Register Scripts and Style */
 function theme_register_scripts() {
-    wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
 
-    wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
-    wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
-    wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
-
-    // Stylesheets
-    wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
-    wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
-    wp_enqueue_style( 'slick-1-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
-    wp_enqueue_style( 'slick-2-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
-
-
-    //wp_enqueue_script( 'main-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'lib/main.js' ));
+  wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
+  wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
+  wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
+  wp_enqueue_script( 'rater-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/rater.js' ), array( 'jquery' ));
+  wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
+  // Stylesheets
+  wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
+  wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
+  wp_enqueue_style( 'slick-1-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
+  wp_enqueue_style( 'slick-2-css', get_stylesheet_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
@@ -33,7 +30,7 @@ add_action('woocommerce_before_main_content', 'wp_woo_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'wp_woo_wrapper_end', 10);
 
 function wp_woo_wrapper_start() {
-  echo '<div class="woo-content">';
+  echo '<div class="woo-content primary-wrapper">';
 }
 
 function wp_woo_wrapper_end() {
@@ -225,8 +222,28 @@ if ( function_exists('register_sidebar') )
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-        'name' => 'sidebar-second',
-        'id' => 'sidebar-second',
+        'name' => 'Top Rated Products',
+        'id' => 'top-rated',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Top Brands',
+        'id' => 'top-brands',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Latest Products',
+        'id' => 'latest-products',
         'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',

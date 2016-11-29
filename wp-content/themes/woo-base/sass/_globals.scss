@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 
 /* =======================================================================
 ## ++ Cleafix
@@ -193,9 +197,6 @@ html, body {
   background-position: center;
 }
 
-.woof_sid_auto_shortcode.woof {
-  background-color: green;
-}
 
 .container {
 
@@ -376,23 +377,67 @@ html, body {
 }
 
 // Align fix
+.woof_sid_auto_shortcode {
+  @include media($breakpoint-medium) {
+    display: none;
+  }
+}
+
 
 .primary-wrapper{
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
+  overflow:hidden;
 }
 
 .nav-open{
-  left: 280px !important;
+  // left: 280px !important;
   transition: all 0.3s ease-in-out;
 }
 
 
-  .product_list_widget {
-    &:hover .slick-next {
-      right: 0;
-    }
-    &:hover .slick-prev {
-      left: 0;
-    }
+.product_list_widget {
+  &:hover .slick-next {
+    right: 0;
   }
+  &:hover .slick-prev {
+    left: 0;
+  }
+}
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.related h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 35px 0px 5px 0px;
+  color: #FFF;
+  background-color: black;
+}
+
+html, body {
+  height: auto;
+  position: relative;
+}
+
+.page-title {
+  display: none;
+}
+
+.woof_sid_auto_shortcode.woof {
+    background-color: #dedede;
+}
+
+.woo-content {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+ul .page-numbers {
+  border: 1px solid;
+  border-radius: 4px;
+}

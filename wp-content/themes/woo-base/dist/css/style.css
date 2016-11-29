@@ -76,6 +76,9 @@ body {
 a {
   text-decoration: none; }
 
+h1 {
+  font-size: 3rem; }
+
 /* =======================================================================
 ## ++ Cleafix
 ========================================================================== */
@@ -173,9 +176,6 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
-
-.woof_sid_auto_shortcode.woof {
-  background-color: green; }
 
 .container .slick-dotted.slick-slider {
   margin-bottom: 0; }
@@ -299,12 +299,16 @@ html, body {
   text-transform: uppercase;
   font-family: Arial; }
 
+@media screen and (max-width: 880px) {
+  .woof_sid_auto_shortcode {
+    display: none; } }
+
 .primary-wrapper {
   padding-left: 72px !important;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  overflow: hidden; }
 
 .nav-open {
-  left: 280px !important;
   transition: all 0.3s ease-in-out; }
 
 .product_list_widget:hover .slick-next {
@@ -312,6 +316,36 @@ html, body {
 
 .product_list_widget:hover .slick-prev {
   left: 0; }
+
+.woocommerce-breadcrumb {
+  display: none; }
+
+.related h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 35px 0px 5px 0px;
+  color: #FFF;
+  background-color: black; }
+
+html, body {
+  height: auto;
+  position: relative; }
+
+.page-title {
+  display: none; }
+
+.woof_sid_auto_shortcode.woof {
+  background-color: #dedede; }
+
+.woo-content {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
+
+ul .page-numbers {
+  border: 1px solid;
+  border-radius: 4px; }
 
 #left-sidebar {
   display: block;
@@ -326,7 +360,7 @@ html, body {
   #left-sidebar label {
     color: #fff; }
   #left-sidebar .filter-icon {
-    display: block;
+    display: none;
     width: 40px;
     height: 40px;
     background-image: url("../graphics/icons/filter-menu.svg");
@@ -334,6 +368,9 @@ html, body {
     background-repeat: no-repeat;
     background-position: 0 0;
     margin: 0 auto; }
+    @media screen and (max-width: 880px) {
+      #left-sidebar .filter-icon {
+        display: block; } }
   #left-sidebar.is-open {
     left: 0; }
   #left-sidebar .side-nav-wrapper {
@@ -442,21 +479,14 @@ html, body {
         float: right;
         padding-left: .5rem; }
 
-.single-product .entry-summary {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .single-product .entry-summary:last-child {
-    margin-right: 0; }
-
 .single-product .images {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%;
-  display: inline-block;
-  float: left; }
+  width: 65.88078%;
+  display: block;
+  float: left;
+  margin: 0; }
   .single-product .images:last-child {
     margin-right: 0; }
 
@@ -473,6 +503,25 @@ html, body {
   margin-right: 2.35765%;
   width: 100%; }
   .single-product .related.products:last-child {
+    margin-right: 0; }
+
+.single-product #reviews {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border: 1px solid red;
+  overflow: auto; }
+  .single-product #reviews:last-child {
+    margin-right: 0; }
+
+.single-product .up-sells {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  float: left; }
+  .single-product .up-sells:last-child {
     margin-right: 0; }
 
 .woocommerce-pagination .page-numbers {
@@ -504,6 +553,36 @@ html, body {
   content: "";
   display: table;
   clear: both; }
+
+.summary-tabs-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  position: relative;
+  margin: 0;
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: #bbb; }
+  .summary-tabs-wrapper:last-child {
+    margin-right: 0; }
+  .summary-tabs-wrapper h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem; }
+  .summary-tabs-wrapper .rate-select-layer span {
+    color: #fa5400; }
+  .summary-tabs-wrapper .star-rating {
+    width: 50%;
+    display: block;
+    float: right;
+    margin-bottom: 1rem; }
+  .summary-tabs-wrapper .price {
+    width: 50%;
+    display: block;
+    float: right;
+    margin-bottom: 1rem;
+    font-weight: 900; }
 
 .container .slider-wrapper.woo-content {
   padding-left: 0; }
