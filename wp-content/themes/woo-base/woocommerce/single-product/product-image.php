@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $post, $product;
 ?>
-<div class="images">
+<div class="images imgLiquidFill imgLiquid equal-height" style="background-image: url(<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', true)[0] ?>)">
 	<?php
 		if ( has_post_thumbnail() ) {
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
