@@ -118,6 +118,28 @@ function get_star_rating()
 }
 
 
+// Move review tab single poroduct page.
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['reviews'] );  // Removes the reviews tab
+    unset( $tabs['description'] );  // Removes the additional information tab
+    return $tabs;
+}
+
+// Move single product reviews to under images.
+add_action( 'woocommerce_after_single_product', 'comments_template', 50 );
+function woocommerce_template_product_reviews() {
+woocommerce_get_template( 'single-product-reviews.php' );
+}
+
+// Move single product related 
+add_action( 'woocommerce_before_main_content', 'wpa_115808' );
+function wpa_115808(){
+   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+   add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
+}
+// End woocommerce hooks
+
 // Start Advanced custom fields
 if(function_exists("register_field_group"))
 {
@@ -169,7 +191,6 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
 }// End advanced custom fields
-// End woocommerce hooks
 
 
 // Remove each style one by one

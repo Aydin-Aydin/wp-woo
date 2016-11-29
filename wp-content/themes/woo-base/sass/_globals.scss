@@ -445,3 +445,10 @@ ul .page-numbers {
   border: 1px solid;
   border-radius: 4px;
 }
+
+// Rating stars
+.rate-select-layer {
+  span {
+    color: $orange;
+  }
+}

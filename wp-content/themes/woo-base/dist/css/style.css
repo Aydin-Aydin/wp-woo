@@ -351,6 +351,9 @@ ul .page-numbers {
   border: 1px solid;
   border-radius: 4px; }
 
+.rate-select-layer span {
+  color: #fa5400; }
+
 #left-sidebar {
   display: block;
   float: left;
@@ -509,33 +512,15 @@ ul .page-numbers {
   .single-product .related.products:last-child {
     margin-right: 0; }
 
-.single-product .woocommerce-tabs {
-  width: 100%;
-  display: block;
+.single-product #reviews {
   float: left;
-  margin: 0; }
-  .single-product .woocommerce-tabs .tabs {
-    width: 100%;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    overflow: auto; }
-    .single-product .woocommerce-tabs .tabs li {
-      display: block;
-      float: left;
-      width: 50%;
-      margin: 0;
-      padding: 1rem;
-      background-color: #bbb;
-      box-shadow: 0px 0px 0px 2px #555 inset; }
-      .single-product .woocommerce-tabs .tabs li.active {
-        background-color: #555;
-        box-shadow: none; }
-        .single-product .woocommerce-tabs .tabs li.active a {
-          color: #fff; }
-      .single-product .woocommerce-tabs .tabs li a {
-        color: #000; }
-  .single-product .woocommerce-tabs .woocommerce-Reviews-title {
-    display: none; }
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  border: 1px solid red;
+  overflow: auto; }
+  .single-product #reviews:last-child {
+    margin-right: 0; }
 
 .single-product .up-sells {
   float: left;
@@ -592,8 +577,6 @@ ul .page-numbers {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 2rem; }
-  .summary-tabs-wrapper .rate-select-layer span {
-    color: #fa5400; }
   .summary-tabs-wrapper .star-rating {
     width: 50%;
     display: block;
