@@ -14,59 +14,61 @@
   }
 
   .related.products {
+    display: block;
+    float: left;
     @include span-columns(12);
-    display: block;
-    float: left;
   }
-  .woocommerce-pagination {
-  display: inline-block;
-  float: left;
-  @include span-columns(12);
-  .woocommerce-tabs {
-    width: 100%;
-    display: block;
-    float: left;
-    margin: 0;
 
-    .tabs {
-      width: 100%;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      overflow: auto;
-      li {
-        display: block;
-        float: left;
-        width: 50%;
-        margin: 0;
-        padding: 1rem;
-        background-color: $light-gray;
-        box-shadow:0px 0px 0px 2px $dark-gray inset;
-
-        &.active {
-          background-color: $dark-gray;
-          box-shadow: none;
-
-          a {
-            color:$white;
-          }
-        }
-
-          a {
-            color: $side-menu-color;
-          }
-      }
-    }
-    .woocommerce-Reviews-title {
-      display: none;
-    }
+  #reviews {
+    @include span-columns(12);
+    border: 1px solid red;
+    overflow: auto;
   }
+
+  // .woocommerce-tabs {
+  //   width: 100%;
+  //   display: block;
+  //   float: left;
+  //   margin: 0;
+
+  //   .tabs {
+  //     width: 100%;
+  //     margin-bottom: 1rem;
+  //     margin-top: 1rem;
+  //     overflow: auto;
+  //     li {
+  //       display: block;
+  //       float: left;
+  //       width: 50%;
+  //       margin: 0;
+  //       padding: 1rem;
+  //       background-color: $light-gray;
+  //       box-shadow:0px 0px 0px 2px $dark-gray inset;
+
+  //       &.active {
+  //         background-color: $dark-gray;
+  //         box-shadow: none;
+
+  //         a {
+  //           color:$white;
+  //         }
+  //       }
+
+  //         a {
+  //           color: $side-menu-color;
+  //         }
+  //     }
+  //   }
+  //   .woocommerce-Reviews-title {
+  //     display: none;
+  //   }
+  // }
 
   .up-sells {
     @include span-columns(12);
     float: left;
   }
 }
-
 
 .woocommerce-pagination .page-numbers {
   display: inline-block;

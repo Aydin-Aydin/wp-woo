@@ -27,9 +27,6 @@ $('.cat-slider').slick({
   slidesToScroll: 3
 });
 
-<<<<<<< HEAD
-
-=======
 // Options
 var options = {
     max_value: 5,
@@ -48,13 +45,12 @@ options = {
   byRow: true,
   property: 'height',
   target: null,
-  remove: false  
+  remove: false
 };
 
 $('.equal-height').matchHeight(options);
 
 // equal-height
->>>>>>> Aydin
 
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
