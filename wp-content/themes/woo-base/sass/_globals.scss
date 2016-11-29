@@ -64,6 +64,10 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 
 /* =======================================================================
 ## ++ Cleafix
@@ -383,6 +387,7 @@ html, body {
 .primary-wrapper{
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
+  overflow:hidden;
 }
 
 .nav-open{
@@ -412,10 +417,6 @@ html, body {
 }
 
 html, body {
-  margin-left: 47px;
-  margin-right: 0px;
-  padding-right: 20px;
-  width: 1382px;
   height: auto;
   position: relative;
 }
@@ -432,6 +433,8 @@ html, body {
   width: auto;
   height: auto;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 ul .page-numbers {
