@@ -27,7 +27,7 @@ $('.product_list_widget').slick({
 
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
-//         $(this).width() = 100;
+//         console.log(this.attr('class') + "#" + this.id);
 //     }
 // });
 
