@@ -235,6 +235,26 @@ if ( function_exists('register_sidebar') )
 
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
+        'name' => 'Top Brands',
+        'id' => 'top-brands',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Latest Products',
+        'id' => 'latest-products',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
         'name' => 'woo-products',
         'id' => 'woo-products',
         'before_widget' => '<section id="%1$s" class="wdg-product %2$s">',

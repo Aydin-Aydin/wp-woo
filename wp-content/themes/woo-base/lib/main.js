@@ -19,11 +19,15 @@ $(".slider-wrapper").slick({
 });
 
 // Front page category slider
-$('.product_list_widget').slick({
+$('div.front-widget ul').addClass('cat-slider');
+
+$('.cat-slider').slick({
   infinite: true,
   slidesToShow: 6,
   slidesToScroll: 3
 });
+
+
 
 // $("*").each(function() {
 //     if ($(this).width() > $(window).width()) {
