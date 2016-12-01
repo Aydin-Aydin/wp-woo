@@ -1,0 +1,206 @@
+/** 
+  * TurboTabs jQuery Plugin
+  * Author: Aleksej Vukomanovic
+  * Website: http://themeflection.com
+  * Version: 1.0
+  * Version from: 25.03.2015
+  */
+ul.tt_tabs {
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  text-align: left;
+}
+
+ul.tt_tabs li {
+  
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 5px;
+  transition: all 0.50s ease-in-out;
+  -webkit-transition: all 0.50s ease-in-out;
+  -moz-transition: all 0.50s ease-in-out;
+  -ms-transition: all 0.50s ease-in-out;
+  -o-transition: all 0.50s ease-in-out;
+ 
+ }
+ ul.tt_tabs li i.fa{
+  margin-right: 3px;
+ }
+ul.tt_tabs.cl-effect-21 {
+    margin-bottom: 15px !important;
+}
+
+div.tt_container{
+  
+  position: relative;
+  
+  overflow: hidden;
+ 
+  
+}
+div.tt_tab {
+  left: 0;
+  top: 0;
+  padding: 20px;
+  padding-top:0px;
+  visibility: hidden;
+  position: absolute; 
+  width: 100%;
+  transition: all 0.40s ease-in-out;
+ -webkit-transition: all 0.40s ease-in-out;
+ -moz-transition: all 0.40s ease-in-out;
+ }
+
+div.tt_tab.active {
+  visibility: visible; 
+}
+}
+div.tt_tab h2 {
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding-bottom: 8px;
+}
+div.tt_container:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+/* VERTICAL MODE */
+.vertical .tt_container {
+  display: inline-block;
+  width: 65%;
+  vertical-align: top;
+   margin-left: -2px;
+}
+.vertical ul.tt_tabs {
+  display: inline-block;
+  vertical-align: top;
+  list-style-type: none;
+  margin: 3% 0 0 0;
+  padding: 0;
+  text-align: center;
+  max-width: 25%;
+}
+.vertical ul.tt_tabs li {
+  padding: 18px 20px;
+  display: block;
+  border-radius: 0;
+ 
+  }
+.vertical.responsive .tt_tabs {
+  width: 90%;
+  padding: 3%;
+}
+.vertical.responsive .tt_tabs li{
+
+}
+.responsive .tt_tabs li{
+  display: block;
+  padding: 5px;
+ 
+}
+.responsive .tt_tabs li h3{
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  transition: all 0.20s ease-in-out;
+  -webkit-transition: all 0.20s ease-in-out;
+  -moz-transition: all 0.20s ease-in-out;
+  -ms-transition: all 0.20s ease-in-out;
+  -o-transition: all 0.20s ease-in-out;
+}
+.responsive .tt_tab{
+  position: relative;
+  visibility: visible;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  text-align: center;
+}
+
+
+.responsive .tt_container{display: none;}
+
+@media only screen and (max-width: 480px){
+  .responsive{width: 90%!important; padding: 2%!important;}
+  .responsive.vertical .tt_tabs{max-width: 100%; }
+  ul.tt_tabs li{width:100% !important}
+
+}
+@media only screen and (max-width: 760px){
+  .responsive.vertical .tt_tabs{max-width: 100%; }
+  .responsive.vertical ul.tt_tabs li{padding: 10px; border-radius: 6px; -webkit-border-radius: 6px; -moz-border-radius: 6px;}}
+  }
+@media only screen and (max-width: 970px){
+.vertical{width: 90%!important; padding: 3%!important;}
+}
+@media only screen and (min-width: 720px) and (max-width: 1080px){
+.vertical ul.tt_tabs {width: 20%;}
+.vertical .tt_container{width: 50%;}
+}
+
+
+
+
+/* Effect 21: borders slight translate */
+.cl-effect-21 .t_name {
+	padding: 10px;
+	text-shadow: none;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+	cursor:pointer;
+}
+
+.cl-effect-21 .t_name::before,
+.cl-effect-21 .t_name::after {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 .t_name::before {
+	top: 0;
+	-webkit-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.cl-effect-21 .t_name::after {
+	bottom: 0;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+.cl-effect-21 .t_name:hover,
+.cl-effect-21 .active .t_name {
+	color: #444;
+}
+
+.cl-effect-21 .t_name:hover::before,
+.cl-effect-21 .active .t_name::before,
+.cl-effect-21 .t_name:hover::after,
+.cl-effect-21 .active .t_name::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+.cl-effect-21 .t_name {
+    position: relative;
+    display: inline-block;
+}
