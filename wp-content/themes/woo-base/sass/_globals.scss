@@ -364,7 +364,7 @@ html, body {
 }
 
 // Top rated widget
-.widget_top_rated_products {
+.front-widget {
   h4.widgettitle {
     background-color: #000;
     padding: 20px;
@@ -373,6 +373,27 @@ html, body {
     text-transform: uppercase;
     font-family: Arial;
 
+  }
+}
+
+// Brand Widget
+.brand-widget {
+  div.yith-wcbr-thumbnail-list {
+    ul {
+      margin:0;
+      li {
+        padding: 0;
+        a {
+          border:none !important;
+          height: 140px;
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -404,6 +425,8 @@ html, body {
     left: 0;
   }
 }
+
+/////////////////////////
 
 .woocommerce-breadcrumb {
   display: none;

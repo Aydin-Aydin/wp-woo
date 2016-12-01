@@ -291,13 +291,25 @@ html, body {
   .front-widget ul li a:focus {
     outline: none; }
 
-.widget_top_rated_products h4.widgettitle {
+.front-widget h4.widgettitle {
   background-color: #000;
   padding: 20px;
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
   font-family: Arial; }
+
+.brand-widget div.yith-wcbr-thumbnail-list ul {
+  margin: 0; }
+  .brand-widget div.yith-wcbr-thumbnail-list ul li {
+    padding: 0; }
+    .brand-widget div.yith-wcbr-thumbnail-list ul li a {
+      border: none !important;
+      height: 140px; }
+      .brand-widget div.yith-wcbr-thumbnail-list ul li a img {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%); }
 
 @media screen and (max-width: 880px) {
   .woof_sid_auto_shortcode {
