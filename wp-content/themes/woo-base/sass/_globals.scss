@@ -366,7 +366,7 @@ html, body {
 
 // Top rated widget
 .front-widget {
-  h4.widgettitle {
+  h4, h3 {
     background-color: #000;
     padding: 20px;
     color: #fff;
@@ -384,9 +384,10 @@ html, body {
       margin:0;
       li {
         padding: 0;
+        margin:0;
         a {
           border:none !important;
-          height: 140px;
+          height: 200px;
           img {
             position: absolute;
             top: 50%;
@@ -395,6 +396,9 @@ html, body {
         }
       }
     }
+  }
+  .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before{
+    display: none;
   }
 }
 
@@ -418,12 +422,14 @@ html, body {
 }
 
 
-.product_list_widget {
-  &:hover .slick-next {
-    right: 0;
-  }
-  &:hover .slick-prev {
-    left: 0;
+.front-widget {
+  ul {
+    &:hover .slick-next {
+      right: 0;
+    }
+    &:hover .slick-prev {
+      left: 0;
+    }
   }
 }
 
