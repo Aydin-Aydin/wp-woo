@@ -347,6 +347,9 @@ ul .page-numbers {
   border: 1px solid;
   border-radius: 4px; }
 
+.woocommerce-pagination.page-numbers {
+  margin-right: 5px; }
+
 #left-sidebar {
   display: block;
   float: left;
