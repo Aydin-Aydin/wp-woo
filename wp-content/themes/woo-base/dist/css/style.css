@@ -299,6 +299,18 @@ html, body {
   text-transform: uppercase;
   font-family: Arial; }
 
+.brand-widget div.yith-wcbr-thumbnail-list ul {
+  margin: 0; }
+  .brand-widget div.yith-wcbr-thumbnail-list ul li {
+    padding: 0; }
+    .brand-widget div.yith-wcbr-thumbnail-list ul li a {
+      border: none !important;
+      height: 140px; }
+      .brand-widget div.yith-wcbr-thumbnail-list ul li a img {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+
 @media screen and (max-width: 880px) {
   .woof_sid_auto_shortcode {
     display: none; } }

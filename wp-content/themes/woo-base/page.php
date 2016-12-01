@@ -32,14 +32,13 @@
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 
-<!--   <div class="latest-products">
-    <?php dynamic_sidebar( 'latest-products' ); ?>
-  </div> -->
-
   <div class="brand-widget">
     <?php dynamic_sidebar( 'top-brands' ); ?>
   </div>
 
+  <div class="latest-products">
+    <?php dynamic_sidebar( 'latest-products' ); ?>
+  </div>
 </section>
   <?php endif ?>
 <?php get_footer(); ?>

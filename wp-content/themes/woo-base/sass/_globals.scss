@@ -376,6 +376,27 @@ html, body {
   }
 }
 
+// Brand Widget
+.brand-widget {
+  div.yith-wcbr-thumbnail-list {
+    ul {
+      margin:0;
+      li {
+        padding: 0;
+        a {
+          border:none !important;
+          height: 140px;
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
 // Align fix
 .woof_sid_auto_shortcode {
   @include media($breakpoint-medium) {
@@ -404,6 +425,8 @@ html, body {
     left: 0;
   }
 }
+
+/////////////////////////
 
 .woocommerce-breadcrumb {
   display: none;
