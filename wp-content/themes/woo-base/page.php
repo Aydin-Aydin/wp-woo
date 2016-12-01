@@ -28,11 +28,11 @@
     <?php endwhile; ?>
   </div><!-- end slider-wrapper woo-main-content -->
 
-  <div class="front-widget">
+  <div class="front-widget rated-widget">
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 
-  <div class="brand-widget">
+  <div class="front-widget brand-widget">
     <?php dynamic_sidebar( 'top-brands' ); ?>
   </div>
 

@@ -291,7 +291,7 @@ html, body {
   .front-widget ul li a:focus {
     outline: none; }
 
-.front-widget h4.widgettitle {
+.front-widget h4, .front-widget h3 {
   background-color: #000;
   padding: 20px;
   color: #fff;
@@ -302,14 +302,18 @@ html, body {
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
   .brand-widget div.yith-wcbr-thumbnail-list ul li {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     .brand-widget div.yith-wcbr-thumbnail-list ul li a {
       border: none !important;
-      height: 140px; }
+      height: 200px; }
       .brand-widget div.yith-wcbr-thumbnail-list ul li a img {
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%); }
+
+.brand-widget .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before {
+  display: none; }
 
 @media screen and (max-width: 880px) {
   .woof_sid_auto_shortcode {
@@ -323,10 +327,10 @@ html, body {
 .nav-open {
   transition: all 0.3s ease-in-out; }
 
-.product_list_widget:hover .slick-next {
+.front-widget ul:hover .slick-next {
   right: 0; }
 
-.product_list_widget:hover .slick-prev {
+.front-widget ul:hover .slick-prev {
   left: 0; }
 
 .woocommerce-breadcrumb {
