@@ -97,3 +97,4 @@ $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer
   });
 })();
 
+
