@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
@@ -165,5 +164,3 @@ $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer
 
   });
 })();
-
->>>>>>> 84dda384b08a1cec895153ea31856d853a8a9106
