@@ -324,9 +324,6 @@ html, body {
   transition: all 0.3s ease-in-out;
   overflow: hidden; }
 
-.nav-open {
-  transition: all 0.3s ease-in-out; }
-
 .front-widget ul:hover .slick-next {
   right: 0; }
 

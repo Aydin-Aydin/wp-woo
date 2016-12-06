@@ -62,5 +62,12 @@ $('.equal-height').matchHeight(options);
 //     }
 // });
 
+
+$('.scrollDown').click(function() {
+  $('#scroll2').animate({
+    duration: 5000
+  })
+});
+
   });
 })();

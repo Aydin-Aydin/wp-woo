@@ -9,6 +9,7 @@ function theme_register_scripts() {
   wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
   wp_enqueue_script( 'rater-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/rater.js' ), array( 'jquery' ));
   wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
+
   // Stylesheets
   wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
   wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
