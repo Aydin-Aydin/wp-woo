@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width">
 </head>
 <body <?php body_class(); ?>>
-	<div class="container">
+	<div class="main-container">
 
 
         

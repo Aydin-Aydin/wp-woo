@@ -24,6 +24,7 @@ $('.product_list_widget').slick({
   slidesToShow: 6,
   slidesToScroll: 3
 });
+  
 
 // Options
 var options = {
@@ -47,14 +48,19 @@ options = {
 };
 
 $('.equal-height').matchHeight(options);
+$('.variations select').niceSelect();
 
-// equal-height
+$('.value .reset_variations').css({
+  position: 'absolute',
+  zIndex: '-10'
+});
 
-// $("*").each(function() {
-//     if ($(this).width() > $(window).width()) {
-//         $(this).width() = 100;
-//     }
-// });
+  // You may also like section
+  $('.summary-tabs-wrapper .products .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+
+
+  $('.summary-tabs-wrapper .products .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
+  //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
 
   });
 })();

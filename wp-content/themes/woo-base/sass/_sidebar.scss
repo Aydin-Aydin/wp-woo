@@ -1,4 +1,4 @@
-// .sidebar-left-container {
+// .sidebar-left-main-container {
 //   overflow: auto;
 //   display: block;
 //   float: left;
@@ -9,8 +9,9 @@
 
 #left-sidebar {
   @include media($breakpoint-large) {
-    left: -242px;
+    left: -393px;
   }
+
   display: block;
   float: left;
   height: 100vh;
@@ -18,6 +19,7 @@
   padding: 1rem;
   position: fixed;
   left: -393px;
+  top: 0;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
