@@ -11,10 +11,12 @@
   display: block;
   float: left;
   height: 100vh;
+  width: 317px;
+  overflow: hidden;
   background-color: $side-menu-color;
   padding: 1rem;
   position: fixed;
-  left: -246px;
+  left: -244px;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
@@ -123,14 +125,51 @@
 }
   }
   .side-first-wrapper {
-    float: left;
 
-    label.screen-reader-text {
-      display:none !important;
+    div.sidebar-widget{
+
+      &.widget_search{
+        label.screen-reader-text{
+          color: $white;
+          font-size: 9pt;
+          font-weight: $lato-light;
+          font-style: italic;
+          position: absolute;
+          pointer-events: none;
+          left: 1rem;
+          top: 50px;
+          transition: 0.2s ease all;
+          -moz-transition: 0.2s ease all;
+          -webkit-transition: 0.2s ease all;
+        }
+
+        input[type="text"]{
+          font-size: 18px;
+          padding: 10px 10px 10px 5px;
+          display: block;
+          border: none;
+          border-bottom: 2px solid $white;
+          width: 200px;
+          background-color: transparent;
+          color: $white;
+
+            &:focus{
+              outline:none;
+            }
+          }
+
+          input[type="submit"]{
+            font-size: 30pt;
+          }
+        }
+      }
+      }
+
+
     }
   }
 
-  .side-left-wrapper {
+/*   .side-left-wrapper {
     position: fixed;
     left: -50%;
     bottom: 0;
@@ -146,7 +185,7 @@
      @include media($sidebar-main-menu-small) {
       width: 100%;
     }
-  }
+  } */
 
   .is-open {
     transition: all 0.3s ease-in-out;
@@ -157,15 +196,31 @@
     margin-top: 1rem;
   }
 
+
   #menu-primary {
 
     li {
       padding: 1rem;
-      border-bottom: 1px solid $white;
+
+      a{
+        display: block;
+        font-weight: $lato-light;
+        font-size: 18pt;
+        width: 100%;
+        color: $white;
+        text-transform: uppercase;
+
+        &:hover{
+          color: $nav-link-hover;
+        }
+      }
+      &.current-menu-item{
+        a{
+          color: $nav-link-current;
+          font-weight: $lato-regular;
+        }
+      }
     }
   }
 
-	a {
-		color: $white;
-	}
 }
