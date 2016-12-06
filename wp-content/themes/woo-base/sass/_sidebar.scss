@@ -14,7 +14,7 @@
   width: 317px;
   overflow: hidden;
   background-color: $side-menu-color;
-  padding: 1rem;
+  padding: 1rem 0 0 0;
   position: fixed;
   left: -244px;
   z-index: 2;
@@ -48,14 +48,14 @@
     float: right;
     display: inline-block;
     height: 100vh;
-    padding-left: 1rem;
+    width: 72.5px;
 
 // Hamburger
     .toggle-menu {
       width: 40px;
       height: 40px;
       position: relative;
-      /* margin: 50px auto; */
+      margin: auto;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -o-transform: rotate(0deg);
@@ -122,25 +122,67 @@
       top: 18px;
       width: 0%;
       left: 50%;
-}
+    }
+
+    a.cart-icon{
+      display: block;
+      width: 40px;
+      height: 60px;
+      text-align: center;
+      position: relative;
+      top: 78vh;
+      color: $black;
+      background-color: transparent;
+      background-image: url("../graphics/icons/tote-bag.svg");
+      background-repeat: no-repeat;
+      background-size: 125% 125%;
+      background-position: center;
+      line-height: 80px;
+      font-weight: $lato-regular;
+      font-size: 14pt;
+      margin: auto;
+
+      &:link{
+        color: $sidebar-icon-text;
+      }
+      &:visited{
+        color: $sidebar-icon-text;
+      }
+      &:hover{
+        font-size: 18pt;
+        font-weight: $lato-semi;
+        background-size: cover;
+      }
+    }
   }
   .side-first-wrapper {
+    width: 200px;
+    margin: 1rem;
 
     div.sidebar-widget{
-
       &.widget_search{
         label.screen-reader-text{
-          color: $white;
-          font-size: 9pt;
-          font-weight: $lato-light;
-          font-style: italic;
+          display: none;
+        }
+
+        #searchsubmit{
+          width: 30px;
+          height: 30px;
           position: absolute;
-          pointer-events: none;
-          left: 1rem;
-          top: 50px;
-          transition: 0.2s ease all;
-          -moz-transition: 0.2s ease all;
-          -webkit-transition: 0.2s ease all;
+          top: 40px;
+          left: 190px;
+          border: none;
+          background-color: #000000;
+          background-repeat: no-repeat;
+          background-image: url("../graphics/icons/Search.svg");
+          background-size: 50% 50%;
+          background-position: center;
+          font-size: 100vw;
+          overflow: hidden;
+
+          &:focus{
+            outline: !important;
+          }
         }
 
         input[type="text"]{
@@ -148,13 +190,18 @@
           padding: 10px 10px 10px 5px;
           display: block;
           border: none;
-          border-bottom: 2px solid $white;
+          border-bottom: 1px solid $white;
           width: 200px;
           background-color: transparent;
           color: $white;
+          -webkit-transition: .1s ease-in-out;
+          -moz-transition: .1s ease-in-out;
+          -o-transition: .1s ease-in-out;
+          transition: .1s ease-in-out;
 
             &:focus{
               outline:none;
+              border-bottom: 2px solid $nav-link-current;
             }
           }
 
@@ -163,9 +210,6 @@
           }
         }
       }
-      }
-
-
     }
   }
 
@@ -182,7 +226,7 @@
       width: 50%;
     }
 
-     @include media($sidebar-main-menu-small) {
+    @include media($sidebar-main-menu-small) {
       width: 100%;
     }
   } */
@@ -200,7 +244,7 @@
   #menu-primary {
 
     li {
-      padding: 1rem;
+      padding: 10px 0;
 
       a{
         display: block;
@@ -214,6 +258,7 @@
           color: $nav-link-hover;
         }
       }
+
       &.current-menu-item{
         a{
           color: $nav-link-current;
@@ -222,5 +267,3 @@
       }
     }
   }
-
-}
