@@ -42,6 +42,10 @@
         border-left: 1px solid $light-gray;
       }      
     }
+
+    @include media($breakpoint-medium) {
+      display: none;
+    }
   }
 }
 

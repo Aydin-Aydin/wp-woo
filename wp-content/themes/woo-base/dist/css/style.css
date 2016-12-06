@@ -965,6 +965,9 @@ label.right {
     border-right: 1px solid #bbb; }
   .single-product .up-sells .grid-item-2-columns:nth-child(even) {
     border-left: 1px solid #bbb; }
+  @media screen and (max-width: 880px) {
+    .single-product .up-sells {
+      display: none; } }
 
 .woocommerce-pagination .page-numbers {
   display: inline-block;
