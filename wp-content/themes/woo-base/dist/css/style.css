@@ -12,6 +12,7 @@ http://www.opensource.org/licenses/gpl-license.php
 
 */
 /* Vendor */
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 html {
   box-sizing: border-box; }
 
@@ -44,7 +45,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-family: "Lato", sans-serif; }
 
 ol, ul {
   list-style: none; }
@@ -377,10 +379,12 @@ ul .page-numbers {
   display: block;
   float: left;
   height: 100vh;
+  width: 317px;
+  overflow: hidden;
   background-color: #000;
-  padding: 1rem;
+  padding: 1rem 0 0 0;
   position: fixed;
-  left: -246px;
+  left: -244px;
   z-index: 2;
   transition: all 0.3s ease-in-out; }
   #left-sidebar label {
@@ -403,12 +407,12 @@ ul .page-numbers {
     float: right;
     display: inline-block;
     height: 100vh;
-    padding-left: 1rem; }
+    width: 72.5px; }
     #left-sidebar .side-nav-wrapper .toggle-menu {
       width: 40px;
       height: 40px;
       position: relative;
-      /* margin: 50px auto; */
+      margin: auto;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -o-transform: rotate(0deg);
@@ -459,34 +463,109 @@ ul .page-numbers {
       top: 18px;
       width: 0%;
       left: 50%; }
+    #left-sidebar .side-nav-wrapper a.cart-icon {
+      display: block;
+      width: 40px;
+      height: 60px;
+      text-align: center;
+      position: relative;
+      top: 73vh;
+      color: #000;
+      background-color: transparent;
+      background-image: url("../graphics/icons/tote-bag.svg");
+      background-repeat: no-repeat;
+      background-size: 125% 125%;
+      background-position: center;
+      line-height: 80px;
+      font-weight: 400;
+      font-size: 14pt;
+      margin: auto; }
+      #left-sidebar .side-nav-wrapper a.cart-icon:link {
+        color: #e11515; }
+      #left-sidebar .side-nav-wrapper a.cart-icon:visited {
+        color: #e11515; }
+      #left-sidebar .side-nav-wrapper a.cart-icon:hover {
+        font-size: 18pt;
+        font-weight: 700;
+        background-size: cover; }
   #left-sidebar .side-first-wrapper {
-    float: left; }
-    #left-sidebar .side-first-wrapper label.screen-reader-text {
-      display: none !important; }
-  #left-sidebar .side-left-wrapper {
+    width: 200px;
+    margin: 1rem; }
+    #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search label.screen-reader-text {
+      display: none; }
+    #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search #searchsubmit {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 40px;
+      left: 190px;
+      border: none;
+      background-color: #000000;
+      background-repeat: no-repeat;
+      background-image: url("../graphics/icons/Search.svg");
+      background-size: 50% 50%;
+      background-position: center;
+      font-size: 100vw;
+      overflow: hidden; }
+      #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search #searchsubmit:focus {
+        outline: !important; }
+    #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search input[type="text"] {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      border: none;
+      border-bottom: 1px solid #fff;
+      width: 200px;
+      background-color: transparent;
+      color: #fff;
+      -webkit-transition: .1s ease-in-out;
+      -moz-transition: .1s ease-in-out;
+      -o-transition: .1s ease-in-out;
+      transition: .1s ease-in-out; }
+      #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search input[type="text"]:focus {
+        outline: none;
+        border-bottom: 2px solid #27ae60; }
+    #left-sidebar .side-first-wrapper div.sidebar-widget.widget_search input[type="submit"] {
+      font-size: 30pt; }
+
+/*   .side-left-wrapper {
     position: fixed;
     left: -50%;
     bottom: 0;
     top: 0;
     padding: 1rem;
     background-color: #000;
-    transition: all 0.3s ease-in-out; }
-    @media screen and (max-width: 1300px) {
-      #left-sidebar .side-left-wrapper {
-        width: 50%; } }
-    @media screen and (max-width: 1100px) {
-      #left-sidebar .side-left-wrapper {
-        width: 100%; } }
-  #left-sidebar .is-open {
     transition: all 0.3s ease-in-out;
-    left: 0; }
-  #left-sidebar .sidebar-widget {
-    margin-top: 1rem; }
-  #left-sidebar #menu-primary li {
-    padding: 1rem;
-    border-bottom: 1px solid #fff; }
-  #left-sidebar a {
-    color: #fff; }
+
+    @include media($sidebar-main-menu-medium) {
+      width: 50%;
+    }
+
+    @include media($sidebar-main-menu-small) {
+      width: 100%;
+    }
+  } */
+.is-open {
+  transition: all 0.3s ease-in-out;
+  left: 0; }
+
+.sidebar-widget {
+  margin-top: 1rem; }
+
+#menu-primary li {
+  padding: 10px 0; }
+  #menu-primary li a {
+    display: block;
+    font-weight: 300;
+    font-size: 18pt;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase; }
+    #menu-primary li a:hover {
+      color: #696969; }
+  #menu-primary li.current-menu-item a {
+    color: #27ae60;
+    font-weight: 400; }
 
 .woo-main-content .product {
   padding: 1rem; }
