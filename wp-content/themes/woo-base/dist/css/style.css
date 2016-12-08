@@ -19,6 +19,18 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: 'lato-light';
+  src: url("../../fonts/Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url("../../fonts/Lato/Lato-Bold.ttf"); }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,6 +92,10 @@ a {
 
 h1 {
   font-size: 3rem; }
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
 
 /* =======================================================================
 ## ++ Cleafix
@@ -160,6 +176,7 @@ html, body {
   display: block;
   float: left;
   width: 19%;
+  height: 400px;
   margin-bottom: 1%; }
   @media screen and (max-width: 1400px) {
     .grid-item {
@@ -299,7 +316,7 @@ html, body {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
-  font-family: Arial; }
+  font-family: 'lato-regular'; }
 
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
@@ -325,9 +342,6 @@ html, body {
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
   overflow: hidden; }
-
-.nav-open {
-  transition: all 0.3s ease-in-out; }
 
 .front-widget ul:hover .slick-next {
   right: 0; }
@@ -360,13 +374,15 @@ html, body {
   overflow: hidden;
   position: relative;
   z-index: 1; }
+  .woo-content .grid-item {
+    text-align: center; }
 
 ul .page-numbers {
   border: 1px solid;
   border-radius: 4px; }
 
 #woocommerce_products-2 .gutter-sizer {
-  width: 3%; }
+  width: 1%; }
 
 .grid-item {
   display: block;
@@ -548,9 +564,6 @@ ul .page-numbers {
 .is-open {
   transition: all 0.3s ease-in-out;
   left: 0; }
-
-.sidebar-widget {
-  margin-top: 1rem; }
 
 #menu-primary li {
   padding: 10px 0; }

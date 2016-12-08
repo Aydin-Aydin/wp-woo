@@ -16,7 +16,7 @@ import containerMargin from './custom/container-margin';
 $(".slider-wrapper").slick({
   dots: true,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 10000,
   speed: 500
 });
 

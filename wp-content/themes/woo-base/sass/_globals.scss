@@ -69,6 +69,11 @@ h1 {
   font-size: 3rem;
 }
 
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../../fonts/Lato/Lato-Regular.ttf');
+}
+
 
 /* =======================================================================
 ## ++ Cleafix
@@ -171,6 +176,7 @@ html, body {
   display: block;
   float: left;
   width: 19%;
+  height: 400px;
   margin-bottom: 1%;
 
   @include media($breakpoint-xlarge) {
@@ -372,7 +378,7 @@ html, body {
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
-    font-family: Arial;
+    font-family: 'lato-regular';
 
   }
 }
@@ -416,10 +422,7 @@ html, body {
   overflow:hidden;
 }
 
-.nav-open{
-  // left: 280px !important;
-  transition: all 0.3s ease-in-out;
-}
+
 
 
 .front-widget {
@@ -465,6 +468,10 @@ html, body {
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+ .grid-item {
+    text-align: center;
+  }
 }
 
 ul .page-numbers {
@@ -474,9 +481,10 @@ ul .page-numbers {
 
 #woocommerce_products-2 {
   .gutter-sizer {
-    width: 3%;
+    width: 1%;
   }
 }
+
 // This is the grid for the products
 .grid-item {
     display: block;

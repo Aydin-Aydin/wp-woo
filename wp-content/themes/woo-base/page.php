@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 	<?php get_sidebar('sidebar-first'); ?>
 <section class="primary-wrapper">
+
 <?php if (is_front_page()): ?>
   <div class="slider-wrapper woo-main-content">
     <?php
@@ -23,22 +24,24 @@
         </div>
       </div>
 
-
-
     <?php endwhile; ?>
   </div><!-- end slider-wrapper woo-main-content -->
+  <!-- <a class="scrollDown" href="#scroll2">Scroll</a> -->
 
-  <div class="front-widget rated-widget">
+   <div class="front-widget brand-widget">
+    <?php dynamic_sidebar( 'top-brands' ); ?>
+  </div>
+
+  <div class="front-widget rated-widget" id="scroll2">
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 
-  <div class="front-widget brand-widget">
-    <?php dynamic_sidebar( 'top-brands' ); ?>
-  </div>
+
 
   <div class="latest-products">
     <?php dynamic_sidebar( 'latest-products' ); ?>
   </div>
+
 </section>
   <?php endif ?>
 <?php get_footer(); ?>
