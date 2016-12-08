@@ -378,8 +378,7 @@ html, body {
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
-    font-family: 'lato-regular';
-
+    font-weight: $lato-regular;
   }
 }
 
@@ -471,6 +470,11 @@ html, body {
 
  .grid-item {
     text-align: center;
+    .text-wrapper {
+      .star-rating div, .star-rating .rating {
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -487,11 +491,11 @@ ul .page-numbers {
 
 // This is the grid for the products
 .grid-item {
-    display: block;
-    float: left;
-    width: 19%;
-    margin-bottom: 1%;
-    margin: 2px;
+  display: block;
+  float: left;
+  width: 19%;
+  margin-bottom: 1%;
+  margin: 2px;
 }
 
 // .add_to_wishlist {

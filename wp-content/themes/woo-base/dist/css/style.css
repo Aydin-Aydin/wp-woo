@@ -316,7 +316,7 @@ html, body {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
-  font-family: 'lato-regular'; }
+  font-weight: 400; }
 
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
@@ -376,6 +376,8 @@ html, body {
   z-index: 1; }
   .woo-content .grid-item {
     text-align: center; }
+    .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
+      margin: 0 auto; }
 
 ul .page-numbers {
   border: 1px solid;
