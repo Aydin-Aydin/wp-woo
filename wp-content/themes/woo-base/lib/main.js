@@ -10,51 +10,66 @@ import containerMargin from './custom/container-margin';
     masonGrid.init();
     containerMargin.init();
 
-		$('.grid-item.product').matchHeight();
+    $('.grid-item.product').matchHeight();
 
 
-$(".slider-wrapper").slick({
-  dots: true,
-  speed: 500
-});
+    $(".slider-wrapper").slick({
+      dots: true,
+      speed: 500
+    });
 
-// Front page category slider
-$('.product_list_widget').slick({
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 3
-});
+    // Front page category slider
+    $('.product_list_widget').slick({
+      infinite: true,
+      slidesToShow: 6,
+      slidesToScroll: 3
+    });
 
-// Options
-var options = {
-    max_value: 5,
-    step_size: 0.5,
-    initial_value: 0,
-    selected_symbol_type: 'utf8_star', // Must be a key from symbols
-    cursor: 'default',
-    readonly: true,
-}
+    // You may also like section
+    $('.summary-tabs-wrapper .grid-sizer').css({
+      width: "45%"
+    });
+    $('.summary-tabs-wrapper .grid-item').css({
+      width: "45%"
+    });
 
-$(".rating").rate(options);
+    // Options
+    var options = {
+      max_value: 5,
+      step_size: 0.5,
+      initial_value: 0,
+      selected_symbol_type: 'utf8_star', // Must be a key from symbols
+      cursor: 'default',
+      readonly: true,
+    }
 
-$(".rating").rate("getValue");
+    $(".rating").rate(options);
 
-options = {
-  byRow: true,
-  property: 'height',
-  target: null,
-  remove: false  
-};
+    $(".rating").rate("getValue");
 
-$('.equal-height').matchHeight(options);
+    options = {
+      byRow: true,
+      property: 'height',
+      target: null,
+      remove: false
+    };
 
-// equal-height
+    $('.equal-height').matchHeight(options);
+    $('.variations select').niceSelect();
 
-// $("*").each(function() {
-//     if ($(this).width() > $(window).width()) {
-//         $(this).width() = 100;
-//     }
-// });
+
+    $('.value .reset_variations').css({
+      position: 'absolute',
+      zIndex: '-10'
+    });
+
+    // equal-height
+
+    // $("*").each(function() {
+    //     if ($(this).width() > $(window).width()) {
+    //         $(this).width() = 100;
+    //     }
+    // });
 
   });
 })();

@@ -1,4 +1,4 @@
-// .sidebar-left-container {
+// .sidebar-left-main-container {
 //   overflow: auto;
 //   display: block;
 //   float: left;
@@ -8,16 +8,18 @@
 
 
 #left-sidebar {
-  @include media($breakpoint-large) {
-    left: -242px;
+  .is-block {
+    display: block !important;
+    transition: all 0.3s ease-in-out;
   }
+
   display: block;
   float: left;
   height: 100vh;
   background-color: $side-menu-color;
   padding: 1rem;
   position: fixed;
-  left: -393px;
+  top: 0;
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
@@ -127,6 +129,7 @@
   }
   .side-first-wrapper {
     float: left;
+    display: none;
 
     label.screen-reader-text {
       display:none !important;
@@ -151,10 +154,10 @@
     }
   }
 
-  .is-open {
-    transition: all 0.3s ease-in-out;
-    left: 0;
-  }
+  // .is-open {
+  //   transition: all 0.3s ease-in-out;
+  //   left: 0;
+  // }
 
   .sidebar-widget {
     margin-top: 1rem;

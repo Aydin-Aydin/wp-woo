@@ -5,6 +5,10 @@
     display: block;
     float: left;
     margin: 0;
+
+    @include media($breakpoint-medium) {
+      @include span-columns(12);
+    }    
   }
 
   .main-contnet-wrapper {
@@ -25,48 +29,25 @@
     overflow: auto;
   }
 
-  // .woocommerce-tabs {
-  //   width: 100%;
-  //   display: block;
-  //   float: left;
-  //   margin: 0;
-
-  //   .tabs {
-  //     width: 100%;
-  //     margin-bottom: 1rem;
-  //     margin-top: 1rem;
-  //     overflow: auto;
-  //     li {
-  //       display: block;
-  //       float: left;
-  //       width: 50%;
-  //       margin: 0;
-  //       padding: 1rem;
-  //       background-color: $light-gray;
-  //       box-shadow:0px 0px 0px 2px $dark-gray inset;
-
-  //       &.active {
-  //         background-color: $dark-gray;
-  //         box-shadow: none;
-
-  //         a {
-  //           color:$white;
-  //         }
-  //       }
-
-  //         a {
-  //           color: $side-menu-color;
-  //         }
-  //     }
-  //   }
-  //   .woocommerce-Reviews-title {
-  //     display: none;
-  //   }
-  // }
-
   .up-sells {
     @include span-columns(12);
     float: left;
+
+    .grid {
+      padding: 0 !important;
+    }
+
+    // .grid-sizer {
+    //   @include media($breakpoint-xlarge) {
+    //     width: 49% !important; 
+    //   }
+    // }
+
+    // .grid-item {
+    //   @include media($breakpoint-xlarge) {
+    //     width: 49% !important; 
+    //   }
+    // }
   }
 }
 
@@ -100,6 +81,37 @@
   padding: 2rem 1rem 1rem 1rem;
   background-color: $light-gray;
 
+  @include media($breakpoint-medium) {
+    @include span-columns(12);
+  }
+
+  .product_meta {
+    display: none;
+  }
+
+  .cart {
+    position: relative;
+    & > * {
+      @include span-columns(6 of 12);
+      display: block;
+      float: left;
+      height: 40px;
+
+      input {
+        height: 100%;
+        padding: 1rem;
+        width: 100%;
+      }
+
+      @include media($breakpoint-medium) {
+        @include span-columns(12);
+        &:first-child {
+          margin-bottom: .5rem;
+        }
+      }
+    }
+  }
+
   h1 {
     text-transform: uppercase;
     font-size: 2rem;
@@ -119,6 +131,28 @@
     display: block;
     float: right;
     margin-bottom: 1rem;
+    font-size: 150%;
     font-weight: 900;
   }
+
+  .short-description {
+    margin-bottom: 2rem;
+  }
+
+  .variations {
+    td {
+      vertical-align: middle;
+
+      label {
+        margin-right: 1rem;
+        font-size: 110%;
+        font-weight: 900;
+      }     
+    }
+  }   
 }
+
+#commentform {
+  background-color: $light-gray;
+}
+
