@@ -8,9 +8,14 @@
 
 
 #left-sidebar {
+<<<<<<< HEAD
   .is-block {
     display: block !important;
     transition: all 0.3s ease-in-out;
+=======
+  @include media($breakpoint-large) {
+    left: -393px;
+>>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
   }
 
   display: block;
@@ -19,6 +24,10 @@
   background-color: $side-menu-color;
   padding: 1rem;
   position: fixed;
+<<<<<<< HEAD
+=======
+  left: -393px;
+>>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
   top: 0;
   z-index: 2;
   transition: all 0.3s ease-in-out;

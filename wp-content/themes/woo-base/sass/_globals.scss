@@ -165,6 +165,30 @@ html, body {
   }
 }
 
+.grid-sizer-2-columns {
+  width: 48% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  }
+
+  @include media($breakpoint-large) {
+   width: 100% !important;
+  }  
+}
+
+.grid-item-2-columns {
+  display: block;
+  float: left;
+  width: 50% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  }
+
+  @include media($breakpoint-large) {
+   width: 100% !important;
+  }    
+}
+
 .grid-item {
 
   display: block;
@@ -305,11 +329,15 @@ html, body {
   }
 }
 
-  .imgLiquidFill {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.gallery-thumb {
+  display: block;
+  float: left;
+
+  a {
+    display: block;
+    overflow: auto;
   }
+}
 
 // Front Widgets
 
@@ -436,7 +464,7 @@ html, body {
 .woo-content {
   width: auto;
   height: auto;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   z-index: 1;
 }

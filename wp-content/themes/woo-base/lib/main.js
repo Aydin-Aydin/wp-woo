@@ -18,12 +18,22 @@ import containerMargin from './custom/container-margin';
       speed: 500
     });
 
+<<<<<<< HEAD
     // Front page category slider
     $('.product_list_widget').slick({
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 3
     });
+=======
+// Front page category slider
+$('.product_list_widget').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 3
+});
+  
+>>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
 
     // You may also like section
     $('.summary-tabs-wrapper .grid-sizer').css({
@@ -47,6 +57,7 @@ import containerMargin from './custom/container-margin';
 
     $(".rating").rate("getValue");
 
+<<<<<<< HEAD
     options = {
       byRow: true,
       property: 'height',
@@ -70,6 +81,22 @@ import containerMargin from './custom/container-margin';
     //         $(this).width() = 100;
     //     }
     // });
+=======
+$('.equal-height').matchHeight(options);
+$('.variations select').niceSelect();
+
+$('.value .reset_variations').css({
+  position: 'absolute',
+  zIndex: '-10'
+});
+
+  // You may also like section
+  $('.summary-tabs-wrapper .products .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+
+
+  $('.summary-tabs-wrapper .products .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
+  //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
+>>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
 
   });
 })();
