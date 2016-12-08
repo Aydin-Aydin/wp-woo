@@ -300,7 +300,7 @@ html, body {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
-  font-family: Arial; }
+  font-weight: 400; }
 
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
@@ -367,6 +367,15 @@ ul .page-numbers {
 
 #woocommerce_products-2 .gutter-sizer {
   width: 1%; }
+
+.grid-item {
+  display: block;
+  float: left;
+  width: 19%;
+  margin-bottom: 1%;
+  margin: 2px; }
+  .grid-item .text-wrapper .star-rating div, .grid-item .text-wrapper .star-rating .rating {
+    margin: 0 auto; }
 
 #left-sidebar {
   display: block;
