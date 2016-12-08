@@ -2,19 +2,19 @@
 ## ++ Media Queries
 ========================================================================== */
 
-/* 
-    Used for media queries. 
+/*
+    Used for media queries.
     Add these mixins in your normal scss flow.
-    
+
     Eg.
     .container{
         width:1024px;
-        
+
         @include tablets{
             width:90%;
         }
     }
-*/ 
+*/
 
 @mixin lowresmonitors{
         @media screen and (max-width: 1350px){ @content;}
@@ -27,22 +27,21 @@
 @mixin phones{
         @media screen and (max-width: 720px){ @content; }
 }
-
 /* =======================================================================
 ## ++ Unit transform
 ========================================================================== */
 
-/*  
-    Used for making containers have width in percentages. 
-    Usage: define elemnt width in px and the width of parent elemnt in px. 
-    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}   
+/*
+    Used for making containers have width in percentages.
+    Usage: define elemnt width in px and the width of parent elemnt in px.
+    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}
 */
 
 @function cp($target, $container) {
     @return ($target / $container) * 100%;
 }
 
-/*  
+/*
     Used for making px values convert to rem values
     Usage: define font-size in px and it will convert to rems
     eg. font-size: rem(14px);

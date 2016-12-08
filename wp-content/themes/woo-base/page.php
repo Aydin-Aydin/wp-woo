@@ -27,13 +27,16 @@
     <?php endwhile; ?>
   </div><!-- end slider-wrapper woo-main-content -->
   <!-- <a class="scrollDown" href="#scroll2">Scroll</a> -->
+
+   <div class="front-widget brand-widget">
+    <?php dynamic_sidebar( 'top-brands' ); ?>
+  </div>
+
   <div class="front-widget rated-widget" id="scroll2">
     <?php dynamic_sidebar( 'top-rated' ); ?>
   </div>
 
-  <div class="front-widget brand-widget">
-    <?php dynamic_sidebar( 'top-brands' ); ?>
-  </div>
+
 
   <div class="latest-products">
     <?php dynamic_sidebar( 'latest-products' ); ?>

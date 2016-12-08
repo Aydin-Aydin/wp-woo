@@ -171,6 +171,7 @@ html, body {
   display: block;
   float: left;
   width: 19%;
+  height: 400px;
   margin-bottom: 1%;
 
   @include media($breakpoint-xlarge) {
@@ -462,6 +463,10 @@ html, body {
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+ .grid-item {
+    text-align: center;
+  }
 }
 
 ul .page-numbers {
@@ -474,4 +479,6 @@ ul .page-numbers {
     width: 1%;
   }
 }
+
+
 

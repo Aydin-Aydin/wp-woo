@@ -17,15 +17,27 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+  exit; // Exit if accessed directly
 }
 
 global $product;
 
-if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' )
-	return;
-?>
+if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' ) {
+  return;
+}
 
-<?php if ( $rating_html = $product->get_rating_html() ) : ?>
-	<?php echo $rating_html; ?>
+$rating_count = $product->get_rating_count();
+$review_count = $product->get_review_count();
+$average      = $product->get_average_rating();
+
+if ( $rating_count > 0 ) : ?>
+
+  <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
+      <div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
+        <div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
+      </div>
+    </div>
+  </div>
+
 <?php endif; ?>
