@@ -21,8 +21,9 @@
             </div>
           </div>
         </div>
-      </div>
 
+        <a id="takeMeDown" href="" title="Take Me Down"></a>
+      </div>
 
 
     <?php endwhile; ?>
