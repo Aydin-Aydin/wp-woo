@@ -69,6 +69,11 @@ h1 {
   font-size: 3rem;
 }
 
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../../fonts/Lato/Lato-Regular.ttf');
+}
+
 
 /* =======================================================================
 ## ++ Cleafix
@@ -170,7 +175,7 @@ html, body {
 
   display: block;
   float: left;
-  width: 19%;
+  height: 360px;
   margin-bottom: 1%;
 
   @include media($breakpoint-xlarge) {
@@ -198,7 +203,7 @@ html, body {
   background-position: center;
 }
 
-
+// CPT Slider
 .container {
 
   .slick-dotted.slick-slider {
@@ -386,8 +391,7 @@ html, body {
     color: #fff;
     font-size: 20px;
     text-transform: uppercase;
-    font-family: Arial;
-
+    font-weight: $lato-regular;
   }
 }
 
@@ -430,10 +434,7 @@ html, body {
   overflow:hidden;
 }
 
-.nav-open{
-  // left: 280px !important;
-  transition: all 0.3s ease-in-out;
-}
+
 
 
 .front-widget {
@@ -465,7 +466,7 @@ html, body {
   position: relative;
 }
 
-.page-title {
+.page-title, .woocommerce-result-count {
   display: none;
 }
 
@@ -479,9 +480,72 @@ html, body {
   overflow: hidden;
   position: relative;
   z-index: 1;
+
+ .grid-item {
+    text-align: center;
+    .text-wrapper {
+      .star-rating div, .star-rating .rating {
+        margin: 0 auto;
+      }
+    }
+  }
 }
 
-ul .page-numbers {
-  border: 1px solid;
-  border-radius: 4px;
+// Pagination shop page
+.woocommerce-pagination {
+  width: 100%;
+  ul.page-numbers {
+    width: 100% !important;
+    height: 70px;
+
+    li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px;
+
+      a {
+        color: $black;
+      }
+      span.current {
+        color: $inline-pagination-link;
+      }
+
+    }
+  }
 }
+
+#woocommerce_products-2 {
+  .gutter-sizer {
+    width: 1%;
+  }
+}
+
+// This is the grid for the products
+.grid-item {
+  display: block;
+  float: left;
+  margin-bottom: 1%;
+  margin: 2px;
+
+  .text-wrapper {
+    .star-rating div, .star-rating .rating {
+      margin: 0 auto;
+    }
+    a {
+      color: $black;
+
+    }
+  }
+}
+
+// .add_to_wishlist {
+//   font: bold 11px Arial;
+//   text-decoration: none;
+//   background-color: #EEEEEE;
+//   color: #333333;
+//   padding: 2px 6px 2px 6px;
+//   border-top: 1px solid #CCCCCC;
+//   border-right: 1px solid #333333;
+//   border-bottom: 1px solid #333333;
+//   border-left: 1px solid #CCCCCC;
+// }

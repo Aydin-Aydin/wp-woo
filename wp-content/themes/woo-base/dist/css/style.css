@@ -19,6 +19,18 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: 'lato-light';
+  src: url("../../fonts/Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url("../../fonts/Lato/Lato-Bold.ttf"); }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,6 +92,10 @@ a {
 
 h1 {
   font-size: 3rem; }
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
 
 /* =======================================================================
 ## ++ Cleafix
@@ -159,7 +175,7 @@ html, body {
 .grid-item {
   display: block;
   float: left;
-  width: 19%;
+  height: 360px;
   margin-bottom: 1%; }
   @media screen and (max-width: 1400px) {
     .grid-item {
@@ -309,7 +325,7 @@ html, body {
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
-  font-family: Arial; }
+  font-weight: 400; }
 
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
@@ -336,9 +352,6 @@ html, body {
   transition: all 0.3s ease-in-out;
   overflow: hidden; }
 
-.nav-open {
-  transition: all 0.3s ease-in-out; }
-
 .front-widget ul:hover .slick-next {
   right: 0; }
 
@@ -358,7 +371,7 @@ html, body {
   height: auto;
   position: relative; }
 
-.page-title {
+.page-title, .woocommerce-result-count {
   display: none; }
 
 .woof_sid_auto_shortcode.woof {
@@ -370,10 +383,37 @@ html, body {
   overflow: hidden;
   position: relative;
   z-index: 1; }
+  .woo-content .grid-item {
+    text-align: center; }
+    .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
+      margin: 0 auto; }
 
-ul .page-numbers {
-  border: 1px solid;
-  border-radius: 4px; }
+.woocommerce-pagination {
+  width: 100%; }
+  .woocommerce-pagination ul.page-numbers {
+    width: 100% !important;
+    height: 70px; }
+    .woocommerce-pagination ul.page-numbers li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px; }
+      .woocommerce-pagination ul.page-numbers li a {
+        color: #000; }
+      .woocommerce-pagination ul.page-numbers li span.current {
+        color: #a14515; }
+
+#woocommerce_products-2 .gutter-sizer {
+  width: 1%; }
+
+.grid-item {
+  display: block;
+  float: left;
+  margin-bottom: 1%;
+  margin: 2px; }
+  .grid-item .text-wrapper .star-rating div, .grid-item .text-wrapper .star-rating .rating {
+    margin: 0 auto; }
+  .grid-item .text-wrapper a {
+    color: #000; }
 
 #left-sidebar {
   display: block;
