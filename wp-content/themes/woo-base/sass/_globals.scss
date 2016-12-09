@@ -297,6 +297,20 @@ html, body {
             }
           }
         }
+
+        #takeMeDown{
+          display: block;
+          width: 45px;
+          height: 45px;
+          background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          bottom: 70px;
+          margin: auto;
+        }
+
+
       }
     }
   }
