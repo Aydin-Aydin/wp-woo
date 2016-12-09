@@ -175,8 +175,7 @@ html, body {
 
   display: block;
   float: left;
-  width: 19%;
-  height: 400px;
+  height: 360px;
   margin-bottom: 1%;
 
   @include media($breakpoint-xlarge) {
@@ -204,7 +203,7 @@ html, body {
   background-position: center;
 }
 
-
+// CPT Slider
 .container {
 
   .slick-dotted.slick-slider {
@@ -453,7 +452,7 @@ html, body {
   position: relative;
 }
 
-.page-title {
+.page-title, .woocommerce-result-count {
   display: none;
 }
 
@@ -478,9 +477,27 @@ html, body {
   }
 }
 
-ul .page-numbers {
-  border: 1px solid;
-  border-radius: 4px;
+// Pagination shop page
+.woocommerce-pagination {
+  width: 100%;
+  ul.page-numbers {
+    width: 100% !important;
+    height: 70px;
+
+    li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px;
+
+      a {
+        color: $black;
+      }
+      span.current {
+        color: $inline-pagination-link;
+      }
+
+    }
+  }
 }
 
 #woocommerce_products-2 {
@@ -493,9 +510,18 @@ ul .page-numbers {
 .grid-item {
   display: block;
   float: left;
-  width: 19%;
   margin-bottom: 1%;
   margin: 2px;
+
+  .text-wrapper {
+    .star-rating div, .star-rating .rating {
+      margin: 0 auto;
+    }
+    a {
+      color: $black;
+
+    }
+  }
 }
 
 // .add_to_wishlist {

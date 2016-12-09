@@ -96,6 +96,9 @@ add_filter('woocommerce_loop_add_to_cart_link', 'woo_hide_add_to_card_link');
     return false;
  }
 
+// Display 12 products per page. (Pagination)
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
+
 // Wrap product details that located in shop page in a div
  add_action('woocommerce_before_shop_loop_item_title', 'product_teaser_text_wrapper_start', 10);
  add_action('woocommerce_after_shop_loop_item','product_teaser_text_wrapper_end', 10);
