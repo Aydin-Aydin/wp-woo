@@ -133,12 +133,16 @@ function woocommerce_template_product_reviews() {
 woocommerce_get_template( 'single-product-reviews.php' );
 }
 
-// Move single product related 
-add_action( 'woocommerce_before_main_content', 'wpa_115808' );
-function wpa_115808(){
+// Remove single product related 
+add_action( 'woocommerce_before_main_content', 'remove_single_product_related' );
+function remove_single_product_related(){
    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
    //add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
+  // Move you may like section to under product image
+   add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display' );
 }
+
 // End woocommerce hooks
 
 // Start Advanced custom fields
