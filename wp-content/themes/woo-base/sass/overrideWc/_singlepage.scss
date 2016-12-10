@@ -12,7 +12,6 @@
   }
 
   .main-contnet-wrapper {
-    border: 1px solid red;
     display: block;
     float: left;
   }
@@ -24,24 +23,40 @@
   }
 
   #reviews {
-    @include span-columns(12);
-    border: 1px solid red;
+    @include span-columns(6);
+    width: 50% !important;
+    margin-right: 0;
     overflow: auto;
+
+    h2 {
+      background-color: $side-menu-color;
+      text-align: center;
+      padding: 1rem;
+      color: $white;
+      text-transform: uppercase;
+    }
   }
 
   .up-sells {
-    @include span-columns(12);
-    float: left;
-    margin-right: 0;
+    @include span-columns(6);
+    width: 50% !important;
 
-    .grid-item-2-columns {
-      &:nth-child(odd) {
-        border-right: 1px solid $light-gray;
-      }
-      &:nth-child(even) {
-        border-left: 1px solid $light-gray;
-      }      
+    h2 {
+      background-color: $side-menu-color;
+      text-align: center;
+      padding: 1rem;
+      color: $white;
+      text-transform: uppercase;
     }
+
+    // .grid-item-2-columns {
+    //   &:nth-child(odd) {
+    //     border-right: 1px solid $light-gray;
+    //   }
+    //   &:nth-child(even) {
+    //     border-left: 1px solid $light-gray;
+    //   }      
+    // }
 
     @include media($breakpoint-medium) {
       display: none;

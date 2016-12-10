@@ -56,10 +56,10 @@ $('.value .reset_variations').css({
 });
 
   // You may also like section
-  $('.summary-tabs-wrapper .products .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+  $('.up-sells .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
 
 
-  $('.summary-tabs-wrapper .products .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
+  $('.up-sells .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
   //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
 
   });

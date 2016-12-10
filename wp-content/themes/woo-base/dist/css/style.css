@@ -928,7 +928,6 @@ label.right {
       width: 100%; } }
 
 .single-product .main-contnet-wrapper {
-  border: 1px solid red;
   display: block;
   float: left; }
 
@@ -946,25 +945,33 @@ label.right {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  border: 1px solid red;
+  width: 48.82117%;
+  width: 50% !important;
+  margin-right: 0;
   overflow: auto; }
   .single-product #reviews:last-child {
     margin-right: 0; }
+  .single-product #reviews h2 {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase; }
 
 .single-product .up-sells {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  float: left;
-  margin-right: 0; }
+  width: 48.82117%;
+  width: 50% !important; }
   .single-product .up-sells:last-child {
     margin-right: 0; }
-  .single-product .up-sells .grid-item-2-columns:nth-child(odd) {
-    border-right: 1px solid #bbb; }
-  .single-product .up-sells .grid-item-2-columns:nth-child(even) {
-    border-left: 1px solid #bbb; }
+  .single-product .up-sells h2 {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase; }
   @media screen and (max-width: 880px) {
     .single-product .up-sells {
       display: none; } }

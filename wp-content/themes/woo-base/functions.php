@@ -130,7 +130,7 @@ function woo_remove_product_tabs( $tabs ) {
 // Move single product reviews to under images.
 add_action( 'woocommerce_after_single_product', 'comments_template', 10 );
 function woocommerce_template_product_reviews() {
-woocommerce_get_template( 'single-product-reviews.php' );
+  woocommerce_get_template( 'single-product-reviews.php' );
 }
 
 // Remove single product related 
