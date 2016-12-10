@@ -1064,6 +1064,10 @@ label.right {
       font-size: 110%;
       font-weight: 900; }
 
+.gallery-thumb {
+  display: block;
+  float: left; }
+
 .main-container .slider-wrapper.woo-content {
   padding-left: 0; }
   .main-container .slider-wrapper.woo-content .slider-content {

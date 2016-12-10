@@ -137,7 +137,7 @@ woocommerce_get_template( 'single-product-reviews.php' );
 add_action( 'woocommerce_before_main_content', 'wpa_115808' );
 function wpa_115808(){
    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-   add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
+   //add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
 }
 // End woocommerce hooks
 
