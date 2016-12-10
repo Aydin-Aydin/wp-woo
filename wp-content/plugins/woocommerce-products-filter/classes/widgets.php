@@ -161,7 +161,7 @@ class WOOF_Widget extends WP_Widget {
                     <option <?php selected($instance['ajax_redraw'], $k) ?> value="<?php echo $k ?>" class="level-0"><?php echo $val ?></option>
                 <?php endforeach; ?>
             </select>
-            <i><?php _e('Useful when uses hierarchical drop-down for example', 'woocommerce-products-filter') ?></i>
+            <i><?php _e('Redraws search form by AJAX, and to start filtering "Filter" button should be pressed. Useful when uses hierarchical drop-down for example', 'woocommerce-products-filter') ?></i>
         </p>
         <?php
     }

@@ -2,8 +2,8 @@
 if (!defined('ABSPATH'))
     die('No direct access allowed');
 
-final class WOOF_EXT_BY_ONSALES extends WOOF_EXT
-{
+//29-11-2016
+final class WOOF_EXT_BY_ONSALES extends WOOF_EXT {
 
     public $type = 'by_html_type';
     public $html_type = 'by_onsales'; //your custom key here
@@ -61,14 +61,14 @@ final class WOOF_EXT_BY_ONSALES extends WOOF_EXT
     public function woof_print_html_type_options()
     {
         global $WOOF;
-        echo $WOOF->render_html($this->get_ext_path() . 'views'.DIRECTORY_SEPARATOR.'options.php', array(
+        echo $WOOF->render_html($this->get_ext_path() . 'views' . DIRECTORY_SEPARATOR . 'options.php', array(
             'key' => $this->html_type,
             "woof_settings" => get_option('woof_settings', array())
                 )
         );
     }
 
-    public function assemble_query_params(&$meta_query)
+    public function assemble_query_params(&$meta_query, &$query = NULL)
     {
         global $WOOF;
         $request = $WOOF->get_request_data();
@@ -93,10 +93,29 @@ final class WOOF_EXT_BY_ONSALES extends WOOF_EXT
                     )
                 )
             );
+
+            //***
+
+            if (is_object($query))
+            {
+                $query->set('post__in', array_merge(array(0), wc_get_product_ids_on_sale()));
+            }
+
+            if (is_array($query))
+            {
+                $query['post__in'] = array_merge(array(0), wc_get_product_ids_on_sale());
+            }
+
+            add_filter('woof_products_query', array($this, 'woof_products_query'), 9999);
         }
 
-
         return $meta_query;
+    }
+
+    public function woof_products_query($args)
+    {
+        $args['post__in'] = array_merge(array(0), wc_get_product_ids_on_sale());
+        return $args;
     }
 
 }

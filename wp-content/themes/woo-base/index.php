@@ -6,7 +6,6 @@
     </p>
 <?php require( dirname( __FILE__ ) . '/wp-blog-header.php' ); ?>
 <?php get_sidebar('SidebarOne'); ?>
-
 <?php get_footer(); ?>
 =======
 >>>>>>> develop

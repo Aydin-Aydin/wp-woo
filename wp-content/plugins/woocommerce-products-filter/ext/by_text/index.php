@@ -1,8 +1,9 @@
 <?php
 if (!defined('ABSPATH'))
     die('No direct access allowed');
+
 //WOOF_EXT_BY_TEXT_ADV - next version
-//27-10-2016
+//30-11-2016
 final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
 
     public $type = 'by_html_type';
@@ -104,8 +105,8 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
         <?php if (isset($WOOF->settings['by_text']['post_links_in_autocomplete'])): ?>
                 woof_post_links_in_autocomplete =<?php echo (int) $WOOF->settings['by_text']['post_links_in_autocomplete']; ?>;
         <?php endif; ?>
-            
-             var how_to_open_links = 0;
+
+            var how_to_open_links = 0;
         <?php if (isset($WOOF->settings['by_text']['how_to_open_links'])): ?>
                 how_to_open_links =<?php echo (int) $WOOF->settings['by_text']['how_to_open_links']; ?>;
         <?php endif; ?>
@@ -118,7 +119,7 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
     public function woof_text_filter($args = array())
     {
         global $WOOF;
-        $args['loader_img']=$this->get_ext_link().'img/loader.gif';
+        $args['loader_img'] = $this->get_ext_link() . 'img/loader.gif';
         return $WOOF->render_html($this->get_ext_path() . 'views' . DIRECTORY_SEPARATOR . 'shortcodes' . DIRECTORY_SEPARATOR . 'woof_text_filter.php', $args);
     }
 
@@ -133,7 +134,7 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
         );
     }
 
-    public function assemble_query_params(&$meta_query)
+    public function assemble_query_params(&$meta_query, &$query = NULL)
     {
         add_filter('posts_where', array($this, 'woof_post_text_filter'), 9999); //for searching by text
         return $meta_query;
@@ -141,9 +142,21 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
 
     public function woof_post_text_filter($where = '')
     {
+        
         global $wp_query;
         global $WOOF;
         $request = $WOOF->get_request_data();
+        
+        //***
+        
+        if (isset($request['s']))
+        {
+            //uncomment it for cyrillic text search
+            //return $where;
+        }
+
+        //***        
+        
         if (defined('DOING_AJAX'))
         {
             $conditions = (isset($wp_query->query_vars['post_type']) AND $wp_query->query_vars['post_type'] == 'product') OR isset($_REQUEST['woof_products_doing']);
@@ -160,6 +173,8 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
                 $woof_text = trim(WOOF_HELPER::strtolower($woof_text));
                 $woof_text = preg_replace('/\s+/', ' ', $woof_text);
                 $woof_text = str_replace(' ', '?(.*)', $woof_text);
+                //http://dev.mysql.com/doc/refman/5.7/en/regexp.html
+                $woof_text = '[[:<:]]' . $woof_text . '[[:>:]]';
 
                 //***
 
@@ -178,32 +193,32 @@ final class WOOF_EXT_BY_TEXT extends WOOF_EXT {
                 switch ($behavior)
                 {
                     case 'content':
-                        $where.= "AND post_content REGEXP '{$woof_text}'";
+                        $where.= " AND post_content REGEXP '{$woof_text}'";
                         break;
 
                     case 'title_or_content':
-                        $where.= "AND (post_title REGEXP '{$woof_text}' OR post_content REGEXP '{$woof_text}')";
+                        $where.= " AND (post_title REGEXP '{$woof_text}' OR post_content REGEXP '{$woof_text}')";
                         break;
 
                     case 'title_and_content':
-                        $where.= "AND (post_title REGEXP '{$woof_text}' AND post_content REGEXP '{$woof_text}')";
+                        $where.= " AND (post_title REGEXP '{$woof_text}' AND post_content REGEXP '{$woof_text}')";
                         break;
 
                     case 'excerpt':
-                        $where.= "AND post_excerpt REGEXP '{$woof_text}'";
+                        $where.= " AND post_excerpt REGEXP '{$woof_text}'";
                         break;
 
                     case 'content_or_excerpt':
-                        $where.= "AND (post_excerpt REGEXP '{$woof_text}' OR post_content REGEXP '{$woof_text}')";
+                        $where.= " AND (post_excerpt REGEXP '{$woof_text}' OR post_content REGEXP '{$woof_text}')";
                         break;
 
                     case 'title_or_content_or_excerpt':
-                        $where.= "AND ((post_title REGEXP '{$woof_text}') OR (post_excerpt REGEXP '{$woof_text}') OR (post_content REGEXP '{$woof_text}'))";
+                        $where.= " AND ((post_title REGEXP '{$woof_text}') OR (post_excerpt REGEXP '{$woof_text}') OR (post_content REGEXP '{$woof_text}'))";
                         break;
 
                     default:
                         //only by title
-                        $where.= "AND post_title REGEXP '{$woof_text}'";
+                        $where.= " AND post_title REGEXP '{$woof_text}'";
                         break;
                 }
             }

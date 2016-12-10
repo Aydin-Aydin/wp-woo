@@ -559,11 +559,14 @@ final class WOOF_HELPER {
             );
         }
 
-        foreach ($meta_query as $key => $query)
+        if (!empty($meta_query) AND is_array($meta_query))
         {
-            if (!empty($query['price_filter']) || !empty($query['rating_filter']))
+            foreach ($meta_query as $key => $query)
             {
-                unset($meta_query[$key]);
+                if (!empty($query['price_filter']) || !empty($query['rating_filter']))
+                {
+                    unset($meta_query[$key]);
+                }
             }
         }
 

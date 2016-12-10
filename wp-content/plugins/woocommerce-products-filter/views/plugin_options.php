@@ -1946,7 +1946,7 @@
 
                 <div class="woof-name-description">
                     <strong><?php _e('Taxonomy custom label', 'woocommerce-products-filter') ?></strong>
-                    <span><?php _e('For example you want to show title of Product Categories as "My Products". Just for your conveniencing.', 'woocommerce-products-filter') ?></span>
+                    <span><?php _e('For example you want to show title of Product Categories as "My Products". Just for your convenience.', 'woocommerce-products-filter') ?></span>
                 </div>
 
                 <div class="woof-form-element">

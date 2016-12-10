@@ -83,7 +83,7 @@ final class WOOF_EXT_BY_AUTHOR extends WOOF_EXT
         );
     }
 
-    public function assemble_query_params(&$meta_query)
+    public function assemble_query_params(&$meta_query, &$query = NULL)
     {
         add_filter('posts_where', array($this, 'woof_post_author_filter'), 9999); //for searching by author
         return $meta_query;

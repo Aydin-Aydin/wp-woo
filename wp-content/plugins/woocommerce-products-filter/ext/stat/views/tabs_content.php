@@ -703,6 +703,7 @@ if (!defined('ABSPATH'))
 
 </style>
 
+
 <script type="text/javascript">
     jQuery(function ($) {
         //reset cache of "Statistical parameters" drop-down
@@ -710,7 +711,11 @@ if (!defined('ABSPATH'))
 
         //+++
         //*** Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages': ['corechart', 'bar']});
+        try {
+            google.charts.load('current', {'packages': ['corechart', 'bar']});
+        } catch (e) {
+            console.log('<?php _e('Google charts library not loaded! If site is on localhost just disable statistic extension in tab Extensions!', 'woocommerce-products-filter') ?>');
+        }
         //+++
         jQuery('.woof_cron_system').change(function () {
             var state = parseInt(jQuery(this).val(), 10);
@@ -729,85 +734,91 @@ if (!defined('ABSPATH'))
 
     function woof_stat_draw_graphs() {
         woof_stat_process_monitor('<?php _e('drawing graphs ...', 'woocommerce-products-filter') ?>');
-        if (woof_stat_data.length) {
-            var graph1 = {};
-            //***
-            var counter = 1;
-            if (Object.keys(woof_stat_get_request_snippets()).length === 0) {
-                var data1 = woof_stat_data[0];
-                counter = 1;
-                for (tn in data1) {
-                    if (counter > parseInt(woof_stat_vars.max_items_per_graph, 10)) {
-                        break;
-                    }
-                    graph1[tn] = data1[tn];
-                    counter++;
-                }
 
-                //+++
-                var data2 = woof_stat_data[1];
-                counter = 1;
-                var graph_count = 0;
-                for (i in data2) {
-
-                    var graph = {};
-                    var html = "";
-                    var id = 'chart_div_1_set_' + graph_count;
-                    html = '<div class="woof_stat_one_graph"><span class="woof_stat_graph_title">' + data2[i]['tax_name'] + '</span>';
-                    html += "<div id='" + id + "' style='width: 100%; height: 500px;'></div></div>";
-                    jQuery('#chart_div_1_set').append(html);
+        try {
+            if (woof_stat_data.length) {
+                var graph1 = {};
+                //***
+                var counter = 1;
+                if (Object.keys(woof_stat_get_request_snippets()).length === 0) {
+                    var data1 = woof_stat_data[0];
                     counter = 1;
-
-                    for (term_name in data2[i]['terms']) {
+                    for (tn in data1) {
                         if (counter > parseInt(woof_stat_vars.max_items_per_graph, 10)) {
                             break;
                         }
-                        //+++
-                        graph[term_name] = parseInt(data2[i]['terms'][term_name], 10);
+                        graph1[tn] = data1[tn];
                         counter++;
                     }
-                    //console.log(id);
-                    //console.log(graph);
-                    drawChart1(graph, id);
-                    graph_count++;
-                }
 
-            } else {
-                var counter = 1;
-                jQuery(woof_stat_data).each(function (i, request_block) {
-                    //counter = 0;
-                    jQuery(request_block).each(function (ii, item) {
-                        if (counter > parseInt(woof_stat_vars.max_items_per_graph, 10)) {
-                            return;
-                        }
-                        //+++
-                        if (graph1[item.vname] !== undefined) {
-                            graph1[item.vname] = graph1[item.vname] + parseInt(item.val, 10);
-                        } else {
-                            graph1[item.vname] = parseInt(item.val, 10);
-                        }
+                    //+++
+                    var data2 = woof_stat_data[1];
+                    counter = 1;
+                    var graph_count = 0;
+                    for (i in data2) {
 
-                        counter++;
+                        var graph = {};
+                        var html = "";
+                        var id = 'chart_div_1_set_' + graph_count;
+                        html = '<div class="woof_stat_one_graph"><span class="woof_stat_graph_title">' + data2[i]['tax_name'] + '</span>';
+                        html += "<div id='" + id + "' style='width: 100%; height: 500px;'></div></div>";
+                        jQuery('#chart_div_1_set').append(html);
+                        counter = 1;
+
+                        for (term_name in data2[i]['terms']) {
+                            if (counter > parseInt(woof_stat_vars.max_items_per_graph, 10)) {
+                                break;
+                            }
+                            //+++
+                            graph[term_name] = parseInt(data2[i]['terms'][term_name], 10);
+                            counter++;
+                        }
+                        //console.log(id);
+                        //console.log(graph);
+                        drawChart1(graph, id);
+                        graph_count++;
+                    }
+
+                } else {
+                    var counter = 1;
+                    jQuery(woof_stat_data).each(function (i, request_block) {
+                        //counter = 0;
+                        jQuery(request_block).each(function (ii, item) {
+                            if (counter > parseInt(woof_stat_vars.max_items_per_graph, 10)) {
+                                return;
+                            }
+                            //+++
+                            if (graph1[item.vname] !== undefined) {
+                                graph1[item.vname] = graph1[item.vname] + parseInt(item.val, 10);
+                            } else {
+                                graph1[item.vname] = parseInt(item.val, 10);
+                            }
+
+                            counter++;
+                        });
                     });
-                });
-            }
-            drawChart1(graph1, 'chart_div_1');
-            //***
+                }
+                drawChart1(graph1, 'chart_div_1');
+                //***
 
-            /*
-             var graph2 = [['Name', 'Value', {role: 'style'}]];
-             //console.log(woof_stat_data);
-             jQuery(woof_stat_data).each(function (i, request_block) {
-             jQuery(request_block).each(function (ii, item) {
-             graph2[graph2.length] = [item.vname, item.val, 'opacity: 0.2'];
-             });
-             });
-             drawChart2(graph2);
-             */
+                /*
+                 var graph2 = [['Name', 'Value', {role: 'style'}]];
+                 //console.log(woof_stat_data);
+                 jQuery(woof_stat_data).each(function (i, request_block) {
+                 jQuery(request_block).each(function (ii, item) {
+                 graph2[graph2.length] = [item.vname, item.val, 'opacity: 0.2'];
+                 });
+                 });
+                 drawChart2(graph2);
+                 */
+            }
+
+            woof_stat_process_monitor('<?php _e('finished!', 'woocommerce-products-filter') ?>');
+            jQuery('#woof_stat_print_btn').show(200);
+        } catch (e) {
+            console.log('<?php _e('Looks like troubles with JavaScript!', 'woocommerce-products-filter') ?>');
         }
 
-        woof_stat_process_monitor('<?php _e('finished!', 'woocommerce-products-filter') ?>');
-        jQuery('#woof_stat_print_btn').show(200);
         return false;
     }
 
@@ -873,4 +884,5 @@ if (!defined('ABSPATH'))
 
     }
 </script>
+
 

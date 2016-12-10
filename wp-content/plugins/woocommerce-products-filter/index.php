@@ -4,10 +4,10 @@
   Plugin URI: http://woocommerce-filter.com/
   Description: WOOF - WooCommerce Products Filter. Flexible, easy and robust products filter for WooCommerce store site!
   Requires at least: WP 4.1.0
-  Tested up to: WP 4.6.1
+  Tested up to: WP 4.7
   Author: realmag777
   Author URI: https://pluginus.net/
-  Version: 1.1.6
+  Version: 1.1.6.1
   Tags: filter,search,woocommerce,woocommerce filter,woocommerce product filter,woocommerce products filter,products filter,product filter,filter of products,filter for products,filter for woocommerce
   Text Domain: woocommerce-products-filter
   Domain Path: /languages
@@ -25,7 +25,7 @@ if (!defined('ABSPATH'))
   ini_set('upload_max_filesize', '100M');
   ini_set('max_input_vars', 10000);
  */
-
+//for testing on clients sites
 if ($_SERVER['REMOTE_ADDR'] != '2.xxx.83.xxx')
 {
     //return;
@@ -49,7 +49,7 @@ define('WOOF_PATH', plugin_dir_path(__FILE__));
 define('WOOF_LINK', plugin_dir_url(__FILE__));
 define('WOOF_PLUGIN_NAME', plugin_basename(__FILE__));
 define('WOOF_EXT_PATH', WOOF_PATH . 'ext/');
-define('WOOF_VERSION', '1.1.6');
+define('WOOF_VERSION', '1.1.6.1');
 define('WOOF_MIN_WOOCOMMERCE_VERSION', '2.4');
 //classes
 include WOOF_PATH . 'classes/storage.php';
@@ -62,7 +62,7 @@ include WOOF_PATH . 'classes/counter.php';
 include WOOF_PATH . 'classes/widgets.php';
 
 //***
-//04-11-2016
+//05-12-2016
 final class WOOF {
 
     public $settings = array();
@@ -83,13 +83,6 @@ final class WOOF {
 
     public function __construct()
     {
-        if (isset($_GET['woof_get_php_info']))
-        {
-            //for support purposes
-            phpinfo();
-            exit;
-        }
-
         global $wpdb;
         self::$query_cache_table = $wpdb->prefix . self::$query_cache_table;
 
@@ -503,7 +496,7 @@ final class WOOF {
 
     public function get_swoof_search_slug()
     {
-        $slug = 'swoof';        
+        $slug = 'swoof';
 
         return $slug;
     }
@@ -521,7 +514,7 @@ final class WOOF {
             {
                 if (method_exists($obj, 'assemble_query_params'))
                 {
-                    $q->set('meta_query', $obj->assemble_query_params($meta_query));
+                    $q->set('meta_query', $obj->assemble_query_params($meta_query, $q));
                 }
             }
         }
@@ -643,7 +636,7 @@ final class WOOF {
                                     return $wp_query;
                                 }
                             }
-                            $obj->assemble_query_params($meta_query);
+                            $obj->assemble_query_params($meta_query, $wp_query);
                         }
                     }
                 }
@@ -819,7 +812,7 @@ final class WOOF {
                     //$_SESSION['woof_really_current_term'] = $queried_obj;
                     $this->set_really_current_term($queried_obj);
                     ?>
-                        woof_really_curr_tax = {term_id:<?php echo $queried_obj->term_id ?>, taxonomy: "<?php echo $queried_obj->taxonomy ?>"};
+                        woof_really_curr_tax = {term_id:<?php echo intval($queried_obj->term_id) ?>, taxonomy: "<?php echo $queried_obj->taxonomy ?>"};
                     <?php
                 }
             }
@@ -1098,11 +1091,11 @@ final class WOOF {
 
 
 
-                                                                                                                        
+
         <?php if (!current_user_can('create_users')): ?>
                 .woof_edit_view{
                     display: none;
-                }                      
+                }
         <?php endif; ?>
 
         </style>
@@ -1207,7 +1200,7 @@ final class WOOF {
                 'class' => 'chosen_select',
                 'css' => 'min-width:300px;',
                 'options' => array(
-		    0 => __('No - premium only', 'woocommerce-products-filter')
+                    0 => __('No - premium only', 'woocommerce-products-filter')
                 ),
                 'desc_tip' => true
             ),
@@ -1535,7 +1528,7 @@ final class WOOF {
             {
                 if (method_exists($obj, 'assemble_query_params'))
                 {
-                    $obj->assemble_query_params($args['meta_query']);
+                    $obj->assemble_query_params($args['meta_query'], $args);
                 }
             }
         }
@@ -2075,7 +2068,7 @@ final class WOOF {
         if ($get_args_only)
         {
             $_REQUEST['woof_query_args'] = $wr;
-            return;
+            return $wr;
         }
 
         if (!$is_prediction)
