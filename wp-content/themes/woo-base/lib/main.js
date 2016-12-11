@@ -20,22 +20,13 @@ import containerMargin from './custom/container-margin';
       speed: 500
     });
 
-<<<<<<< HEAD
     // Front page category slider
     $('.product_list_widget').slick({
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 3
     });
-=======
-// Front page category slider
-$('.product_list_widget').slick({
-  infinite: true,
-  slidesToShow: 6,
-  slidesToScroll: 3
-});
-  
->>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
+
 
     // You may also like section
     $('.summary-tabs-wrapper .grid-sizer').css({
@@ -59,7 +50,6 @@ $('.product_list_widget').slick({
 
     $(".rating").rate("getValue");
 
-<<<<<<< HEAD
     options = {
       byRow: true,
       property: 'height',
@@ -77,34 +67,28 @@ $('.product_list_widget').slick({
     });
 
     // equal-height
-
-<<<<<<< HEAD
     // $("*").each(function() {
     //     if ($(this).width() > $(window).width()) {
     //         $(this).width() = 100;
     //     }
     // });
-=======
-=======
 
-//comment-form-rating
+    //comment-form-rating
 
->>>>>>> eb27490ba921d6e97714e210fcd4780408173b1d
-$('.equal-height').matchHeight(options);
-$('.variations select').niceSelect();
+    $('.equal-height').matchHeight(options);
+    $('.variations select').niceSelect();
 
-$('.value .reset_variations').css({
-  position: 'absolute',
-  zIndex: '-10'
-});
+    $('.value .reset_variations').css({
+      position: 'absolute',
+      zIndex: '-10'
+    });
 
-  // You may also like section
-  $('.up-sells .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+    // You may also like section
+    $('.up-sells .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
 
 
-  $('.up-sells .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
-  //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
->>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
+    $('.up-sells .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
+    //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
 
   });
 })();
