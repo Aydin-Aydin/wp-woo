@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
+import toggleReviewForm from './custom/toggle-review-form';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
 
@@ -9,6 +10,7 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+    toggleReviewForm.init();
 
     $('.grid-item.product').matchHeight();
 
@@ -76,12 +78,18 @@ $('.product_list_widget').slick({
 
     // equal-height
 
+<<<<<<< HEAD
     // $("*").each(function() {
     //     if ($(this).width() > $(window).width()) {
     //         $(this).width() = 100;
     //     }
     // });
 =======
+=======
+
+//comment-form-rating
+
+>>>>>>> eb27490ba921d6e97714e210fcd4780408173b1d
 $('.equal-height').matchHeight(options);
 $('.variations select').niceSelect();
 
@@ -91,10 +99,10 @@ $('.value .reset_variations').css({
 });
 
   // You may also like section
-  $('.summary-tabs-wrapper .products .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+  $('.up-sells .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
 
 
-  $('.summary-tabs-wrapper .products .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
+  $('.up-sells .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
   //$('.summary-tabs-wrapper .products .grid-item').css({ left: $('.summary-tabs-wrapper .products .grid-item').width()});
 >>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
 

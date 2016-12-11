@@ -948,7 +948,6 @@ label.right {
 >>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
 
 .single-product .main-contnet-wrapper {
-  border: 1px solid red;
   display: block;
   float: left; }
 
@@ -966,21 +965,36 @@ label.right {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  border: 1px solid red;
+  width: 48.82117%;
+  width: 50%;
+  margin-right: 0;
   overflow: auto; }
   .single-product #reviews:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 880px) {
+    .single-product #reviews {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .single-product #reviews:last-child {
+        margin-right: 0; } }
+  .single-product #reviews h2 {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase; }
 
 .single-product .up-sells {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  float: left;
-  margin-right: 0; }
+  width: 48.82117%;
+  width: 50%; }
   .single-product .up-sells:last-child {
     margin-right: 0; }
+<<<<<<< HEAD
 <<<<<<< HEAD
   .single-product .up-sells .grid {
     padding: 0 !important; }
@@ -990,6 +1004,22 @@ label.right {
   .single-product .up-sells .grid-item-2-columns:nth-child(even) {
     border-left: 1px solid #bbb; }
 >>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
+=======
+  @media screen and (max-width: 880px) {
+    .single-product .up-sells {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .single-product .up-sells:last-child {
+        margin-right: 0; } }
+  .single-product .up-sells h2 {
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase; }
+>>>>>>> eb27490ba921d6e97714e210fcd4780408173b1d
 
 .woocommerce-pagination .page-numbers {
   display: inline-block;
@@ -1106,6 +1136,56 @@ label.right {
   background-color: #bbb; }
 =======
 >>>>>>> 5f983673c4d74b50f743fbedbfb99366500ba0c1
+
+.gallery-thumb {
+  display: block;
+  float: left; }
+
+.commentlist {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: block;
+  float: left;
+  overflow: auto; }
+  .commentlist:last-child {
+    margin-right: 0; }
+  .commentlist .comment {
+    position: relative;
+    border-bottom: 1px solid #bbb;
+    overflow: auto;
+    padding: 1rem; }
+    .commentlist .comment .comment-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      display: block;
+      float: left; }
+      .commentlist .comment .comment-content:last-child {
+        margin-right: 0; }
+      .commentlist .comment .comment-content.thumb {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%; }
+        .commentlist .comment .comment-content.thumb:last-child {
+          margin-right: 0; }
+        .commentlist .comment .comment-content.thumb img {
+          width: 100%;
+          height: auto; }
+
+#respond {
+  padding-left: 1rem; }
+  #respond #reply-title {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fa5400; }
+  #respond .comment-form {
+    display: none; }
+    #respond .comment-form.show-content-form {
+      display: block; }
 
 .main-container .slider-wrapper.woo-content {
   padding-left: 0; }
