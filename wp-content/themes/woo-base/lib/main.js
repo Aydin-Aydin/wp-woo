@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
+import toggleReviewForm from './custom/toggle-review-form';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
 
@@ -9,6 +10,7 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+    toggleReviewForm.init();
 
 		$('.grid-item.product').matchHeight();
 
@@ -46,6 +48,9 @@ options = {
   target: null,
   remove: false  
 };
+
+
+//comment-form-rating
 
 $('.equal-height').matchHeight(options);
 $('.variations select').niceSelect();

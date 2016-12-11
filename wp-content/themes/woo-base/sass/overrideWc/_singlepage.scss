@@ -210,3 +210,19 @@
     }
   }
 }
+
+#respond {
+  padding-left: 1rem;
+  #reply-title {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $orange;
+  }
+  .comment-form {
+    display: none;
+
+    &.show-content-form {
+      display: block;
+    }
+  }
+}

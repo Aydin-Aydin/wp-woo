@@ -1123,6 +1123,17 @@ label.right {
           width: 100%;
           height: auto; }
 
+#respond {
+  padding-left: 1rem; }
+  #respond #reply-title {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fa5400; }
+  #respond .comment-form {
+    display: none; }
+    #respond .comment-form.show-content-form {
+      display: block; }
+
 .main-container .slider-wrapper.woo-content {
   padding-left: 0; }
   .main-container .slider-wrapper.woo-content .slider-content {
