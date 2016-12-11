@@ -24,9 +24,13 @@
 
   #reviews {
     @include span-columns(6);
-    width: 50% !important;
+    width: 50%;
     margin-right: 0;
     overflow: auto;
+
+    @include media($breakpoint-medium) {
+      @include span-columns(12);
+    }
 
     h2 {
       background-color: $side-menu-color;
@@ -39,7 +43,11 @@
 
   .up-sells {
     @include span-columns(6);
-    width: 50% !important;
+    width: 50%;
+
+    @include media($breakpoint-medium) {
+      @include span-columns(12);
+    }
 
     h2 {
       background-color: $side-menu-color;
@@ -58,9 +66,9 @@
     //   }      
     // }
 
-    @include media($breakpoint-medium) {
-      display: none;
-    }
+    // @include media($breakpoint-medium) {
+    //   display: none;
+    // }
   }
 }
 
@@ -172,4 +180,33 @@
 .gallery-thumb {
   display: block;
   float: left;
+}
+
+.commentlist {
+  @include span-columns(12);
+  display: block;
+  float: left;
+  overflow: auto;
+
+  .comment {
+    position: relative;
+    border-bottom: 1px solid $light-gray;
+    overflow: auto;
+    padding: 1rem;
+
+    .comment-content {
+      @include span-columns(10);
+      display: block;
+      float: left;
+
+      &.thumb {
+        @include span-columns(2);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 }

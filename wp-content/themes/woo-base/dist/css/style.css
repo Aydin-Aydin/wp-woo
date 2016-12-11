@@ -946,11 +946,19 @@ label.right {
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  width: 50% !important;
+  width: 50%;
   margin-right: 0;
   overflow: auto; }
   .single-product #reviews:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 880px) {
+    .single-product #reviews {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .single-product #reviews:last-child {
+        margin-right: 0; } }
   .single-product #reviews h2 {
     background-color: #000;
     text-align: center;
@@ -963,18 +971,23 @@ label.right {
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%;
-  width: 50% !important; }
+  width: 50%; }
   .single-product .up-sells:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 880px) {
+    .single-product .up-sells {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .single-product .up-sells:last-child {
+        margin-right: 0; } }
   .single-product .up-sells h2 {
     background-color: #000;
     text-align: center;
     padding: 1rem;
     color: #fff;
     text-transform: uppercase; }
-  @media screen and (max-width: 880px) {
-    .single-product .up-sells {
-      display: none; } }
 
 .woocommerce-pagination .page-numbers {
   display: inline-block;
@@ -1074,6 +1087,41 @@ label.right {
 .gallery-thumb {
   display: block;
   float: left; }
+
+.commentlist {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: block;
+  float: left;
+  overflow: auto; }
+  .commentlist:last-child {
+    margin-right: 0; }
+  .commentlist .comment {
+    position: relative;
+    border-bottom: 1px solid #bbb;
+    overflow: auto;
+    padding: 1rem; }
+    .commentlist .comment .comment-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      display: block;
+      float: left; }
+      .commentlist .comment .comment-content:last-child {
+        margin-right: 0; }
+      .commentlist .comment .comment-content.thumb {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%; }
+        .commentlist .comment .comment-content.thumb:last-child {
+          margin-right: 0; }
+        .commentlist .comment .comment-content.thumb img {
+          width: 100%;
+          height: auto; }
 
 .main-container .slider-wrapper.woo-content {
   padding-left: 0; }
