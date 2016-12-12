@@ -431,6 +431,7 @@ html, body {
 .primary-wrapper{
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
+  height: 100%;
   overflow:hidden;
 }
 
@@ -605,3 +606,19 @@ input#yith-s.yith-s {
   font-size: 1.2em;
 }
 
+/* About-us Page */
+.about-us {
+
+  .woo-main-content {
+    position: relative;
+  }
+
+  #cssanimation {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 3px;
+    width: auto;
+    height: auto;
+    margin-top: 1px;
+  }
+}
