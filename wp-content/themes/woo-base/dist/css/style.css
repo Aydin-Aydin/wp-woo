@@ -79,7 +79,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 html {
-  overflow-y: slider-contentll; }
+  overflow-y: scroll; }
 
 body {
   -webkit-font-smoothing: antialiased; }
@@ -132,8 +132,7 @@ html, body {
 .container {
   position: relative;
   width: 100%;
-  overflow: auto;
-  height: 100vh; }
+  overflow: auto; }
   .container .woo-main-content {
     position: absolute;
     right: 0;
@@ -264,7 +263,7 @@ html, body {
             display: inline-block;
             float: right;
             color: white; }
-      .container .slider-wrapper.woo-main-content .slider-content #takeMeDown {
+      .container .slider-wrapper.woo-main-content .slider-content .take-me-down {
         display: block;
         width: 45px;
         height: 45px;
@@ -313,7 +312,6 @@ html, body {
     background-position: 0 0; }
 
 .front-widget ul li {
-  text-align: center;
   float: left; }
   .front-widget ul li:focus {
     outline: none; }
@@ -389,12 +387,19 @@ html, body {
     .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
       margin: 0 auto; }
 
-ul .page-numbers {
-  border: 1px solid;
-  text-align: center;
-  line-height: inherit;
-  border-radius: 4px;
-  width: auto; }
+.woocommerce-pagination {
+  width: 100%; }
+  .woocommerce-pagination ul.page-numbers {
+    width: 100% !important;
+    height: 70px; }
+    .woocommerce-pagination ul.page-numbers li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px; }
+      .woocommerce-pagination ul.page-numbers li a {
+        color: #000; }
+      .woocommerce-pagination ul.page-numbers li span.current {
+        color: #a14515; }
 
 #woocommerce_products-2 .gutter-sizer {
   width: 1%; }
