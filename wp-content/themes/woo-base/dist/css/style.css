@@ -132,8 +132,7 @@ html, body {
 .container {
   position: relative;
   width: 100%;
-  overflow: auto;
-  height: 100vh; }
+  overflow: auto; }
   .container .woo-main-content {
     position: absolute;
     right: 0;
@@ -264,7 +263,7 @@ html, body {
             display: inline-block;
             float: right;
             color: white; }
-      .container .slider-wrapper.woo-main-content .slider-content #takeMeDown {
+      .container .slider-wrapper.woo-main-content .slider-content .take-me-down {
         display: block;
         width: 45px;
         height: 45px;

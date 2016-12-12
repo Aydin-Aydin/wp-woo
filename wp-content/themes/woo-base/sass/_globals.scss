@@ -115,7 +115,7 @@ html, body {
   position: relative;
   width: 100%;
   overflow: auto;
-  height: 100vh;
+  // height: 100vh;
 
   .woo-main-content {
     position: absolute;
@@ -302,8 +302,7 @@ html, body {
             }
           }
         }
-
-        #takeMeDown{
+         .take-me-down{
           display: block;
           width: 45px;
           height: 45px;
@@ -314,8 +313,6 @@ html, body {
           bottom: 70px;
           margin: auto;
         }
-
-
       }
     }
   }
@@ -326,6 +323,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
   }
+
 
 // Front Widgets
 
