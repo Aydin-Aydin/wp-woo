@@ -47,7 +47,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 html{
-  overflow-y: scroll;
+  overflow-y: slider-contentll;
 }
 
 body{
@@ -353,6 +353,7 @@ html, body {
   }
   ul {
     li {
+      text-align: center;
       &:focus {
         outline: none;
       }
