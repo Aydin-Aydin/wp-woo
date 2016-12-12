@@ -42,9 +42,6 @@
   }
 
   .up-sells {
-<<<<<<< HEAD
-    @include span-columns(12);
-    float: left;
 
     .grid {
       padding: 0 !important;
@@ -62,10 +59,8 @@
     //   }
     // }
     margin-right: 0;
-=======
     @include span-columns(6);
     width: 50%;
->>>>>>> eb27490ba921d6e97714e210fcd4780408173b1d
 
     @include media($breakpoint-medium) {
       @include span-columns(12);
@@ -199,12 +194,10 @@
   }   
 }
 
-<<<<<<< HEAD
 #commentform {
   background-color: $light-gray;
 }
 
-=======
 .gallery-thumb {
   display: block;
   float: left;
@@ -254,4 +247,3 @@
     }
   }
 }
->>>>>>> eb27490ba921d6e97714e210fcd4780408173b1d
