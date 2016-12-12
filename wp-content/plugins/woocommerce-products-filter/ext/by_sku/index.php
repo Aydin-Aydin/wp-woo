@@ -52,7 +52,7 @@ final class WOOF_EXT_BY_SKU extends WOOF_EXT
         
     }
 
-    public function assemble_query_params(&$meta_query)
+    public function assemble_query_params(&$meta_query, &$query = NULL)
     {
 
         return $meta_query;

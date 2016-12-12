@@ -39,8 +39,8 @@ jQuery(function () {
 
 
     jQuery('body').bind('price_slider_change', function (event, min, max) {
-        if (woof_autosubmit && !woof_show_price_search_button) {
-            jQuery('.widget_price_filter form').trigger('submit');
+        if (woof_autosubmit && !woof_show_price_search_button && jQuery('.price_slider_wrapper').length < 2) {
+            jQuery('.woof .widget_price_filter form').trigger('submit');
         } else {
             var min_price = jQuery(this).find('.price_slider_amount #min_price').val();
             var max_price = jQuery(this).find('.price_slider_amount #max_price').val();
@@ -178,6 +178,20 @@ jQuery(function () {
     });
 
 
+    //***
+    window.onpopstate = function (event) {
+        try {
+            if (Object.keys(woof_current_values).length) {
+                woof_show_info_popup(woof_lang_loading);
+                window.location.reload();
+                return false;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+
+    };
+    //***
 
     //ion-slider price range slider
     woof_init_ion_sliders();
@@ -415,7 +429,7 @@ function woof_submit_link(link) {
             });
 
             //*** script after ajax loading here
-            woof_js_after_ajax_done();            
+            woof_js_after_ajax_done();
         });
     } else {
         if (woof_ajax_redraw) {

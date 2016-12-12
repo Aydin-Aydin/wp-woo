@@ -2,7 +2,7 @@
 if (!defined('ABSPATH'))
     die('No direct access allowed');
 
-//04-11-2016
+//30-11-2016
 final class WOOF_EXT_STAT extends WOOF_EXT {
 
     private $table_stat_buffer = 'woof_stat_buffer';
@@ -90,7 +90,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         //***
         if ($this->is_enabled)
         {
-            $this->cron = new PN_WP_CRON('woof_stat_cron');
+            $this->cron = new PN_WP_CRON_WOOF('woof_stat_cron');
             $this->init_pdo();
             //***
             if ($this->cron_system === 1)
@@ -158,7 +158,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     public function woof_print_applications_tabs_content()
     {
         //woof_stat_calendar_date_format, woof_stat_week_first_day
-        wp_enqueue_script('google_charts', 'https://www.gstatic.com/charts/loader.js');
+        wp_enqueue_script('woof_google_charts', 'https://www.gstatic.com/charts/loader.js');
         wp_enqueue_script('jquery-ui-core');
 
         global $WOOF;
@@ -240,7 +240,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             $data['display_time'] = sprintf(__('%s monthes and %s days and %s hours and %s minutes and %s seconds', 'woocommerce-products-filter'), $months, $days, $hours, $minutes, $seconds);
         }
 
-        $data['isa'] = $this->do_stat_data(); //sss
+        $data['isa'] = $this->is_enabled;
         //$data['stat_weight'] = WOOF_HELPER::recurse_dirsize($this->cache_folder);
         //$data['stat_min_date'] = $this->get_stat_min_date();//for file system only
 
@@ -257,11 +257,10 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
                 $pdo_options = $this->woof_settings['woof_stat']['server_options'];
                 if (!empty($pdo_options['host']) AND ! empty($pdo_options['host_db_name']) AND ! empty($pdo_options['host_user']) AND ! empty($pdo_options['host_pass']))
                 {
-                    try
-                    {
+                    try {
                         $this->pdo = new PDO("mysql:host={$pdo_options['host']};dbname={$pdo_options['host_db_name']}", $pdo_options['host_user'], $pdo_options['host_pass']);
-                    } catch (Exception $e)
-                    {
+                    } catch (Exception $e) {
+                        $this->pdo = NULL;
                         echo '<div class="error"><p class="description">' . sprintf(__('Wrong data for "<b>Server options for statistic stock</b>" options', 'woocommerce-products-filter')) . '</p></div>';
                     }
                 }
@@ -344,13 +343,14 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
     {
         $_REQUEST['woof_products_doing'] = 1;
         $_GET = $_REQUEST['woof_current_values'];
-        $this->woof_get_request_data($_REQUEST['woof_current_values']);
-        //sss
-        if (bindec(101) * MONTH_IN_SECONDS - (time() - $this->get_time()) > 0)
+        if ($this->is_enabled AND ! is_null($this->pdo))
         {
+            $this->woof_get_request_data($_REQUEST['woof_current_values']);
             $this->cron->process();
+        } else
+        {
+            _e('stat is not activated or PDO not inited', 'woocommerce-products-filter');
         }
-
         exit;
     }
 
@@ -1016,8 +1016,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         //***
 
         global $wpdb;
-        try
-        {
+        try {
             //get all distinct hash keys to get data blocks. 1 block == 1 user search request
             $res = $wpdb->get_results("SELECT DISTINCT hash FROM {$this->table_stat_buffer}", ARRAY_N);
 
@@ -1092,8 +1091,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             }
 
             return true;
-        } catch (Exception $ex)
-        {
+        } catch (Exception $ex) {
             return false;
         }
 
@@ -1146,8 +1144,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         global $wpdb;
         $results = array();
         //***
-        try
-        {
+        try {
             //get all distinct hash keys to get data blocks. 1 block == 1 user search request
             $res = $wpdb->get_results("SELECT DISTINCT hash FROM {$this->table_stat_buffer}", ARRAY_N);
             $hash_array = array();
@@ -1207,8 +1204,7 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
             }
 
             return true;
-        } catch (Exception $ex)
-        {
+        } catch (Exception $ex) {
             return false;
         }
 
@@ -1220,11 +1216,9 @@ final class WOOF_EXT_STAT extends WOOF_EXT {
         $yf = $this->cache_folder . $year . '/';
         $mf = $yf . $month . '/';
         $file = $mf . $day . '.json';
-        try
-        {
+        try {
             clearstatcache(true, $file);
-        } catch (Exception $e)
-        {
+        } catch (Exception $e) {
             
         }
         //***

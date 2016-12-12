@@ -19,6 +19,18 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: 'lato-light';
+  src: url("../../fonts/Lato/Lato-Light.ttf"); }
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url("../../fonts/Lato/Lato-Bold.ttf"); }
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,6 +92,10 @@ a {
 
 h1 {
   font-size: 3rem; }
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
 
 /* =======================================================================
 ## ++ Cleafix
@@ -248,6 +264,16 @@ html, body {
             display: inline-block;
             float: right;
             color: white; }
+      .container .slider-wrapper.woo-main-content .slider-content #takeMeDown {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        bottom: 70px;
+        margin: auto; }
 
 .imgLiquidFill {
   background-size: cover;
@@ -360,20 +386,15 @@ html, body {
   z-index: 1; }
   .woo-content .grid-item {
     text-align: center; }
+    .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
+      margin: 0 auto; }
 
-.woocommerce-pagination {
-  width: 100%; }
-  .woocommerce-pagination ul.page-numbers {
-    width: 100% !important;
-    height: 70px; }
-    .woocommerce-pagination ul.page-numbers li {
-      display: inline-block;
-      padding: 12px;
-      font-size: 20px; }
-      .woocommerce-pagination ul.page-numbers li a {
-        color: #000; }
-      .woocommerce-pagination ul.page-numbers li span.current {
-        color: #a14515; }
+ul .page-numbers {
+  border: 1px solid;
+  text-align: center;
+  line-height: inherit;
+  border-radius: 4px;
+  width: auto; }
 
 #woocommerce_products-2 .gutter-sizer {
   width: 1%; }
@@ -387,6 +408,33 @@ html, body {
     margin: 0 auto; }
   .grid-item .text-wrapper a {
     color: #000; }
+
+#footer-sidebar {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  height: 100px;
+  margin-left: 5px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+  font-family: lato;
+  color: #060606; }
+
+#yith-searchsubmit {
+  display: none; }
+
+#left-sidebar label {
+  color: #fff;
+  font-size: 1.8em; }
+
+input#yith-s.yith-s {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: #FFF;
+  outline: 0;
+  font-size: 1.2em; }
 
 #left-sidebar {
   display: block;
@@ -422,6 +470,7 @@ html, body {
     height: 100vh;
     width: 72.5px; }
     #left-sidebar .side-nav-wrapper .toggle-menu {
+      margin-top: 1rem;
       width: 40px;
       height: 40px;
       position: relative;
@@ -576,6 +625,53 @@ html, body {
   #menu-primary li.current-menu-item a {
     color: #27ae60;
     font-weight: 400; }
+
+footer {
+  width: 100%; }
+  footer div.footer-nav-wrap {
+    background-color: #000;
+    width: 100%;
+    height: 50px;
+    overflow: hidden; }
+    footer div.footer-nav-wrap .footer-nav {
+      position: relative;
+      width: 100%; }
+      footer div.footer-nav-wrap .footer-nav #menu-footer {
+        display: flex;
+        flex: 1; }
+        footer div.footer-nav-wrap .footer-nav #menu-footer li {
+          display: flex;
+          flex: 1; }
+          footer div.footer-nav-wrap .footer-nav #menu-footer li a {
+            display: block;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+            font-size: 14pt;
+            text-transform: uppercase; }
+            footer div.footer-nav-wrap .footer-nav #menu-footer li a:hover {
+              font-weight: 400;
+              color: #666666; }
+  footer div.footer-copy {
+    width: 100%;
+    background-color: #fff;
+    height: 50px; }
+    footer div.footer-copy p {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 50px;
+      text-align: center;
+      font-size: 12pt;
+      font-weight: 300; }
+      footer div.footer-copy p a {
+        color: #000; }
+        footer div.footer-copy p a:hover {
+          color: #666666;
+          font-weight: 400; }
 
 .woo-main-content .product {
   padding: 1rem; }
