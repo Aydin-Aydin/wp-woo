@@ -81,7 +81,7 @@ if (!function_exists('woof_draw_mselect_childs'))
                     continue;
                 }
                 ?>
-                <option <?php if ($show_count AND $count == 0 AND ! in_array($term['slug'], $current_request)): ?>disabled=""<?php endif; ?> value="<?php echo $term['slug'] ?>" <?php echo selected(in_array($term['slug'], $current_request)) ?>><?php echo str_repeat('&nbsp;&nbsp;&nbsp;', $level) ?><?php
+                <option <?php if ($show_count AND $count == 0 AND ! in_array($term['slug'], $current_request)): ?>disabled=""<?php endif; ?> value="<?php echo $term['slug'] ?>" <?php echo selected(in_array($term['slug'], $current_request)) ?> class="woof-padding-<?php echo $level ?>"><?php
                     if (has_filter('woof_before_term_name'))
                         echo apply_filters('woof_before_term_name', $term, $taxonomy_info);
                     else

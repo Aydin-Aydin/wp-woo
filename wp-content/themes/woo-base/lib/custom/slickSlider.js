@@ -7,7 +7,6 @@ const slickSlider = {
       autoplaySpeed: 10000,
       speed: 500
     });
-
     // Brand widget
     $('div.brand-widget ul li').removeClass('first last-row');
     $('.yith-wcbr-thumbnail-list li').attr('style', '');
