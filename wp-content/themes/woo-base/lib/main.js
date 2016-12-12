@@ -30,6 +30,8 @@ import hideResetButton from './custom/hideResetButton';
     $('.summary-tabs-wrapper .grid-item').css({
       width: "45%"
     });
+
+    $('.stars').find('span a').css({border: '1px solid red'});
     
   });
 })();
