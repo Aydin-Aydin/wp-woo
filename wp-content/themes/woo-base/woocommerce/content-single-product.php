@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
-
+<section class="summary-tabs-wrapper equal-height"><!--  The end-tag is located in tabs.php -->
 	<div class="summary entry-summary">
 
 		<?php

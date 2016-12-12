@@ -1,20 +1,77 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: $lato-stack;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
 html{
-    font-size: 100%;
+  overflow-y: scroll;
 }
 
 body{
     -webkit-font-smoothing: antialiased;
 }
 
+
+
 *{
     box-sizing:border-box;
 }
 
+
 a {
-	text-decoration: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../../fonts/Lato/Lato-Regular.ttf');
 }
 
 
@@ -43,11 +100,523 @@ a {
  font-size: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
 .clr{clear:both;}
 
+.container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  // height: 100vh;
+
+  .woo-main-content {
+    position: absolute;
+    right: 0;
+    padding-left: 1rem;
+  }
+
+  .sidebar-left-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.onsale {
+  position: absolute;
+}
+
+
+
+.grid {
+   width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.gutter-sizer {
+  width: 1%;
+}
+
+.grid-sizer {
+  width: 19%;
+
+  @include media($breakpoint-xlarge) {
+   width: 24%;
+  }
+
+  @include media($breakpoint-large) {
+   width: 24%;
+  }
+
+  @include media($breakpoint-medium) {
+   width: 49%;
+  }
+
+  @include media($breakpoint-small) {
+   width: 99%;
+  }
+}
+
+.grid-item {
+
+  display: block;
+  float: left;
+  height: 360px;
+  margin-bottom: 1%;
+
+  @include media($breakpoint-xlarge) {
+   width: 24%;
+  }
+
+  @include media($breakpoint-large) {
+   width: 24%;
+  }
+
+  @include media($breakpoint-medium) {
+    width: 49%;
+  }
+
+  @include media($breakpoint-small) {
+    width: 99%;
+  }
+}
+
+
+
+.imgLiquidFill {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// CPT Slider
+.container {
+
+  .slick-dotted.slick-slider {
+    margin-bottom:0;
+  }
+  .slider-wrapper {
+    padding-left: 0;
+    position:relative;
+    z-index: 0;
+
+
+    &.woo-main-content {
+      vertical-align: middle;
+      height: 100%;
+
+      .slick-next, .slick-prev {
+        display: none !important;
+      }
+      .slick-dots {
+        position: absolute;
+        right: 40px;
+        top: 50%;
+        display: block;
+        width: 20px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: right;
+
+        transform: translateY(-25%);
+        -moz-transform: translateY(-25%);
+        -o-transform: translateY(-25%);
+        -ms-transform: translateY(-25%);
+
+        li {
+          margin: 5px 0;
+          button:before {
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+
+      .slider-content {
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100vh;
+
+        .overlay-filter {
+          background-color: rgba(0,0,0, 0.35);
+        }
+
+        .entry-content {
+          position: relative;
+          font-family: arial;
+          font-size: 120%;
+          padding: 40px;
+          width: 75%;
+          color: white;
+          margin: 0 auto;
+          height: 100vh;
+          overflow: auto;
+
+          .overlay {
+            position: absolute;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+
+
+
+            h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+
+
+            }
+            p {
+              line-height: 1.2em;
+            }
+
+            a {
+              text-align: center;
+              margin-top: 40px;
+              padding: 20px;
+              width: 35%;
+              background: #000;
+              display: inline-block;
+              float: right;
+              color: white;
+            }
+          }
+        }
+         .take-me-down{
+          display: block;
+          width: 45px;
+          height: 45px;
+          background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          position: relative;
+          bottom: 70px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+  .imgLiquidFill {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+// Front Widgets
+
+.front-widget {
+
+  .slick-prev, .slick-next {
+    z-index:1;
+    height: 100%;
+    width: 60px;
+    background-color: rgba(0,0,0,0.65);
+
+    &:hover, &:focus, &:visited, &:active {
+      background-color: rgba(0,0,0,0.65);
+    }
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size:60px;
+    padding: 0 60px;
+    height: 100%;
+    opacity:1;
+  }
+  .slick-prev {
+    left:-60px;
+    transition: all 0.35s;
+
+    &:before {
+      content:"";
+      background-image: url('../graphics/icons/back.svg');
+      background-size: cover;
+      background-position:0 0;
+    }
+  }
+  .slick-next {
+    right:-60px;
+    transition: all 0.35s;
+
+
+    &:before {
+      content:"";
+      background-image: url('../graphics/icons/next.svg');
+      background-size: cover;
+      background-position:0 0;
+    }
+  }
+  ul {
+    li {
+      &:focus {
+        outline: none;
+      }
+      float: left;
+      a:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+// Top rated widget
+.front-widget {
+  h4, h3 {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: $lato-regular;
+  }
+}
+
+// Brand Widget
+.brand-widget {
+  div.yith-wcbr-thumbnail-list {
+    ul {
+      margin:0;
+      li {
+        padding: 0;
+        margin:0;
+        a {
+          border:none !important;
+          height: 200px;
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+  .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before{
+    display: none;
+  }
+}
+
+// Align fix
+.woof_sid_auto_shortcode {
+  @include media($breakpoint-medium) {
+    display: none;
+  }
+}
+
+
+.primary-wrapper{
+  padding-left: 72px !important;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  overflow:hidden;
+}
 
 
 
 
+.front-widget {
+  ul {
+    &:hover .slick-next {
+      right: 0;
+    }
+    &:hover .slick-prev {
+      left: 0;
+    }
+  }
+}
+
+/////////////////////////
+
+.woocommerce-breadcrumb {
+  display: none;
+}
+
+.related h2 {
+  margin: 0px 0px 0px 0px;
+  padding: 35px 0px 5px 0px;
+  color: #FFF;
+  background-color: black;
+}
+
+html, body {
+  height: auto;
+  position: relative;
+}
+
+.page-title, .woocommerce-result-count {
+  display: none;
+}
+
+.woof_sid_auto_shortcode.woof {
+    background-color: #dedede;
+}
+
+.woo-content {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+ .grid-item {
+    text-align: center;
+    .text-wrapper {
+      .star-rating div, .star-rating .rating {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// Pagination shop page
+.woocommerce-pagination {
+  width: 100%;
+  ul.page-numbers {
+    width: 100% !important;
+    height: 70px;
+
+    li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px;
+
+      a {
+        color: $black;
+      }
+      span.current {
+        color: $inline-pagination-link;
+      }
+
+    }
+  }
+}
+
+#woocommerce_products-2 {
+  .gutter-sizer {
+    width: 1%;
+  }
+}
+
+// This is the grid for the products
+.grid-item {
+  display: block;
+  float: left;
+  margin-bottom: 1%;
+  margin: 2px;
+
+  .text-wrapper {
+    .star-rating div, .star-rating .rating {
+      margin: 0 auto;
+    }
+    a {
+      color: $black;
+
+    }
+  }
+}
+
+// .add_to_wishlist {
+//   font: bold 11px Arial;
+//   text-decoration: none;
+//   background-color: #EEEEEE;
+//   color: #333333;
+//   padding: 2px 6px 2px 6px;
+//   border-top: 1px solid #CCCCCC;
+//   border-right: 1px solid #333333;
+//   border-bottom: 1px solid #333333;
+//   border-left: 1px solid #CCCCCC;
+// }
 
 
+//Footer
+#footer-sidebar {
+display:block;
+margin-top: 5px;
+width: 100%;
+height: 100px;
+margin-left:5px;
+text-align: center;
+line-height: 30px;
+background-color: #fff;
+font-family: lato;
+color: #060606;
+}
+
+// #footer-sidebar1 {
+// float: left;
+// width: 440px;
+// margin-left:5px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar2 {
+// float: left;
+// width: 440px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar3 {
+// float: left;
+// width: 440px;
+// background-color: lightgray;
+// }
+
+//Removing the Searchbutton
+#yith-searchsubmit {
+  display: none;
+}
+
+//Style for the Searchbar title.
+#left-sidebar label {
+  color: #fff;
+  font-size: 1.8em;
+}
+input#yith-s.yith-s {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: #FFF;
+  outline: 0;
+  font-size: 1.2em;
+}
+
+/* About-us Page */
+.about-us {
+
+  .woo-main-content {
+    position: relative;
+  }
+
+  #cssanimation {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 3px;
+    width: auto;
+    height: auto;
+    margin-top: 1px;
+  }
+}

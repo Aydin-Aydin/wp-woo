@@ -44,5 +44,6 @@ if ( ! empty( $tabs ) ) : ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
+</section> <!-- end summary-tabs-wrapper "content-single-product.php" -->
 
 <?php endif; ?>

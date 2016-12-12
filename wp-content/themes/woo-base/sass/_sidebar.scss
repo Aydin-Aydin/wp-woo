@@ -1,66 +1,265 @@
-#left-sidebar {
-	display: block;
-	float: left;
-	height: 100vh;
-	background-color: $side-menu-color;
-  padding: 1rem;
+// .sidebar-left-container {
+//   overflow: auto;
+//   display: block;
+//   float: left;
+// }
 
-  .toggle-menu-open {
-    display: block;
-    width: 40px;
-    height: 50px;
-    background-image: url('../graphics/icons/open-icon.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    margin: 0 auto;
+
+
+
+#left-sidebar {
+  display: block;
+  float: left;
+  height: 100vh;
+  width: 317px;
+  overflow: hidden;
+  background-color: $side-menu-color;
+  padding: 1rem 0 0 0;
+  position: fixed;
+  left: -244px;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+
+  label {
+    color: $white;
   }
 
-  .toggle-menu-close {
-    display: block;
-    width: 30px;
-    height: 50px;
-    background-image: url('../graphics/icons/close-icon.svg');
+    .filter-icon {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('../graphics/icons/filter-menu.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0 0;
-    float: right;
+    margin: 0 auto;
+
+    @include media($breakpoint-medium) {
+      display: block;
+    }
   }
 
-  .side-left-wrapper {
-    position: absolute;
+  &.is-open {
+
     left: 0;
+  }
+
+  .side-nav-wrapper {
+    float: right;
+    display: inline-block;
+    height: 100vh;
+    width: 72.5px;
+
+// Hamburger
+    .toggle-menu {
+      margin-top: 1rem;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      margin: auto;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .toggle-menu span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background: #fff;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+
+    .toggle-menu span:nth-child(1) {
+      top: 0px;
+    }
+
+    .toggle-menu span:nth-child(2),.toggle-menu span:nth-child(3) {
+      top: 12px;
+    }
+
+    .toggle-menu span:nth-child(4) {
+      top: 24px;
+    }
+
+    .toggle-menu.open span:nth-child(1) {
+      top: 12px;
+      width: 0%;
+      left: 50%;
+    }
+
+    .toggle-menu.open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .toggle-menu.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .toggle-menu.open span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    a.cart-icon{
+      display: block;
+      width: 40px;
+      height: 60px;
+      text-align: center;
+      position: relative;
+      top: 73vh;
+      color: $black;
+      background-color: transparent;
+      background-image: url("../graphics/icons/tote-bag.svg");
+      background-repeat: no-repeat;
+      background-size: 125% 125%;
+      background-position: center;
+      line-height: 80px;
+      font-weight: $lato-regular;
+      font-size: 14pt;
+      margin: auto;
+
+      &:link{
+        color: $sidebar-icon-text;
+      }
+      &:visited{
+        color: $sidebar-icon-text;
+      }
+      &:hover{
+        font-size: 18pt;
+        font-weight: $lato-semi;
+        background-size: cover;
+      }
+    }
+  }
+  .side-first-wrapper {
+    width: 200px;
+    margin: 1rem;
+
+    div.sidebar-widget{
+      &.widget_search{
+        label.screen-reader-text{
+          display: none;
+        }
+
+        #searchsubmit{
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          top: 40px;
+          left: 190px;
+          border: none;
+          background-color: #000000;
+          background-repeat: no-repeat;
+          background-image: url("../graphics/icons/Search.svg");
+          background-size: 50% 50%;
+          background-position: center;
+          font-size: 100vw;
+          overflow: hidden;
+
+          &:focus{
+            outline: !important;
+          }
+        }
+
+        input[type="text"]{
+          font-size: 18px;
+          padding: 10px 10px 10px 5px;
+          display: block;
+          border: none;
+          border-bottom: 1px solid $white;
+          width: 200px;
+          background-color: transparent;
+          color: $white;
+          -webkit-transition: .1s ease-in-out;
+          -moz-transition: .1s ease-in-out;
+          -o-transition: .1s ease-in-out;
+          transition: .1s ease-in-out;
+
+            &:focus{
+              outline:none;
+              border-bottom: 2px solid $nav-link-current;
+            }
+          }
+
+          input[type="submit"]{
+            font-size: 30pt;
+          }
+        }
+      }
+    }
+  }
+
+/*   .side-left-wrapper {
+    position: fixed;
+    left: -50%;
     bottom: 0;
     top: 0;
-    transform: translate(-200px);
     padding: 1rem;
     background-color: #000;
-    visibility: hidden;
+    transition: all 0.3s ease-in-out;
 
     @include media($sidebar-main-menu-medium) {
       width: 50%;
-    } 
-  }
+    }
+
+    @include media($sidebar-main-menu-small) {
+      width: 100%;
+    }
+  } */
 
   .is-open {
-    transform: translate(0);
-    transition: all 300ms linear;
-    visibility: visible;
-  }
-
-  .sidebar-widget {
-    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+    left: 0;
   }
 
   #menu-primary {
 
     li {
-      padding: 1rem;
-      border-bottom: 1px solid $white;
+      padding: 10px 0;
+
+      a{
+        display: block;
+        font-weight: $lato-light;
+        font-size: 18pt;
+        width: 100%;
+        color: $white;
+        text-transform: uppercase;
+
+        &:hover{
+          color: $nav-link-hover;
+        }
+      }
+
+      &.current-menu-item{
+        a{
+          color: $nav-link-current;
+          font-weight: $lato-regular;
+        }
+      }
     }
   }
-
-	a {
-		color: $white;
-	}
-}
