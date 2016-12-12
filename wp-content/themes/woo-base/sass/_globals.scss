@@ -469,7 +469,10 @@ html, body {
 
 ul .page-numbers {
   border: 1px solid;
+  text-align: center;
+  line-height: inherit;
   border-radius: 4px;
+  width: auto;
 }
 
 #woocommerce_products-2 {
@@ -497,3 +500,58 @@ ul .page-numbers {
 //   border-bottom: 1px solid #333333;
 //   border-left: 1px solid #CCCCCC;
 // }
+
+
+//Footer
+#footer-sidebar {
+display:block;
+margin-top: 5px;
+width: 100%;
+height: 100px;
+margin-left:5px;
+text-align: center;
+line-height: 30px;
+background-color: #fff;
+font-family: lato;
+color: #060606;
+}
+
+// #footer-sidebar1 {
+// float: left;
+// width: 440px;
+// margin-left:5px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar2 {
+// float: left;
+// width: 440px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar3 {
+// float: left;
+// width: 440px;
+// background-color: lightgray;
+// }
+
+//Removing the Searchbutton
+#yith-searchsubmit {
+  display: none;
+}
+
+//Style for the Searchbar title.
+#left-sidebar label {
+  color: #fff;
+  font-size: 1.8em;
+}
+input#yith-s.yith-s {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: #FFF;
+  outline: 0;
+  font-size: 1.2em;
+}

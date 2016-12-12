@@ -363,7 +363,10 @@ html, body {
 
 ul .page-numbers {
   border: 1px solid;
-  border-radius: 4px; }
+  text-align: center;
+  line-height: inherit;
+  border-radius: 4px;
+  width: auto; }
 
 #woocommerce_products-2 .gutter-sizer {
   width: 3%; }
@@ -374,6 +377,33 @@ ul .page-numbers {
   width: 19%;
   margin-bottom: 1%;
   margin: 2px; }
+
+#footer-sidebar {
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  height: 100px;
+  margin-left: 5px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+  font-family: lato;
+  color: #060606; }
+
+#yith-searchsubmit {
+  display: none; }
+
+#left-sidebar label {
+  color: #fff;
+  font-size: 1.8em; }
+
+input#yith-s.yith-s {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: #FFF;
+  outline: 0;
+  font-size: 1.2em; }
 
 #left-sidebar {
   display: block;
