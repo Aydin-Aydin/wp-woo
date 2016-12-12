@@ -38,7 +38,8 @@ function wp_woo_wrapper_end() {
   echo '</div>';
 }
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
+// Add woocommerce theme support
+add_action('after_setup_theme', 'woocommerce_support');
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
@@ -240,7 +241,7 @@ if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'sidebar-first',
         'id' => 'sidebar-first',
-        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
@@ -268,6 +269,9 @@ if ( function_exists('register_sidebar') )
 
 
 /*  EXCERPT
+=======
+/*  EXCERPT 
+>>>>>>> ed4e195586ab5d9f019d287355fa105be26c8f61
     Usage:
 
     <?php echo excerpt(100); ?>

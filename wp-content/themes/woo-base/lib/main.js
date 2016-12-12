@@ -23,5 +23,13 @@ import hideResetButton from './custom/hideResetButton';
     niceSelect.init();
     slickSlider.init();
     hideResetButton.init();
+    // You may also like section
+    $('.summary-tabs-wrapper .grid-sizer').css({
+      width: "45%"
+    });
+    $('.summary-tabs-wrapper .grid-item').css({
+      width: "45%"
+    });
+    
   });
 })();

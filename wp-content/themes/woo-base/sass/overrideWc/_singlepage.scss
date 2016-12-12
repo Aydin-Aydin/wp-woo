@@ -42,6 +42,23 @@
   }
 
   .up-sells {
+
+    .grid {
+      padding: 0 !important;
+    }
+
+    // .grid-sizer {
+    //   @include media($breakpoint-xlarge) {
+    //     width: 49% !important; 
+    //   }
+    // }
+
+    // .grid-item {
+    //   @include media($breakpoint-xlarge) {
+    //     width: 49% !important; 
+    //   }
+    // }
+    margin-right: 0;
     @include span-columns(6);
     width: 50%;
 
@@ -175,6 +192,10 @@
       }     
     }
   }   
+}
+
+#commentform {
+  background-color: $light-gray;
 }
 
 .gallery-thumb {
