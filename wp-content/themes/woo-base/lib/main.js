@@ -2,6 +2,7 @@ import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
+import scrollToElement from './custom/scroll-2-element';
 
 (function() {
   //   Run when DOM is ready
@@ -9,6 +10,7 @@ import containerMargin from './custom/container-margin';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+    scrollToElement.init();
 
 		$('.grid-item.product').matchHeight();
 

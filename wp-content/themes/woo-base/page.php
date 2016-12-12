@@ -23,14 +23,14 @@
             </div>
           </div>
 
-          <a id="takeMeDown" href="" title="Take Me Down"></a>
+          <a id="takeMeDown" href="#frontWidgetBrands" title="Take Me Down"></a>
         </div>
 
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
 
-    <div class="front-widget brand-widget">
+    <div class="front-widget brand-widget" id="frontWidgetBrands">
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 

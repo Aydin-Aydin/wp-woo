@@ -14,11 +14,12 @@
         </div><!-- .footer-nav-wrap -->
 
         <div class="footer-copy">
-          <p>&copy; <?php echo date("Y");?>
+          <p>
           <a href="<?php echo site_url(); ?>">
-            <?php bloginfo( 'name' ); ?>.
+            <?php bloginfo( 'name' ); ?>
           </a>
-          <span>All Rights Reserved</span>
+          <span>&copy; <?php echo date("Y");?></span>
+          <span> All Rights Reserved!</span>
           </p>
         </div><!-- .footer-copy -->
       </footer>
