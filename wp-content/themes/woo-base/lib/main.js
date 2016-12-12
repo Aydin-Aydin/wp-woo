@@ -32,6 +32,6 @@ import hideResetButton from './custom/hideResetButton';
     });
 
     $('.stars').find('span a').css({border: '1px solid red'});
-    
+
   });
 })();
