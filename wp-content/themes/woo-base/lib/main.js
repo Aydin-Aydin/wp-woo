@@ -23,6 +23,5 @@ import hideResetButton from './custom/hideResetButton';
     niceSelect.init();
     slickSlider.init();
     hideResetButton.init();
-
   });
 })();
