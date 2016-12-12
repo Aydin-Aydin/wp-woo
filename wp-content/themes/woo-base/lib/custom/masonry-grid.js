@@ -19,7 +19,9 @@ const masonGrid = {
 			gutter: '.gutter-sizer',
 			percentPosition: true
 		});
-
+		// Grid 2 columns
+	  $('.up-sells .grid-sizer').addClass('grid-sizer-2-columns').removeClass('grid-sizer');
+	  $('.up-sells .grid-item').addClass('grid-item-2-columns').removeClass('grid-item');
 	}
 };
 export default masonGrid;
