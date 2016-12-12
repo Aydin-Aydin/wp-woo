@@ -23,11 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' ) {
-<<<<<<< HEAD
   return;
-=======
-	return;
->>>>>>> mohamad
 }
 
 $rating_count = $product->get_rating_count();
@@ -36,15 +32,6 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-<<<<<<< HEAD
-  <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
-      <div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
-        <div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
-      </div>
-    </div>
-  </div>
-=======
 	<div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
 		<div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
 			<div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
@@ -52,6 +39,5 @@ if ( $rating_count > 0 ) : ?>
 			</div>
 		</div>
 	</div>
->>>>>>> mohamad
 
 <?php endif; ?>
