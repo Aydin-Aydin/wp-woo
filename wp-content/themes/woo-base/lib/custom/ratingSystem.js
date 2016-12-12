@@ -12,6 +12,10 @@ const ratingSys = {
 
 		$(".rating").rate(options);
 		$(".rating").rate("getValue");
+
+		$('.star-rating div').css({
+			width: '100%'
+		});
   }
 };
 export default ratingSys;
