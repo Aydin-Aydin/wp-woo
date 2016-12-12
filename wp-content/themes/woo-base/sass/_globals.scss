@@ -47,7 +47,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 html{
-  overflow-y: slider-contentll;
+  overflow-y: scroll;
 }
 
 body{
@@ -372,7 +372,6 @@ html, body {
   }
   ul {
     li {
-      text-align: center;
       &:focus {
         outline: none;
       }
@@ -492,13 +491,27 @@ html, body {
   }
 }
 
-ul .page-numbers {
-  border: 1px solid;
-  text-align: center;
-  line-height: inherit;
-  border-radius: 4px;
-  width: auto;
-}
+// Pagination shop page
+.woocommerce-pagination {
+  width: 100%;
+  ul.page-numbers {
+    width: 100% !important;
+    height: 70px;
+
+    li {
+      display: inline-block;
+      padding: 12px;
+      font-size: 20px;
+
+      a {
+        color: $black;
+      }
+      span.current {
+        color: $inline-pagination-link;
+      }
+
+    }
+  }
 
 #woocommerce_products-2 {
   .gutter-sizer {
