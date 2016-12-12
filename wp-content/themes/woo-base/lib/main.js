@@ -7,7 +7,7 @@ import scroll from './custom/scroll-2-element';
 import matchHeight from './custom/matchHeight';
 import ratingSys from './custom/ratingSystem';
 import niceSelect from './custom/niceSelect';
-import slickSlider from './custom/niceSelect';
+import slickSlider from './custom/slickSlider';
 import hideResetButton from './custom/hideResetButton';
 
 (function() {
