@@ -27,6 +27,7 @@
     width: 50%;
     margin-right: 0;
     overflow: auto;
+    padding-left: 1rem;
 
     @include media($breakpoint-medium) {
       @include span-columns(12);
@@ -162,6 +163,7 @@
   }
 
   .star-rating {
+    position: relative;
     width: 50%;
     display: block;
     float: right;
@@ -234,6 +236,7 @@
 
 #respond {
   padding-left: 1rem;
+  padding-bottom: 1rem;
   #reply-title {
     cursor: pointer;
     padding-bottom: 1rem;
@@ -241,6 +244,42 @@
   }
   .comment-form {
     display: none;
+    background-color: transparent;
+
+    textarea {
+      width: 100%;
+      outline: none;
+    }
+
+    .form-submit {
+      border-bottom: 1px solid $light-gray;
+      overflow: auto;
+      padding-bottom: 2rem;
+    }
+
+    .submit {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      float: left;
+      height: 40px;
+      -webkit-tap-highlight-color: transparent;
+      background-color: #55a1fb;
+      border-radius: 5px;
+      border: none;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      height: 42px;
+      line-height: 42px;
+      outline: none;
+      padding: 0 24px;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      width: auto;
+    }
 
     &.show-content-form {
       display: block;

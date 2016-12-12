@@ -7,7 +7,7 @@ import scroll from './custom/scroll-2-element';
 import matchHeight from './custom/matchHeight';
 import ratingSys from './custom/ratingSystem';
 import niceSelect from './custom/niceSelect';
-import slickSlider from './custom/niceSelect';
+import slickSlider from './custom/slickSlider';
 import hideResetButton from './custom/hideResetButton';
 
 (function() {
@@ -31,13 +31,7 @@ import hideResetButton from './custom/hideResetButton';
       width: "45%"
     });
 
-
-     // Brand widget
-    $('div.brand-widget ul li').removeClass('first last-row');
-    $('.yith-wcbr-thumbnail-list li').attr('style', '');
-
-    // Rated widget
-    $('div.rated-widget ul, div.brand-widget ul').addClass('cat-slider');   
+    $('.stars').find('span a').css({border: '1px solid red'});
     
   });
 })();
