@@ -23,23 +23,14 @@
             </div>
           </div>
 
-<<<<<<< HEAD
-          <a id="takeMeDown" href="#frontWidgetBrands" title="Take Me Down"></a>
-=======
           <a class="take-me-down" href="#content-top"></a>
 
->>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
         </div>
 
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
-
-<<<<<<< HEAD
-    <div class="front-widget brand-widget" id="frontWidgetBrands">
-=======
     <div id="content-top" class="front-widget brand-widget">
->>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 
