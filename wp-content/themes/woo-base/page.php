@@ -30,7 +30,6 @@
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
-
     <div id="content-top" class="front-widget brand-widget">
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>

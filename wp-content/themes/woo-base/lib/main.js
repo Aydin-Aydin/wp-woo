@@ -3,6 +3,7 @@ import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
 import scroll from './custom/scroll-2-element';
+
 (function() {
   //   Run when DOM is ready
   $(function() {
