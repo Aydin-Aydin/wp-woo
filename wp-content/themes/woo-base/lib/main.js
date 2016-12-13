@@ -9,12 +9,12 @@ import ratingSys from './custom/ratingSystem';
 import niceSelect from './custom/niceSelect';
 import slickSlider from './custom/slickSlider';
 import hideResetButton from './custom/hideResetButton';
+//import masonGrid2Colomns from './custom/masonry-grid-2-columns';
 
 (function() {
   //   Run when DOM is ready
   $(function() {
     toggleMenu.init();
-    masonGrid.init();
     containerMargin.init();
     toggleReviewForm.init();
     scroll.init();
@@ -23,6 +23,8 @@ import hideResetButton from './custom/hideResetButton';
     niceSelect.init();
     slickSlider.init();
     hideResetButton.init();
+    //masonGrid2Colomns.init();
+    masonGrid.init();
     // You may also like section
     $('.summary-tabs-wrapper .grid-sizer').css({
       width: "45%"
