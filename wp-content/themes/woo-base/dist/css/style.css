@@ -331,6 +331,23 @@ html, body {
   text-transform: uppercase;
   font-weight: 400; }
 
+.rated-widget li {
+  height: 230px;
+  position: relative; }
+  .rated-widget li .img-wrapper {
+    height: 100%; }
+  .rated-widget li .text-wrapper {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    left: 50%;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+    padding: 5px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); }
+
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
   .brand-widget div.yith-wcbr-thumbnail-list ul li {
@@ -395,11 +412,11 @@ html, body {
     .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
       margin: 0 auto; }
 
-li.grid-item {
+#woocommerce_products-2 li.grid-item {
   text-align: center; }
-  li.grid-item a div.imgLiquidFill.imgLiquid {
+  #woocommerce_products-2 li.grid-item .img-wrapper {
     height: 80%; }
-  li.grid-item .text-wrapper {
+  #woocommerce_products-2 li.grid-item .text-wrapper {
     width: 100%; }
 
 .woocommerce-pagination {

@@ -388,7 +388,7 @@ html, body {
   }
 }
 
-// Top rated widget
+// Front page widget
 .front-widget {
   h4, h3 {
     background-color: #000;
@@ -397,6 +397,29 @@ html, body {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: $lato-regular;
+  }
+}
+
+// Top rated widget
+.rated-widget {
+  li {
+    height: 230px;
+    position: relative;
+    .img-wrapper {
+      height: 100%;
+    }
+    .text-wrapper {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      left: 50%;
+      color: white;
+      font-weight: 400;
+      width: 100%;
+      padding: 5px;
+      transform: translateX(-50%);
+      background-color: rgba(0,0,0, 0.5);
+    }
   }
 }
 
@@ -499,15 +522,18 @@ html, body {
   }
 }
 // Latest product front page
-li.grid-item {
-  text-align: center;
-  a div.imgLiquidFill.imgLiquid {
-    height: 80%;
-  }
-  .text-wrapper {
-    width: 100%;
+#woocommerce_products-2 {
+  li.grid-item {
+    text-align: center;
+    .img-wrapper {
+      height: 80%;
+    }
+    .text-wrapper {
+      width: 100%;
+    }
   }
 }
+
 
 // Pagination shop page
 .woocommerce-pagination {
