@@ -115,7 +115,7 @@ html, body {
   position: relative;
   width: 100%;
   overflow: auto;
-  height: 100vh;
+  // height: 100vh;
 
   .woo-main-content {
     position: absolute;
@@ -302,8 +302,7 @@ html, body {
             }
           }
         }
-
-        #takeMeDown{
+         .take-me-down{
           display: block;
           width: 45px;
           height: 45px;
@@ -314,11 +313,14 @@ html, body {
           position: relative;
           bottom: 70px;
           margin: auto;
+<<<<<<< HEAD
 
           &:hover{
             width: 50px;
             height: 50px;
           }
+=======
+>>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
         }
       }
     }
@@ -330,6 +332,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
   }
+
 
 // Front Widgets
 
@@ -435,6 +438,7 @@ html, body {
 .primary-wrapper{
   padding-left: 72px !important;
   transition: all 0.3s ease-in-out;
+  height: 100%;
   overflow:hidden;
 }
 
@@ -452,7 +456,7 @@ html, body {
   }
 }
 
-/////////////////////////
+///////////////////////
 
 .woocommerce-breadcrumb {
   display: none;
@@ -553,3 +557,75 @@ html, body {
 //   border-bottom: 1px solid #333333;
 //   border-left: 1px solid #CCCCCC;
 // }
+
+
+//Footer
+#footer-sidebar {
+display:block;
+margin-top: 5px;
+width: 100%;
+height: 100px;
+margin-left:5px;
+text-align: center;
+line-height: 30px;
+background-color: #fff;
+font-family: lato;
+color: #060606;
+}
+
+// #footer-sidebar1 {
+// float: left;
+// width: 440px;
+// margin-left:5px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar2 {
+// float: left;
+// width: 440px;
+// margin-right:5px;
+// background-color: lightgray;
+// }
+//
+// #footer-sidebar3 {
+// float: left;
+// width: 440px;
+// background-color: lightgray;
+// }
+
+//Removing the Searchbutton
+#yith-searchsubmit {
+  display: none;
+}
+
+//Style for the Searchbar title.
+#left-sidebar label {
+  color: #fff;
+  font-size: 1.8em;
+}
+input#yith-s.yith-s {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  color: #FFF;
+  outline: 0;
+  font-size: 1.2em;
+}
+
+/* About-us Page */
+.about-us {
+
+  .woo-main-content {
+    position: relative;
+  }
+
+  #cssanimation {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 3px;
+    width: auto;
+    height: auto;
+    margin-top: 1px;
+  }
+}

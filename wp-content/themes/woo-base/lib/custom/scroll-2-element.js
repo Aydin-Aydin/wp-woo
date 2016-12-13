@@ -1,4 +1,5 @@
 import $ from 'jquery';
+<<<<<<< HEAD
 const scrollToElement = {
 
   init(){
@@ -18,3 +19,15 @@ const scrollToElement = {
   }
 };
 export default scrollToElement;
+=======
+const scroll = {
+  init() {
+    $(".take-me-down").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#content-top").offset().top},
+          'slow');
+    });
+  }
+};
+export default scroll;
+>>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
