@@ -85,8 +85,6 @@ options = {
 
 $('.equal-height').matchHeight(options);
 
-// Latest product widget
-$('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
 
 
 

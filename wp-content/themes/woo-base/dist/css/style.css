@@ -273,7 +273,8 @@ html, body {
         background-size: 100% 100%;
         position: relative;
         bottom: 70px;
-        margin: auto; }
+        margin: auto;
+        transition: all 0.2s; }
         .container .slider-wrapper.woo-main-content .slider-content .take-me-down:hover {
           width: 50px;
           height: 50px; }
@@ -393,6 +394,13 @@ html, body {
     text-align: center; }
     .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
       margin: 0 auto; }
+
+li.grid-item {
+  text-align: center; }
+  li.grid-item a div.imgLiquidFill.imgLiquid {
+    height: 80%; }
+  li.grid-item .text-wrapper {
+    width: 100%; }
 
 .woocommerce-pagination {
   width: 100%; }
