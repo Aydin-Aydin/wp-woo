@@ -32,12 +32,12 @@ $average      = $product->get_average_rating();
 
 if ( $rating_count > 0 ) : ?>
 
-	<div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-		<div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
-			<div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
-				<div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
-			</div>
-		</div>
-	</div>
+  <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+    <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
+      <div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
+        <div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
+      </div>
+    </div>
+  </div>
 
 <?php endif; ?>

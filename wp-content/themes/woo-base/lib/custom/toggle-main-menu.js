@@ -4,9 +4,13 @@ const toggleMenu = {
     $('.toggle-menu').on('click', function() {
 
       $('#left-sidebar').toggleClass('is-open');
-      $(this).toggleClass('open');
-      $('.side-first-wrapper').toggleClass('is-block');
+      $('.primary-wrapper').toggleClass('nav-open');
     });
+
+
+    $('.toggle-menu').click(function(){
+      $(this).toggleClass('open');
+      });
   }
 };
 export default toggleMenu;

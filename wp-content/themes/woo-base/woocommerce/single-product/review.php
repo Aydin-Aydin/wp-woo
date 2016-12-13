@@ -25,19 +25,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 <li itemprop="review" itemscope itemtype="http://schema.org/Review" <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 
 	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
-		<div class="comment-content thumb">		
-			<?php
-			/**
-			 * The woocommerce_review_before hook
-			 *
-			 * @hooked woocommerce_review_display_gravatar - 10
-			 */
-			do_action( 'woocommerce_review_before', $comment );
-			?>
-		</div>
 
+		<?php
+		/**
+		 * The woocommerce_review_before hook
+		 *
+		 * @hooked woocommerce_review_display_gravatar - 10
+		 */
+		do_action( 'woocommerce_review_before', $comment );
+		?>
 
-		<div class="comment-content comment-text">
+		<div class="comment-text">
 
 			<?php
 			/**

@@ -6,7 +6,6 @@ function theme_register_scripts() {
 
   wp_enqueue_script( 'woo-base-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/woo-base.min.js' ), array( 'jquery' ), '1.0', true );
   wp_enqueue_script( 'imgLiquid-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/imgLiquid.min.js' ), array( 'jquery' ));
-  wp_enqueue_script( 'nice-select-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.nice-select.js' ), array( 'jquery' ));
   wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
   wp_enqueue_script( 'rater-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/rater.js' ), array( 'jquery' ));
   wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
@@ -38,8 +37,7 @@ function wp_woo_wrapper_end() {
   echo '</div>';
 }
 
-// Add woocommerce theme support
-add_action('after_setup_theme', 'woocommerce_support');
+add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
@@ -98,7 +96,7 @@ add_filter('woocommerce_loop_add_to_cart_link', 'woo_hide_add_to_card_link');
     return false;
  }
 
- // Display 24 products per page. Goes in functions.php
+// Display 24 products per page. Goes in functions.php
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
 
 // Wrap product details that located in shop page in a div
@@ -122,32 +120,6 @@ function get_star_rating()
     echo '<div class="star-rating"><span data-rating="' . floor($average * 2) / 2 . '"</span></div>';
 }
 
-
-// Move review tab single poroduct page.
-add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
-function woo_remove_product_tabs( $tabs ) {
-    unset( $tabs['reviews'] );  // Removes the reviews tab
-    unset( $tabs['description'] );  // Removes the additional information tab
-    return $tabs;
-}
-
-// Move single product reviews to under images.
-add_action( 'woocommerce_after_single_product', 'comments_template', 10 );
-function woocommerce_template_product_reviews() {
-  woocommerce_get_template( 'single-product-reviews.php' );
-}
-
-// Remove single product related 
-add_action( 'woocommerce_before_main_content', 'remove_single_product_related' );
-function remove_single_product_related(){
-   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
-   //add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
-  // Move you may like section to under product image
-   add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display' );
-}
-
-// End woocommerce hooks
 
 // Start Advanced custom fields
 if(function_exists("register_field_group"))
@@ -200,6 +172,7 @@ if(function_exists("register_field_group"))
     'menu_order' => 0,
   ));
 }// End advanced custom fields
+// End woocommerce hooks
 
 
 // Remove each style one by one
@@ -244,7 +217,7 @@ if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'name' => 'sidebar-first',
         'id' => 'sidebar-first',
-	    'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
@@ -256,16 +229,6 @@ if ( function_exists('register_sidebar') )
         'id' => 'top-rated',
         'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h4 class="widgettitle">',
-        'after_title' => '</h4>',
-    ));
-
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-        'name' => 'woo-products',
-        'id' => 'woo-products',
-        'before_widget' => '<section id="%1$s" class="wdg-product %2$s">',
-        'after_widget' => '</section>',
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
     ));
@@ -290,6 +253,15 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h4>',
     ));
 
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'woo-products',
+        'id' => 'woo-products',
+        'before_widget' => '<section id="%1$s" class="wdg-product %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
 if ( function_exists('register_sidebar') )
     register_sidebar( array(
     'name' => 'Footer Sidebar 1',
@@ -319,6 +291,11 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
     ) );
 
+/*  EXCERPT
+    Usage:
+
+    <?php echo excerpt(100); ?>
+*/
 
 function excerpt($limit) {
     $excerpt = explode(' ', get_the_excerpt(), $limit);
