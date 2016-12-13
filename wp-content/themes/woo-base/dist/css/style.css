@@ -337,7 +337,9 @@ html, body {
       .brand-widget div.yith-wcbr-thumbnail-list ul li a img {
         position: absolute;
         top: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        max-height: 35%;
+        width: auto; }
 
 .brand-widget .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before {
   display: none; }
