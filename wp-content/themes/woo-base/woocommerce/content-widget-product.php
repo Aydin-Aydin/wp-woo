@@ -35,7 +35,22 @@ global $product; ?>
 
       <?php if ( ! empty( $show_rating ) ) : ?>
         <span class="text-item product-rating">
-            <?php echo $product->get_rating_html(); ?>
+        <?php
+            $rating_count = $product->get_rating_count();
+            $review_count = $product->get_review_count();
+            $average      = $product->get_average_rating();
+
+            if ( $rating_count > 0 ) : ?>
+
+              <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
+                  <div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
+                    <div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
+                  </div>
+                </div>
+              </div>
+
+            <?php endif; ?>
         </span>
       <?php endif; ?>
 

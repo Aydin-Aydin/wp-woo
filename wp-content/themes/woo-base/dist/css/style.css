@@ -338,7 +338,7 @@ html, body {
     height: 100%; }
   .rated-widget li .text-wrapper {
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     text-align: center;
     left: 50%;
     color: white;
@@ -347,6 +347,9 @@ html, body {
     padding: 5px;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.5); }
+    .rated-widget li .text-wrapper .woocommerce-product-rating {
+      padding: 3px;
+      overflow: auto; }
 
 .brand-widget div.yith-wcbr-thumbnail-list ul {
   margin: 0; }
@@ -442,7 +445,8 @@ html, body {
   margin-bottom: 1%;
   margin: 2px; }
   .grid-item .text-wrapper .star-rating div, .grid-item .text-wrapper .star-rating .rating {
-    margin: 0 auto; }
+    margin: 0 auto;
+    color: #fa5400; }
   .grid-item .text-wrapper a {
     color: #000; }
 
