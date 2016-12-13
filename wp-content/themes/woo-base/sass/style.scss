@@ -25,7 +25,7 @@ http://www.opensource.org/licenses/gpl-license.php
 // @import "reset";
 // @import "mixins";
 @import "variables";
-// @import "fonts";
+@import "fonts";
 @import "globals";
 
 
@@ -33,6 +33,6 @@ http://www.opensource.org/licenses/gpl-license.php
 // @import "header";
 // @import "homepage";
 @import "sidebar";
-// @import "footer";
+@import "footer";
 @import "overrideWc/**/*";
 @import "footer";

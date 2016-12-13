@@ -455,6 +455,10 @@ nav ul {  display: block; }
     width: 170px;
 }
 
+.js_woof_options, .js_woof_add_options{
+    color: green !important;
+
+}
 
 #woof_options > li {
     position: relative;
@@ -870,6 +874,36 @@ div.woof_info_popup {
     opacity: 1 !important;
     font-size: 102% !important;
 }
+
+
+
+::-webkit-input-placeholder {color:#b2c8dc;}
+::-moz-placeholder          {color:#b2c8dc;}/* Firefox 19+ */
+:-moz-placeholder           {color:#b2c8dc;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#b2c8dc;}
+
+/*
+input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+*/
+
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
+
 
 
 .woof_premium_only{

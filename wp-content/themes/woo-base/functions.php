@@ -98,6 +98,9 @@ add_filter('woocommerce_loop_add_to_cart_link', 'woo_hide_add_to_card_link');
     return false;
  }
 
+ // Display 24 products per page. Goes in functions.php
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
+
 // Wrap product details that located in shop page in a div
  add_action('woocommerce_before_shop_loop_item_title', 'product_teaser_text_wrapper_start', 10);
  add_action('woocommerce_after_shop_loop_item','product_teaser_text_wrapper_end', 10);
@@ -267,15 +270,55 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h4>',
     ));
 
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Top Brands',
+        'id' => 'top-brands',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
 
-/*  EXCERPT
-=======
-/*  EXCERPT 
->>>>>>> ed4e195586ab5d9f019d287355fa105be26c8f61
-    Usage:
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'Latest Products',
+        'id' => 'latest-products',
+        'before_widget' => '<div id="%1$s" class="sidebar-widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
 
-    <?php echo excerpt(100); ?>
-*/
+if ( function_exists('register_sidebar') )
+    register_sidebar( array(
+    'name' => 'Footer Sidebar 1',
+    'id' => 'footer-sidebar-1',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+    'name' => 'Footer Sidebar 2',
+    'id' => 'footer-sidebar-2',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+    register_sidebar( array(
+    'name' => 'Footer Sidebar 3',
+    'id' => 'footer-sidebar-3',
+    'description' => 'Appears in the footer area',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+
 
 function excerpt($limit) {
     $excerpt = explode(' ', get_the_excerpt(), $limit);
