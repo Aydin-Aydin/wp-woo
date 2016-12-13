@@ -171,18 +171,38 @@ html, body {
   }
 }
 
+<<<<<<< HEAD
+=======
+.grid-sizer-2-columns {
+  width: 48% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  } 
+}
+
+.grid-item-2-columns {
+  display: block;
+  float: left;
+  width: 50% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  }
+
+  @include media($breakpoint-large) {
+   width: 100% !important;
+  }    
+}
+
+>>>>>>> mohamad
 .grid-item {
 
   display: block;
   float: left;
-  height: 360px;
+  // height: 360px;
   margin-bottom: 1%;
+  width: 19%;
 
   @include media($breakpoint-xlarge) {
-   width: 24%;
-  }
-
-  @include media($breakpoint-large) {
    width: 24%;
   }
 
@@ -464,18 +484,8 @@ html, body {
   }
 }
 
-#woocommerce_products-2 {
-  .gutter-sizer {
-    width: 1%;
-  }
-}
-
 // This is the grid for the products
 .grid-item {
-  display: block;
-  float: left;
-  margin-bottom: 1%;
-  margin: 2px;
 
   .text-wrapper {
     .star-rating div, .star-rating .rating {
