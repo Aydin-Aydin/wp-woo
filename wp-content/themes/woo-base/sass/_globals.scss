@@ -578,3 +578,41 @@ input#yith-s.yith-s {
     margin-top: 1px;
   }
 }
+
+#site-name {
+  position: fixed;
+  top: 400px;
+  left: -78px;
+  color: $white;
+  display: block;
+  float: left;
+  font-size: 2rem;
+  transform: rotate(-90deg);
+  letter-spacing: 17px;
+  z-index: 99999;
+  transition: all 1s;
+
+  &.move-right {
+    transform: rotate(360deg);
+    left: 400px;
+    top: 100px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: $orange;
+    letter-spacing: 50px;
+    @include media($breakpoint-large) {
+      font-size: 3rem;
+      letter-spacing: 40px;
+    }
+    @include media($breakpoint-medium) {
+      font-size: 2rem;
+      letter-spacing: 30px;
+    }
+
+    @include media($breakpoint-small) {
+      font-size: 1.5rem;
+      letter-spacing: 20px;
+      left: 350px;
+    }     
+  }
+}

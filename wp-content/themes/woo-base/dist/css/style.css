@@ -431,6 +431,40 @@ input#yith-s.yith-s {
   height: auto;
   margin-top: 1px; }
 
+#site-name {
+  position: fixed;
+  top: 400px;
+  left: -78px;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 2rem;
+  transform: rotate(-90deg);
+  letter-spacing: 17px;
+  z-index: 99999;
+  transition: all 1s; }
+  #site-name.move-right {
+    transform: rotate(360deg);
+    left: 400px;
+    top: 100px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fa5400;
+    letter-spacing: 50px; }
+    @media screen and (max-width: 1100px) {
+      #site-name.move-right {
+        font-size: 3rem;
+        letter-spacing: 40px; } }
+    @media screen and (max-width: 880px) {
+      #site-name.move-right {
+        font-size: 2rem;
+        letter-spacing: 30px; } }
+    @media screen and (max-width: 600px) {
+      #site-name.move-right {
+        font-size: 1.5rem;
+        letter-spacing: 20px;
+        left: 350px; } }
+
 #left-sidebar {
   display: block;
   float: left;

@@ -12,6 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-first' ) ) {
 
 
 <div class="sidebar-left-container">
+        <h2 id="site-name">LACEUP</h2>
 
   <aside id="left-sidebar" class="widget-area" role="complementary">
 
