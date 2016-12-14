@@ -3,6 +3,8 @@ import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
 import scroll from './custom/scroll-2-element';
+import niceSelect from './custom/niceSelect';
+import toggleReviewForm from './custom/toggle-review-form';
 
 (function() {
   //   Run when DOM is ready
@@ -11,8 +13,10 @@ import scroll from './custom/scroll-2-element';
     masonGrid.init();
     containerMargin.init();
     scroll.init();
+    niceSelect.init();
+    toggleReviewForm.init();    
 
-		$('.grid-item.product').matchHeight();
+	$('.grid-item.product').matchHeight();
 
 
 $(".slider-wrapper").slick({
