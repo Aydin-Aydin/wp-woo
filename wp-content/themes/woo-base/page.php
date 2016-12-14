@@ -2,8 +2,31 @@
 	<?php get_sidebar('sidebar-first'); ?>
 <section class="primary-wrapper">
 
-  <?php if (is_front_page()): ?>
+    <?php if (is_front_page()):
+
+      $page = get_posts(
+        array(
+          'name'      => 'home',
+          'post_type' => 'page'
+        )
+      );
+
+      if ( $page )
+        {?>
+
+            <div class="home-post" style="background-image: url(<?php the_field("front_post_img"); ?>);">
+              <div class="post-content">
+
+                <?php echo $page[0]->post_content ?>
+
+              </div>
+            </div>
+
+        <?php }
+    ?>
     <div class="slider-wrapper woo-main-content">
+
+
       <?php
         $args = ['post_type' => 'slider'];
         $loop = new WP_Query( $args );

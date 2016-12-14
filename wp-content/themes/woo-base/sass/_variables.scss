@@ -19,18 +19,5 @@ $breakpoint-xlarge: max-width 1400px;
 $breakpoint-large: max-width 1100px;
 $breakpoint-medium: max-width 880px;
 $breakpoint-small: max-width 600px;
+$breakpoint-xsmall: max-width 480px;
 
-@font-face {
-  font-family: 'lato-regular';
-  src: url('../../fonts/Lato/Lato-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'lato-light';
-  src: url('../../fonts/Lato/Lato-Light.ttf');
-}
-
-@font-face {
-  font-family: 'lato-bold';
-  src: url('../../fonts/Lato/Lato-Bold.ttf');
-}
