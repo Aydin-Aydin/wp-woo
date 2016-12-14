@@ -121,6 +121,11 @@
     width: 100%;
   }
 
+  p {
+    padding: 1rem 0;
+    line-height: 150%;
+  }
+
   .product_meta {
     display: none;
   }
@@ -132,6 +137,9 @@
 
   .cart {
     position: relative;
+    overflow: auto;
+    margin-top: 2rem;
+
     & > * {
       @include span-columns(6 of 12);
       display: block;
@@ -304,3 +312,4 @@
     }
   }
 }
+

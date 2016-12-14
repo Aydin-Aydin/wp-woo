@@ -860,13 +860,18 @@ form table.shop_table.shop_table_responsive.cart {
   @media screen and (max-width: 880px) {
     .summary-tabs-wrapper {
       width: 100%; } }
+  .summary-tabs-wrapper p {
+    padding: 1rem 0;
+    line-height: 150%; }
   .summary-tabs-wrapper .product_meta {
     display: none; }
   .summary-tabs-wrapper .products {
     height: auto;
     padding: 0; }
   .summary-tabs-wrapper .cart {
-    position: relative; }
+    position: relative;
+    overflow: auto;
+    margin-top: 2rem; }
     .summary-tabs-wrapper .cart > * {
       float: left;
       display: block;
