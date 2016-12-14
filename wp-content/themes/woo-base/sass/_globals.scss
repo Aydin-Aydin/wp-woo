@@ -170,26 +170,6 @@ html, body {
   }
 }
 
-.grid-sizer-2-columns {
-  width: 48% !important;
-  @include media($breakpoint-small) {
-   width: 100% !important;
-  } 
-}
-
-.grid-item-2-columns {
-  display: block;
-  float: left;
-  width: 50% !important;
-  @include media($breakpoint-small) {
-   width: 100% !important;
-  }
-
-  @include media($breakpoint-large) {
-   width: 100% !important;
-  }    
-}
-
 .grid-item {
 
   display: block;
@@ -202,6 +182,10 @@ html, body {
    width: 24%;
   }
 
+  @include media($breakpoint-large) {
+   width: 24%;
+  }
+
   @include media($breakpoint-medium) {
     width: 49%;
   }
@@ -210,6 +194,29 @@ html, body {
     width: 99%;
   }
 }
+
+
+
+// .grid-sizer-2-columns {
+//   width: 48% !important;
+//   @include media($breakpoint-small) {
+//    width: 100% !important;
+//   } 
+// }
+
+// .grid-item-2-columns {
+//   display: block;
+//   float: left;
+//   width: 50% !important;
+//   @include media($breakpoint-small) {
+//    width: 100% !important;
+//   }
+
+//   @include media($breakpoint-large) {
+//    width: 100% !important;
+//   }    
+// }
+
 
 
 
@@ -440,15 +447,15 @@ html, body {
   position: relative;
   z-index: 1;
 
- .grid-item {
-    text-align: center;
-    .text-wrapper {
-      .star-rating div, .star-rating .rating {
-        margin: 0 auto;
-      }
-    }
-  }
-}
+//  .grid-item {
+//     text-align: center;
+//     .text-wrapper {
+//       .star-rating div, .star-rating .rating {
+//         margin: 0 auto;
+//       }
+//     }
+//   }
+// }
 
 // Pagination shop page
 .woocommerce-pagination {

@@ -25,15 +25,5 @@ import hideResetButton from './custom/hideResetButton';
     hideResetButton.init();
     //masonGrid2Colomns.init();
     masonGrid.init();
-    // You may also like section
-    $('.summary-tabs-wrapper .grid-sizer').css({
-      width: "45%"
-    });
-    $('.summary-tabs-wrapper .grid-item').css({
-      width: "45%"
-    });
-
-    $('.stars').find('span a').css({border: '1px solid red'});
-    
   });
 })();

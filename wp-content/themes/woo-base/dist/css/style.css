@@ -171,29 +171,15 @@ html, body {
     .grid-sizer {
       width: 99%; } }
 
-.grid-sizer-2-columns {
-  width: 48% !important; }
-  @media screen and (max-width: 600px) {
-    .grid-sizer-2-columns {
-      width: 100% !important; } }
-
-.grid-item-2-columns {
-  display: block;
-  float: left;
-  width: 50% !important; }
-  @media screen and (max-width: 600px) {
-    .grid-item-2-columns {
-      width: 100% !important; } }
-  @media screen and (max-width: 1100px) {
-    .grid-item-2-columns {
-      width: 100% !important; } }
-
 .grid-item {
   display: block;
   float: left;
   margin-bottom: 1%;
   width: 19%; }
   @media screen and (max-width: 1400px) {
+    .grid-item {
+      width: 24%; } }
+  @media screen and (max-width: 1100px) {
     .grid-item {
       width: 24%; } }
   @media screen and (max-width: 880px) {
