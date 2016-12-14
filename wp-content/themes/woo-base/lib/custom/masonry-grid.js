@@ -11,13 +11,13 @@ const masonGrid = {
 		// Latest product widget
 		$('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
 
-		// You may also like section
-		$('.grid').masonry({
-			itemSelector: '.grid-item-2-columns',
-			columnWidth: '.grid-sizer-2-columns',
-			gutter: '.gutter-sizer',
-			percentPosition: true
-		});	
+		// // You may also like section
+		// $('.grid').masonry({
+		// 	itemSelector: '.grid-item-2-columns',
+		// 	columnWidth: '.grid-sizer-2-columns',
+		// 	gutter: '.gutter-sizer',
+		// 	percentPosition: true
+		// });	
 			
 		// General grid
 		$('.grid').masonry({
