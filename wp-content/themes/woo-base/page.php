@@ -17,6 +17,8 @@
             <div class="home-post" style="background-image: url(<?php the_field("front_post_img"); ?>);">
               <div class="post-content">
 
+                <h1><?php bloginfo('name'); ?></h1>
+
                 <?php echo $page[0]->post_content ?>
 
               </div>

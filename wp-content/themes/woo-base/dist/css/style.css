@@ -13,6 +13,7 @@ http://www.opensource.org/licenses/gpl-license.php
 */
 /* Vendor */
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("http://db.onlinewebfonts.com/c/be1dfcee113377ab161f538777124ae5?family=SpumanteW00-Regular");
 html {
   box-sizing: border-box; }
 
@@ -467,6 +468,20 @@ html, body {
     height: 80%; }
   #woocommerce_products-2 li.grid-item .text-wrapper {
     width: 100%; }
+
+.home-post {
+  padding: 4rem 0; }
+  .home-post .post-content {
+    color: #fff;
+    padding: 4%;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-size: 19px;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .home-post .post-content h1 {
+      margin: 10px 0 30px 0;
+      font-size: 3rem;
+      font-family: "SpumanteW00-Regular", sans-serif; }
 
 .woocommerce-pagination {
   width: 100%; }
