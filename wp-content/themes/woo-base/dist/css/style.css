@@ -842,8 +842,7 @@ form table.shop_table.shop_table_responsive.cart {
   padding: 15px;
   width: 100%;
   text-align: center;
-  box-sizing: border-box;
-  border: 2px solid; }
+  box-sizing: border-box; }
   .thumbnails.columns-3:last-child {
     margin-right: 0; }
 

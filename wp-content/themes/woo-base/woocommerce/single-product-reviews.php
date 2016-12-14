@@ -27,38 +27,17 @@ if ( ! comments_open() ) {
 
 ?>
 <div id="reviews" class="woocommerce-Reviews">
+
+
 	<div id="comments">
 		<h2 class="woocommerce-Reviews-title"><?php
 			if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' && ( $count = $product->get_review_count() ) )
-				printf( _n( '%s review for %s%s%s', '%s reviews for %s%s%s', $count, 'woocommerce' ), $count, '<span>', get_the_title(), '</span>' );
+				echo 'Reviews';
 			else
 				_e( 'Reviews', 'woocommerce' );
 		?></h2>
 
-		<?php if ( have_comments() ) : ?>
-
-			<ol class="commentlist">
-				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
-			</ol>
-
-			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-				echo '<nav class="woocommerce-pagination">';
-				paginate_comments_links( apply_filters( 'woocommerce_comment_pagination_args', array(
-					'prev_text' => '&larr;',
-					'next_text' => '&rarr;',
-					'type'      => 'list',
-				) ) );
-				echo '</nav>';
-			endif; ?>
-
-		<?php else : ?>
-
-			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
-
-		<?php endif; ?>
-	</div>
-
-	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) : ?>
+<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->id ) ) : ?>
 
 		<div id="review_form_wrapper">
 			<div id="review_form">
@@ -106,7 +85,30 @@ if ( ! comments_open() ) {
 
 		<p class="woocommerce-verification-required"><?php _e( 'Only logged in customers who have purchased this product may leave a review.', 'woocommerce' ); ?></p>
 
-	<?php endif; ?>
+	<?php endif; ?>		
+
+		<?php if ( have_comments() ) : ?>
+
+			<ol class="commentlist">
+				<?php wp_list_comments( apply_filters( 'woocommerce_product_review_list_args', array( 'callback' => 'woocommerce_comments' ) ) ); ?>
+			</ol>
+
+			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+				echo '<nav class="woocommerce-pagination">';
+				paginate_comments_links( apply_filters( 'woocommerce_comment_pagination_args', array(
+					'prev_text' => '&larr;',
+					'next_text' => '&rarr;',
+					'type'      => 'list',
+				) ) );
+				echo '</nav>';
+			endif; ?>
+
+		<?php else : ?>
+
+			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
+
+		<?php endif; ?>
+	</div>
 
 	<div class="clear"></div>
 </div>
