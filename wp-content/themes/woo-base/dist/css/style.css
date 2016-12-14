@@ -1018,6 +1018,9 @@ form table.shop_table.shop_table_responsive.cart {
     .comment-respond form p label {
       margin-bottom: 1rem; }
 
+.woof_container_product_cat {
+  background-color: #000; }
+
 .container .slider-wrapper.woo-content {
   padding-left: 0; }
   .container .slider-wrapper.woo-content .slider-content {
