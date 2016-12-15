@@ -24,11 +24,15 @@
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           <a id="takeMeDown" href="#frontWidgetBrands" title="Take Me Down"></a>
 =======
           <a class="take-me-down" href="#content-top"></a>
 
 >>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
+=======
+          <a id="takeMeDown" href="#scroll2" title="Take Me Down"></a>
+>>>>>>> sergio
         </div>
 
       <?php endwhile; ?>
@@ -36,10 +40,14 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="front-widget brand-widget" id="frontWidgetBrands">
 =======
     <div id="content-top" class="front-widget brand-widget">
 >>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
+=======
+    <div class="front-widget brand-widget">
+>>>>>>> sergio
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 

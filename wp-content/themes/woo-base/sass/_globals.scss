@@ -48,6 +48,7 @@ table {
 ========================================================================== */
 html{
   overflow-y: scroll;
+  margin-top: 0!important;
 }
 
 body{
@@ -440,10 +441,12 @@ html, body {
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow:hidden;
+
+  @include media($breakpoint-medium){
+    padding-left: 0 !important;
+    margin-top: 70px;
+  }
 }
-
-
-
 
 .front-widget {
   ul {

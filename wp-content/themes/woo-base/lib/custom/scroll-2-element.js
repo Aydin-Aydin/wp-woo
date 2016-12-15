@@ -12,7 +12,6 @@ const scrollToElement = {
         $('body,html').stop().animate({
             scrollTop: target.offset().top
         }, 1000);
-        console.log(target.attr("id"));
       }
     });
 
