@@ -562,18 +562,6 @@ html, body {
 }
 
 
-.primary-wrapper{
-  padding-left: 72px;
-  transition: all 0.3s ease-in-out;
-  height: 100%;
-  overflow:hidden;
-
-  @include media($breakpoint-medium-min){
-    padding-left: 0 !important;
-    margin-top: 70px;
-  }
-}
-
 .front-widget {
   ul {
     &:hover .slick-next {

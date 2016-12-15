@@ -1,12 +1,13 @@
 
 #mobilNavWrap{
-  @include media($breakpoint-medium-min){
-    display: block;
-  }
   display: none;
   width: 100%;
   position: absolute;
   z-index: 100;
+
+  @include media($breakpoint-medium){
+    display: block;
+  }
 // Hamburger
   .mobil-nav-header{
     background-color: $black;
