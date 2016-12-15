@@ -417,19 +417,65 @@ input#yith-s.yith-s {
   border-bottom: 1px solid white;
   color: #FFF;
   outline: 0;
-  font-size: 1.2em; }
+  font-size: 1.1em; }
 
 /* About-us Page */
-.about-us .woo-main-content {
-  position: relative; }
+.about-us {
+  /*Stripe color #81cbbc*/ }
+  .about-us .woo-main-content {
+    position: relative;
+    margin-top: 3px; }
+  .about-us #cssanimation {
+    font-family: verdana;
+    width: 600px;
+    margin: auto;
+    padding: 25px 0;
+    color: #212121;
+    -webkit-border-bottom-left-radius: 60px 700px;
+    -webkit-border-bottom-right-radius: 700px 20px;
+    -webkit-border-top-right-radius: 40px 100px;
+    background: #fcf59b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#81cbbc), color-stop(2%, #fcf59b));
+    -webkit-background-size: 100% 30px; }
+  .about-us p {
+    padding: 3px 100px;
+    line-height: 32px;
+    margin-bottom: 13px;
+    font-size: 14px; }
 
-.about-us #cssanimation {
-  display: inline-block;
-  border: 1px solid;
-  border-radius: 3px;
-  width: auto;
-  height: auto;
-  margin-top: 1px; }
+#site-name {
+  position: fixed;
+  top: 400px;
+  left: -78px;
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 2rem;
+  transform: rotate(-90deg);
+  letter-spacing: 17px;
+  z-index: 99999;
+  transition: all 1s; }
+  #site-name.move-right {
+    transform: rotate(360deg);
+    left: 400px;
+    top: 100px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fa5400;
+    letter-spacing: 50px; }
+    @media screen and (max-width: 1100px) {
+      #site-name.move-right {
+        font-size: 3rem;
+        letter-spacing: 40px; } }
+    @media screen and (max-width: 880px) {
+      #site-name.move-right {
+        font-size: 2rem;
+        letter-spacing: 30px; } }
+    @media screen and (max-width: 600px) {
+      #site-name.move-right {
+        font-size: 1.5rem;
+        letter-spacing: 20px;
+        left: 350px; } }
 
 #left-sidebar {
   display: block;
@@ -871,13 +917,18 @@ form table.shop_table.shop_table_responsive.cart {
   @media screen and (max-width: 880px) {
     .summary-tabs-wrapper {
       width: 100%; } }
+  .summary-tabs-wrapper p {
+    padding: 1rem 0;
+    line-height: 150%; }
   .summary-tabs-wrapper .product_meta {
     display: none; }
   .summary-tabs-wrapper .products {
     height: auto;
     padding: 0; }
   .summary-tabs-wrapper .cart {
-    position: relative; }
+    position: relative;
+    overflow: auto;
+    margin-top: 2rem; }
     .summary-tabs-wrapper .cart > * {
       float: left;
       display: block;
@@ -1023,6 +1074,9 @@ form table.shop_table.shop_table_responsive.cart {
     padding-top: 1rem; }
     .comment-respond form p label {
       margin-bottom: 1rem; }
+
+.woof_container_product_cat {
+  background-color: #000; }
 
 .container .slider-wrapper.woo-content {
   padding-left: 0; }
