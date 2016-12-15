@@ -1,0 +1,203 @@
+
+#mobilNavWrap{
+  @include media($breakpoint-medium){
+    display: block;
+  }
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+// Hamburger
+  .mobil-nav-header{
+    background-color: $black;
+    height: 70px;
+    overflow: hidden;
+
+    .toggle-mobil-nav {
+      width: 40px;
+      height: 40px;
+      float: left;
+      position: relative;
+      margin: 20px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      cursor: pointer;
+    }
+
+    .toggle-mobil-nav span {
+      display: block;
+      position: absolute;
+      height: 5px;
+      width: 100%;
+      background: #fff;
+      border-radius: 3px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+    .toggle-mobil-nav span:nth-child(1) {
+      top: 0px;
+    }
+
+    .toggle-mobil-nav span:nth-child(2),.toggle-mobil-nav span:nth-child(3) {
+      top: 12px;
+    }
+
+    .toggle-mobil-nav span:nth-child(4) {
+      top: 24px;
+    }
+
+    .toggle-mobil-nav.open span:nth-child(1) {
+      top: 12px;
+      width: 0%;
+      left: 50%;
+    }
+
+    .toggle-mobil-nav.open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .toggle-mobil-nav.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    .toggle-mobil-nav.open span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+
+    div.cart{
+      position: relative;
+      width: 40px;
+      height: 40px;
+      float: right;
+      margin: 10px 10px 0 0;
+      a.cart-icon{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        color: $black;
+        background-color: transparent;
+        background-image: url("../graphics/icons/tote-bag.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        line-height: 55px;
+        font-weight: $lato-regular;
+        font-size: 12pt;
+
+        &:link{
+          color: $sidebar-icon-text;
+        }
+        &:visited{
+          color: $sidebar-icon-text;
+        }
+      }
+    }
+  }
+  .mobil-nav{
+    display: block;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: -200vh;
+    margin-top: 20px;
+    z-index: 70;
+    background-color: $black;
+    transition: all 0.5s ease-in-out;
+
+    &.open{
+      top: 50px;
+    }
+
+  div.sidebar-widget{
+    margin-bottom: 20px;
+    &.widget_search{
+      label.screen-reader-text{
+        display: none;
+      }
+
+      #searchsubmit{
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        left: 62%;
+        top: -1px;
+        border: none;
+        background-color: #000000;
+        background-repeat: no-repeat;
+        background-image: url("../graphics/icons/Search.svg");
+        background-size: 50% 50%;
+        background-position: center;
+        font-size: 100vw;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+
+        &:focus{
+          outline: !important;
+        }
+      }
+
+      input[type="text"]{
+        font-size: 18px;
+        padding: 10px 40px 10px 10px;
+        display: block;
+        border: none;
+        border-bottom: 1px solid $white;
+        width: 40%;
+        background-color: transparent;
+        color: $white;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        margin: auto;
+        position: relative;
+        z-index: 101;
+
+          &:focus{
+            outline:none;
+            border-bottom: 2px solid $nav-link-current;
+            width: 60%;
+            font-size: 16pt;
+
+            ~#searchsubmit{
+              left: 72%;
+            }
+          }
+        }
+
+        input[type="submit"]{
+          font-size: 30pt;
+        }
+      }
+    }
+
+    .menu-primary-container{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
