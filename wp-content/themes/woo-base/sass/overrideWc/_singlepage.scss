@@ -8,7 +8,7 @@
 
     @include media($breakpoint-medium) {
       width: 100%;
-    }    
+    }
   }
 
   .main-contnet-wrapper {
@@ -45,17 +45,31 @@
   .up-sells {
     .grid {
       padding: 0 !important;
+
+      .text-wrapper {
+        margin: 0 auto;
+        text-align: center;
+        a {color: $black;}
+        .star-rating div {
+          width: 100% !important;
+        }
+        .rating {
+          margin: 0 auto;
+          color: $orange;
+          margin:2px 0;
+        }
+      }
     }
 
     // .grid-sizer {
     //   @include media($breakpoint-xlarge) {
-    //     width: 49% !important; 
+    //     width: 49% !important;
     //   }
     // }
 
     // .grid-item {
     //   @include media($breakpoint-xlarge) {
-    //     width: 49% !important; 
+    //     width: 49% !important;
     //   }
     // }
     margin-right: 0;
@@ -80,7 +94,7 @@
     //   }
     //   &:nth-child(even) {
     //     border-left: 1px solid $light-gray;
-    //   }      
+    //   }
     // }
 
     // @include media($breakpoint-medium) {
@@ -197,9 +211,9 @@
         margin-right: 1rem;
         font-size: 110%;
         font-weight: 900;
-      }     
+      }
     }
-  }   
+  }
 }
 
 #commentform {

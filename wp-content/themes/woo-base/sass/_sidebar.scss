@@ -20,6 +20,10 @@
   z-index: 2;
   transition: all 0.3s ease-in-out;
 
+  @include media($breakpoint-medium){
+    display: none;
+  }
+
   label {
     color: $white;
   }
@@ -40,7 +44,6 @@
   }
 
   &.is-open {
-
     left: 0;
   }
 
@@ -131,7 +134,7 @@
       height: 60px;
       text-align: center;
       position: relative;
-      top: 73vh;
+      top: 77vh;
       color: $black;
       background-color: transparent;
       background-image: url("../graphics/icons/tote-bag.svg");
@@ -214,51 +217,34 @@
     }
   }
 
-/*   .side-left-wrapper {
-    position: fixed;
-    left: -50%;
-    bottom: 0;
-    top: 0;
-    padding: 1rem;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-
-    @include media($sidebar-main-menu-medium) {
-      width: 50%;
-    }
-
-    @include media($sidebar-main-menu-small) {
-      width: 100%;
-    }
-  } */
-
   .is-open {
     transition: all 0.3s ease-in-out;
     left: 0;
   }
 
-  #menu-primary {
+  #nav_menu-2{
+    #menu-primary-1{
+      li {
+        padding: 10px 0;
 
-    li {
-      padding: 10px 0;
-
-      a{
-        display: block;
-        font-weight: $lato-light;
-        font-size: 18pt;
-        width: 100%;
-        color: $white;
-        text-transform: uppercase;
-
-        &:hover{
-          color: $nav-link-hover;
-        }
-      }
-
-      &.current-menu-item{
         a{
-          color: $nav-link-current;
-          font-weight: $lato-regular;
+          display: block;
+          font-weight: $lato-light;
+          font-size: 18pt;
+          width: 100%;
+          color: $white;
+          text-transform: uppercase;
+
+          &:hover{
+            color: $nav-link-hover;
+          }
+        }
+
+        &.current-menu-item{
+          a{
+            color: $nav-link-current;
+            font-weight: $lato-regular;
+          }
         }
       }
     }

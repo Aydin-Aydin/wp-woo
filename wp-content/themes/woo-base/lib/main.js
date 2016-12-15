@@ -2,6 +2,7 @@ import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
+import toggleMobilNav from './custom/toggle-mobil-nav';
 import scroll from './custom/scroll-2-element';
 import niceSelect from './custom/niceSelect';
 import toggleReviewForm from './custom/toggle-review-form';
@@ -12,12 +13,15 @@ import toggleReviewForm from './custom/toggle-review-form';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+
+    toggleMobilNav.init();
     scroll.init();
     niceSelect.init();
-    toggleReviewForm.init();    
+    toggleReviewForm.init();
 
 	$('.grid-item.product').matchHeight();
 
+		$('.grid-item.product').matchHeight();
 
 $(".slider-wrapper").slick({
   dots: true,
@@ -41,26 +45,52 @@ responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: false,
       }
     },
     {
       breakpoint: 800,
       settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 500
+      }
+    },
+    {
+      breakpoint: 680,
+      settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500
       }
     }
+
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
@@ -90,9 +120,7 @@ options = {
 $('.equal-height').matchHeight(options);
 
 // Latest product widget
-$('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
-
-
+// $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
 
 
 

@@ -22,14 +22,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $product; ?>
-
-<li class="imgLiquidFill imgLiquid" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($product->id), 'thumbnail-size', true)[0] ?>');">
+<li class="grid-item">
 	<a href="<?php echo esc_url( get_permalink( $product->id ) ); ?>" title="<?php echo esc_attr( $product->get_title() ); ?>">
-		<?php echo $product->get_image(); ?>
-		<span class="product-title"><?php echo $product->get_title(); ?></span>
-	</a>
-	<?php if ( ! empty( $show_rating ) ) : ?>
-		<?php echo $product->get_rating_html(); ?>
-	<?php endif; ?>
-	<?php echo $product->get_price_html(); ?>
+    <div class=" img-wrapper imgLiquidFill imgLiquid" style="background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id($product->id), 'thumbnail-size', true)[0] ?>');">
+      	<?php echo $product->get_image(); ?>
+    </div>
+    <div class="text-wrapper">
+      <div class="text-content">
+        <span class="text-item product-title">
+          <?php echo $product->get_title(); ?>
+        </span>
+
+        <?php if ( ! empty( $show_rating ) ) : ?>
+          <span class="text-item product-rating">
+          <?php
+              $rating_count = $product->get_rating_count();
+              $review_count = $product->get_review_count();
+              $average      = $product->get_average_rating();
+
+              if ( $rating_count > 0 ) : ?>
+
+                <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                  <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
+                    <div style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
+                      <div data-rate-value="<?php echo esc_html( $average ); ?>" itemprop="ratingValue" class="rating"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <?php endif; ?>
+          </span>
+        <?php endif; ?>
+
+        <span class="text-item product-price">
+          <?php echo $product->get_price_html(); ?>
+        </span>
+      </div>
+    </div>
+  </a>
 </li>

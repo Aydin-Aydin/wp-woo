@@ -9,16 +9,25 @@
     <title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
     <?php wp_head(); ?>
 
-
     <meta name="viewport" content="width=device-width">
 </head>
 <body <?php body_class(); ?>>
 	<div class="container">
+    <div id="mobilNavWrap">
+      <nav class="mobil-nav">
+        <?php dynamic_sidebar( 'sidebar-first' ); ?>
+      </nav>
 
+      <div class="mobil-nav-header">
+        <div class="toggle-mobil-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-        
-        
-
-        
-     	
-       
+        <div class="cart">
+          <a class="cart-icon cart-contents" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+        </div>
+      </div>
+  </div>

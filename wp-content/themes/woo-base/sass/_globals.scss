@@ -48,6 +48,7 @@ table {
 ========================================================================== */
 html{
   overflow-y: scroll;
+  margin-top: 0!important;
 }
 
 body{
@@ -175,7 +176,7 @@ html, body {
   width: 48% !important;
   @include media($breakpoint-small) {
    width: 100% !important;
-  } 
+  }
 }
 
 .grid-item-2-columns {
@@ -188,7 +189,7 @@ html, body {
 
   @include media($breakpoint-large) {
    width: 100% !important;
-  }    
+  }
 }
 
 .grid-item {
@@ -230,6 +231,10 @@ html, body {
     padding-left: 0;
     position:relative;
     z-index: 0;
+
+    @include media($breakpoint-xmedium) {
+      display:none;
+    }
 
 
     &.woo-main-content {
@@ -330,6 +335,7 @@ html, body {
           position: relative;
           bottom: 70px;
           margin: auto;
+          transition: all 0.2s;
 
           &:hover{
             width: 50px;
@@ -396,13 +402,165 @@ html, body {
       &:focus {
         outline: none;
       }
-      float: left;
       a:focus {
         outline: none;
       }
     }
   }
 }
+
+
+// Front page widget
+.front-widget, .latest-products {
+  h4, h3 {
+    background-color: #000;
+    padding: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: $lato-regular;
+  }
+}
+
+// Top rated widget
+.rated-widget {
+  li.grid-item {
+    height: 230px;
+    position: relative;
+    margin:0;
+    .img-wrapper {
+      height: 100%;
+    }
+    .text-wrapper {
+      @include media($breakpoint-medium) {
+        bottom: -163px;
+      }
+      position: absolute;
+      height: 230px;
+      bottom: -230px;
+      text-align: center;
+      left: 50%;
+      color: white;
+      font-weight: $lato-regular;
+      width: 100%;
+      padding: 5px;
+      transform: translateX(-50%);
+      background-color: rgba(0,0,0, 0.5);
+      transition: all 0.4s;
+
+      .text-content {
+        @include media($breakpoint-medium) {
+          position: relative;
+          top:0;
+          left: 0;
+          transform: none;
+        }
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 100%;
+
+        .woocommerce-product-rating {
+          padding:3px;
+          overflow: auto;
+        }
+      }
+    }
+
+    &:hover {
+      .text-wrapper {
+        bottom: 0;
+      }
+    }
+  }
+  @include media($breakpoint-medium) {
+    li.grid-item:hover {
+      .text-wrapper {
+        bottom: -163px;
+      }
+    }
+  }
+  .slick-dots {
+    top: 5px;
+
+    li {
+      margin:0;
+      width: 15px;
+      button:before {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+// Brand Widget
+.brand-widget {
+  @include media($breakpoint-xsmall) {
+    display: none;
+  }
+  div.yith-wcbr-thumbnail-list {
+    ul {
+      margin:0;
+      li {
+        padding: 0;
+        margin:0;
+        display: inline-block;
+        float:none;
+        a {
+          border:none !important;
+          height: 200px;
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 35%;
+            width: auto;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before{
+    display: none;
+  }
+  .slick-dots {
+    top: 5px;
+
+    li {
+      margin:0;
+      width: 15px;
+      button:before {
+        font-size: 9px;
+      }
+    }
+  }
+}
+
+// Front page grid
+.latest-products .text-wrapper {
+  color: $black;
+  font-weight: $lato-regular;
+  .text-content {
+    padding: 7px;
+    .text-item {
+      padding:2px;
+      display:block;
+      &.product-title{
+        font-weight: $lato-semi;
+      }
+    }
+  }
+}
+
+// Align fix
+.woof_sid_auto_shortcode {
+  @include media($breakpoint-medium) {
+    display: none;
+  }
+}
+
 
 .front-widget {
   ul {
@@ -417,6 +575,7 @@ html, body {
 
 
 
+///////////////////////
 .woocommerce-breadcrumb {
   display: none;
 }
@@ -448,7 +607,7 @@ html, body {
   position: relative;
   z-index: 1;
 
- .grid-item {
+  .grid-item {
     text-align: center;
     .text-wrapper {
       .star-rating div, .star-rating .rating {
@@ -457,6 +616,69 @@ html, body {
     }
   }
 }
+// Latest product front page
+#woocommerce_products-2 {
+  li.grid-item {
+    text-align: center;
+    margin:0;
+    .img-wrapper {
+      height: 80%;
+    }
+    .text-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+// Home Post Front
+
+.home-post {
+  background-size:cover;
+  background-position:top center;
+  position: relative;
+  height: 100vh;
+
+  @include media($breakpoint-xmedium-min) {
+    display: none;
+  }
+
+  .post-wrapper {
+    color: $white;
+    padding: 3rem 4%;
+    line-height: 1.2em;
+    font-weight: $lato-regular;
+    font-size: 20px;
+    background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
+
+    h1 {
+      margin: 10px 0 30px 0;
+      font-size: 3.2rem;
+      font-family: 'spumante-regular';
+    }
+    .scroll2 {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 0 auto;
+
+      transition: all 0.2s;
+    }
+    .text-content {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+  }
+}
+
 
 // Pagination shop page
 .woocommerce-pagination {
@@ -476,21 +698,33 @@ html, body {
       span.current {
         color: $inline-pagination-link;
       }
-
     }
   }
 }
 
 // This is the grid for the products
-.grid-item {
-
-  .text-wrapper {
-    .star-rating div, .star-rating .rating {
-      margin: 0 auto;
+ul.products .grid-item {
+  a {
+    .imgLiquidFill.imgLiquid {
+      height: 80%;
     }
-    a {
-      color: $black;
+  }
 
+
+}
+.text-wrapper {
+  .star-rating div, .star-rating .rating {
+    margin: 0 auto;
+    color: $orange;
+  }
+  .yith-wcbr-brands-logo, .yith-wcbr-brands {
+    display: none;
+  }
+  a {
+    color: $black;
+
+    .imgLiquidFill.imgLiquid {
+      height: 80%;
     }
   }
 }
@@ -614,6 +848,10 @@ input#yith-s.yith-s {
   z-index: 99999;
   transition: all 1s;
 
+  @include media($breakpoint-medium){
+    display: none;
+  }
+
   &.move-right {
     transform: rotate(360deg);
     left: 400px;
@@ -635,6 +873,10 @@ input#yith-s.yith-s {
       font-size: 1.5rem;
       letter-spacing: 20px;
       left: 350px;
-    }     
+    }
   }
+}
+
+.woocommerce-error, .woocommerce-message {
+  display: none;
 }
