@@ -2,28 +2,17 @@ import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
-<<<<<<< HEAD
 import scrollToElement from './custom/scroll-2-element';
 import toggleMobilNav from './custom/toggle-mobil-nav';
 
-=======
-import scroll from './custom/scroll-2-element';
->>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
 (function() {
   //   Run when DOM is ready
   $(function() {
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
-<<<<<<< HEAD
-    scrollToElement.init();
-<<<<<<< HEAD
-=======
-    scroll.init();
->>>>>>> 71511c4e17f3df54582e3799817cd4a391d3b427
-=======
+
     toggleMobilNav.init();
->>>>>>> sergio
 
 		$('.grid-item.product').matchHeight();
 
