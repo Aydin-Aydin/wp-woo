@@ -659,7 +659,8 @@ footer {
           font-weight: 400; }
 
 .cart-wrap {
-  display: flex; }
+  display: flex;
+  font-weight: 300; }
   .cart-wrap div.checkout-cart-wrap {
     flex: 2; }
     .cart-wrap div.checkout-cart-wrap form table.shop_table.shop_table_responsive.cart {
