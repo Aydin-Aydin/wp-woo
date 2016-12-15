@@ -2,8 +2,14 @@ import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
+<<<<<<< HEAD
 import scrollToElement from './custom/scroll-2-element';
 import toggleMobilNav from './custom/toggle-mobil-nav';
+=======
+import scroll from './custom/scroll-2-element';
+import niceSelect from './custom/niceSelect';
+import toggleReviewForm from './custom/toggle-review-form';
+>>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
 
 (function() {
   //   Run when DOM is ready
@@ -11,8 +17,16 @@ import toggleMobilNav from './custom/toggle-mobil-nav';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+<<<<<<< HEAD
 
     toggleMobilNav.init();
+=======
+    scroll.init();
+    niceSelect.init();
+    toggleReviewForm.init();
+
+	$('.grid-item.product').matchHeight();
+>>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
 
 		$('.grid-item.product').matchHeight();
 
@@ -88,8 +102,6 @@ $('.equal-height').matchHeight(options);
 
 // Latest product widget
 $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
-
-
 
 
 

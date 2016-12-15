@@ -172,18 +172,35 @@ html, body {
   }
 }
 
+.grid-sizer-2-columns {
+  width: 48% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  } 
+}
+
+.grid-item-2-columns {
+  display: block;
+  float: left;
+  width: 50% !important;
+  @include media($breakpoint-small) {
+   width: 100% !important;
+  }
+
+  @include media($breakpoint-large) {
+   width: 100% !important;
+  }    
+}
+
 .grid-item {
 
   display: block;
   float: left;
-  height: 360px;
+  // height: 360px;
   margin-bottom: 1%;
+  width: 19%;
 
   @include media($breakpoint-xlarge) {
-   width: 24%;
-  }
-
-  @include media($breakpoint-large) {
    width: 24%;
   }
 
@@ -388,6 +405,7 @@ html, body {
   }
 }
 
+<<<<<<< HEAD
 // Top rated widget
 .front-widget {
   h4, h3 {
@@ -445,6 +463,8 @@ html, body {
   }
 }
 
+=======
+>>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
 .front-widget {
   ul {
     &:hover .slick-next {
@@ -456,7 +476,7 @@ html, body {
   }
 }
 
-///////////////////////
+
 
 .woocommerce-breadcrumb {
   display: none;
@@ -522,18 +542,8 @@ html, body {
   }
 }
 
-#woocommerce_products-2 {
-  .gutter-sizer {
-    width: 1%;
-  }
-}
-
 // This is the grid for the products
 .grid-item {
-  display: block;
-  float: left;
-  margin-bottom: 1%;
-  margin: 2px;
 
   .text-wrapper {
     .star-rating div, .star-rating .rating {
@@ -610,7 +620,7 @@ input#yith-s.yith-s {
   border-bottom: 1px solid white;
   color: #FFF;
   outline: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 /* About-us Page */
@@ -618,14 +628,74 @@ input#yith-s.yith-s {
 
   .woo-main-content {
     position: relative;
+    margin-top: 3px;
   }
-
+/*Stripe color #81cbbc*/
   #cssanimation {
-    display: inline-block;
-    border: 1px solid;
-    border-radius: 3px;
-    width: auto;
-    height: auto;
-    margin-top: 1px;
+    font-family: verdana;
+    width: 600px;
+    margin: auto;
+    padding: 25px 0;
+    color: #212121;
+
+    -webkit-border-bottom-left-radius: 60px 700px;
+    -webkit-border-bottom-right-radius: 700px 20px;
+    -webkit-border-top-right-radius: 40px 100px;
+    //-webkit-border-top-left-radius: 20px 100px;
+
+    background: #fcf59b;
+    background:
+        -webkit-gradient(
+          linear,
+          left top, left bottom,
+          from(#81cbbc),
+          color-stop(2%, #fcf59b)
+        );
+
+    -webkit-background-size: 100% 30px;
+  }
+  p {
+    padding: 3px 100px;
+    line-height: 32px;
+    margin-bottom: 13px;
+    font-size: 14px;
+  }
+}
+
+#site-name {
+  position: fixed;
+  top: 400px;
+  left: -78px;
+  color: $white;
+  display: block;
+  float: left;
+  font-size: 2rem;
+  transform: rotate(-90deg);
+  letter-spacing: 17px;
+  z-index: 99999;
+  transition: all 1s;
+
+  &.move-right {
+    transform: rotate(360deg);
+    left: 400px;
+    top: 100px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: $orange;
+    letter-spacing: 50px;
+    @include media($breakpoint-large) {
+      font-size: 3rem;
+      letter-spacing: 40px;
+    }
+    @include media($breakpoint-medium) {
+      font-size: 2rem;
+      letter-spacing: 30px;
+    }
+
+    @include media($breakpoint-small) {
+      font-size: 1.5rem;
+      letter-spacing: 20px;
+      left: 350px;
+    }     
   }
 }

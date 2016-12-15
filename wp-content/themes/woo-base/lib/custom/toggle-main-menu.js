@@ -5,6 +5,7 @@ const toggleMenu = {
 
       $('#left-sidebar').toggleClass('is-open');
       $('.primary-wrapper').toggleClass('nav-open');
+      $('#site-name').toggleClass('move-right');
     });
 
 

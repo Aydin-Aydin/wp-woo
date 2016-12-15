@@ -25,6 +25,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <a id="takeMeDown" href="#frontWidgetBrands" title="Take Me Down"></a>
 =======
           <a class="take-me-down" href="#content-top"></a>
@@ -33,11 +34,16 @@
 =======
           <a id="takeMeDown" href="#scroll2" title="Take Me Down"></a>
 >>>>>>> sergio
+=======
+          <a class="take-me-down" href="#content-top"></a>
+
+>>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
         </div>
 
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,6 +54,9 @@
 =======
     <div class="front-widget brand-widget">
 >>>>>>> sergio
+=======
+    <div id="content-top" class="front-widget brand-widget">
+>>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 
