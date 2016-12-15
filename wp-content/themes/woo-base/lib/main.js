@@ -14,7 +14,6 @@ import scrollToElement from './custom/scroll-2-element';
 
 		$('.grid-item.product').matchHeight();
 
-
 $(".slider-wrapper").slick({
   dots: true,
   autoplay: true,
