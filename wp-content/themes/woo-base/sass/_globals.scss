@@ -554,7 +554,7 @@ input#yith-s.yith-s {
   border-bottom: 1px solid white;
   color: #FFF;
   outline: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 /* About-us Page */
@@ -562,14 +562,36 @@ input#yith-s.yith-s {
 
   .woo-main-content {
     position: relative;
+    margin-top: 3px;
   }
-
+/*Stripe color #81cbbc*/
   #cssanimation {
-    display: inline-block;
-    border: 1px solid;
-    border-radius: 3px;
-    width: auto;
-    height: auto;
-    margin-top: 1px;
+    font-family: verdana;
+    width: 600px;
+    margin: auto;
+    padding: 25px 0;
+    color: #212121;
+
+    -webkit-border-bottom-left-radius: 60px 700px;
+    -webkit-border-bottom-right-radius: 700px 20px;
+    -webkit-border-top-right-radius: 40px 100px;
+    //-webkit-border-top-left-radius: 20px 100px;
+
+    background: #fcf59b;
+    background:
+        -webkit-gradient(
+          linear,
+          left top, left bottom,
+          from(#81cbbc),
+          color-stop(2%, #fcf59b)
+        );
+
+    -webkit-background-size: 100% 30px;
+  }
+  p {
+    padding: 3px 100px;
+    line-height: 32px;
+    margin-bottom: 13px;
+    font-size: 14px;
   }
 }
