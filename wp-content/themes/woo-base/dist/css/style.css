@@ -806,6 +806,17 @@ form table.shop_table.shop_table_responsive.cart {
   width: 50%; }
   .single-product .up-sells .grid {
     padding: 0 !important; }
+    .single-product .up-sells .grid .text-wrapper {
+      margin: 0 auto;
+      text-align: center; }
+      .single-product .up-sells .grid .text-wrapper a {
+        color: #000; }
+      .single-product .up-sells .grid .text-wrapper .star-rating div {
+        width: 100% !important; }
+      .single-product .up-sells .grid .text-wrapper .rating {
+        margin: 0 auto;
+        color: #fa5400;
+        margin: 2px 0; }
   .single-product .up-sells:last-child {
     margin-right: 0; }
   @media screen and (max-width: 880px) {

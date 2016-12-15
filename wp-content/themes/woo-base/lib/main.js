@@ -14,7 +14,7 @@ import toggleReviewForm from './custom/toggle-review-form';
     containerMargin.init();
     scroll.init();
     niceSelect.init();
-    toggleReviewForm.init();    
+    toggleReviewForm.init();
 
 	$('.grid-item.product').matchHeight();
 
@@ -91,8 +91,6 @@ $('.equal-height').matchHeight(options);
 
 // Latest product widget
 $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
-
-
 
 
 
