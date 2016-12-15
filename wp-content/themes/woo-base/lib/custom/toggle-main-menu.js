@@ -10,7 +10,7 @@ const toggleMenu = {
 
     $('.toggle-menu').click(function(){
       $(this).toggleClass('open');
-      });
+    });
   }
 };
 export default toggleMenu;

@@ -3,6 +3,7 @@ import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
 import scrollToElement from './custom/scroll-2-element';
+import toggleMobilNav from './custom/toggle-mobil-nav';
 
 (function() {
   //   Run when DOM is ready
@@ -11,6 +12,7 @@ import scrollToElement from './custom/scroll-2-element';
     masonGrid.init();
     containerMargin.init();
     scrollToElement.init();
+    toggleMobilNav.init();
 
 		$('.grid-item.product').matchHeight();
 

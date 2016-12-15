@@ -14,11 +14,24 @@
 </head>
 <body <?php body_class(); ?>>
 	<div class="container">
+    <div id="mobilNavWrap">
+      <div class="mobil-nav-header">
+        <div class="toggle-mobil-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+    <nav class="mobil-nav">
+      <?php dynamic_sidebar( 'sidebar-first' ); ?>
+    </nav>
+    </div>
 
 
-        
-        
 
-        
-     	
-       
+
+
+
+
