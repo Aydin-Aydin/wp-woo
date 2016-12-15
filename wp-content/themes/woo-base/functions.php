@@ -137,7 +137,7 @@ function woocommerce_template_product_reviews() {
   woocommerce_get_template( 'single-product-reviews.php' );
 }
 
-// Remove single product related 
+// Remove single product related
 add_action( 'woocommerce_before_main_content', 'remove_single_product_related' );
 function remove_single_product_related(){
    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
@@ -289,34 +289,37 @@ if ( function_exists('register_sidebar') )
         'before_title' => '<h4 class="widgettitle">',
         'after_title' => '</h4>',
     ));
-if ( function_exists('register_sidebar') )
-    register_sidebar( array(
-    'name' => 'Footer Sidebar 1',
-    'id' => 'footer-sidebar-1',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-    ) );
-    register_sidebar( array(
-    'name' => 'Footer Sidebar 2',
-    'id' => 'footer-sidebar-2',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-    ) );
-    register_sidebar( array(
-    'name' => 'Footer Sidebar 3',
-    'id' => 'footer-sidebar-3',
-    'description' => 'Appears in the footer area',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget' => '</aside>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-    ) );
+// if ( function_exists('register_sidebar') )
+//     register_sidebar( array(
+//     'name' => 'Footer Sidebar 1',
+//     'id' => 'footer-sidebar-1',
+//     'description' => 'Appears in the footer area',
+//     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//     'after_widget' => '</aside>',
+//     'before_title' => '<h3 class="widget-title">',
+//     'after_title' => '</h3>',
+//     ) );
+//     register_sidebar( array(
+//     'name' => 'Footer Sidebar 2',
+//     'id' => 'footer-sidebar-2',
+//     'description' => 'Appears in the footer area',
+//     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//     'after_widget' => '</aside>',
+//     'before_title' => '<h3 class="widget-title">',
+//     'after_title' => '</h3>',
+//     ) );
+//     register_sidebar( array(
+//     'name' => 'Footer Sidebar 3',
+//     'id' => 'footer-sidebar-3',
+//     'description' => 'Appears in the footer area',
+//     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+//     'after_widget' => '</aside>',
+//     'before_title' => '<h3 class="widget-title">',
+//     'after_title' => '</h3>',
+//     ) );
+
+// Lönt att ta bort min fotter och behålla detta i functions
+// Good luck!
 
 /*  EXCERPT
     Usage:
