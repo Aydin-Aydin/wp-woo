@@ -738,25 +738,43 @@ footer {
     width: 100%;
     height: 50px;
     overflow: hidden; }
+    @media screen and (max-width: 600px) {
+      footer div.footer-nav-wrap {
+        height: auto;
+        padding-bottom: 20px; } }
     footer div.footer-nav-wrap .footer-nav {
       position: relative;
       width: 100%; }
       footer div.footer-nav-wrap .footer-nav #menu-footer {
         display: flex;
         flex: 1; }
+        @media screen and (max-width: 600px) {
+          footer div.footer-nav-wrap .footer-nav #menu-footer {
+            display: block;
+            flex: none; } }
         footer div.footer-nav-wrap .footer-nav #menu-footer li {
           display: flex;
           flex: 1; }
+          @media screen and (max-width: 600px) {
+            footer div.footer-nav-wrap .footer-nav #menu-footer li {
+              display: block;
+              flex: none;
+              width: 100%; } }
           footer div.footer-nav-wrap .footer-nav #menu-footer li a {
             display: block;
             width: 100%;
-            height: 50px;
+            height: 30px;
             line-height: 50px;
             text-align: center;
             color: #fff;
             font-weight: 300;
             font-size: 14pt;
             text-transform: uppercase; }
+            @media screen and (max-width: 600px) {
+              footer div.footer-nav-wrap .footer-nav #menu-footer li a {
+                font-size: 12pt;
+                text-align: left;
+                padding: 0 10px; } }
             footer div.footer-nav-wrap .footer-nav #menu-footer li a:hover {
               font-weight: 400;
               color: #666666; }
