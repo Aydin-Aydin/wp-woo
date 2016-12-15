@@ -214,6 +214,10 @@ html, body {
     position:relative;
     z-index: 0;
 
+    @include media($breakpoint-xmedium) {
+      display:none;
+    }
+
 
     &.woo-main-content {
       vertical-align: middle;
@@ -560,8 +564,9 @@ html, body {
   }
 }
 
-///////////////////////
 
+
+///////////////////////
 .woocommerce-breadcrumb {
   display: none;
 }
@@ -619,20 +624,48 @@ html, body {
 // Home Post Front
 
 .home-post {
-  padding: 4rem 0;
+  background-size:cover;
+  background-position:top center;
+  position: relative;
+  height: 100vh;
 
-  .post-content {
+  @include media($breakpoint-xmedium-min) {
+    display: none;
+  }
+
+  .post-wrapper {
     color: $white;
-    padding: 4%;
+    padding: 3rem 4%;
     line-height: 1.2em;
     font-weight: $lato-regular;
-    font-size: 19px;
+    font-size: 20px;
     background-color: rgba(0,0,0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
 
     h1 {
       margin: 10px 0 30px 0;
-      font-size: 3rem;
-      font-family: $spumante;
+      font-size: 3.2rem;
+      font-family: 'spumante-regular';
+    }
+    .scroll2 {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 0 auto;
+
+      transition: all 0.2s;
+    }
+    .text-content {
+      margin-bottom: 40px;
+      text-align: left;
     }
   }
 }
@@ -677,6 +710,9 @@ html, body {
     .star-rating div, .star-rating .rating {
       margin: 0 auto;
       color: $orange;
+    }
+    .yith-wcbr-brands-logo, .yith-wcbr-brands {
+      display: none;
     }
     a {
       color: $black;

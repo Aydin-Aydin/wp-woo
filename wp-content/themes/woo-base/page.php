@@ -15,11 +15,13 @@
         {?>
 
             <div class="home-post" style="background-image: url(<?php the_field("front_post_img"); ?>);">
-              <div class="post-content">
+              <div class="post-wrapper">
 
                 <h1><?php bloginfo('name'); ?></h1>
 
-                <?php echo $page[0]->post_content ?>
+                <div class="text-content"><?php echo $page[0]->post_content ?></div>
+
+                <a class="scroll2" href="#ratedWidget"></a>
 
               </div>
             </div>
@@ -59,7 +61,7 @@
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 
-    <div class="front-widget rated-widget" id="scroll2">
+    <div class="front-widget rated-widget" id="ratedWidget">
       <?php dynamic_sidebar( 'top-rated' ); ?>
     </div>
 
