@@ -1,6 +1,6 @@
 
 #mobilNavWrap{
-  @include media($breakpoint-medium){
+  @include media($breakpoint-medium-min){
     display: block;
   }
   display: none;

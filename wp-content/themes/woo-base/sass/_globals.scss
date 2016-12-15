@@ -409,7 +409,6 @@ html, body {
   }
 }
 
-<<<<<<< HEAD
 
 // Front page widget
 .front-widget, .latest-products {
@@ -564,19 +563,17 @@ html, body {
 
 
 .primary-wrapper{
-  padding-left: 72px !important;
+  padding-left: 72px;
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow:hidden;
 
-  @include media($breakpoint-medium){
+  @include media($breakpoint-medium-min){
     padding-left: 0 !important;
     margin-top: 70px;
   }
 }
 
-=======
->>>>>>> sergio
 .front-widget {
   ul {
     &:hover .slick-next {
