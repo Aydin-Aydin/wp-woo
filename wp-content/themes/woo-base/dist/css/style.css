@@ -1636,7 +1636,7 @@ footer {
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow: hidden; }
-  @media screen and (max-width: 880px) {
+  @media screen and (max-width: 879px) {
     .primary-wrapper {
       padding-left: 0 !important; } }
 
