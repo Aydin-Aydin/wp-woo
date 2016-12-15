@@ -638,6 +638,9 @@ input#yith-s.yith-s {
         letter-spacing: 20px;
         left: 350px; } }
 
+.woocommerce-error, .woocommerce-message {
+  display: none; }
+
 #left-sidebar {
   display: block;
   float: left;
@@ -1626,9 +1629,10 @@ footer {
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow: hidden; }
-  @media screen and (max-width: 879px) {
+  @media screen and (max-width: 880px) {
     .primary-wrapper {
-      padding-left: 0 !important; } }
+      padding-left: 0 !important;
+      margin-top: 70px; } }
 
 .front-widget ul:hover .slick-next {
   right: 0; }
