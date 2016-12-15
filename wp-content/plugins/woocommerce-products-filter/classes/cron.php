@@ -9,7 +9,7 @@ if (!defined('ABSPATH'))
  * @author realmag777
  * @site https://pluginus.net
  */
-final class PN_WP_CRON {
+final class PN_WP_CRON_WOOF {
 
     public $actions = array();
     public $cron_key = null;

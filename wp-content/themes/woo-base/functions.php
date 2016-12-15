@@ -9,6 +9,8 @@ function theme_register_scripts() {
   wp_enqueue_script( 'jquery-matchHeight-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.matchHeight.js' ), array( 'jquery' ));
   wp_enqueue_script( 'rater-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/rater.js' ), array( 'jquery' ));
   wp_enqueue_script( 'slick-slider-js', esc_url( trailingslashit( get_template_directory_uri() ) . '/node_modules/slick-carousel/slick/slick.js'), array( 'jquery' ));
+  wp_enqueue_script( 'nice-select-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/jquery.nice-select.js' ), array( 'jquery' ));
+
   // Stylesheets
   wp_enqueue_style( 'normalize-css', get_stylesheet_directory_uri() . '/node_modules/normalize.css/normalize.css');
   wp_enqueue_style( 'woo-base-css', get_stylesheet_directory_uri() . '/dist/css/style.css');
@@ -115,6 +117,34 @@ function get_star_rating()
     $average = $product->get_average_rating();
 
     echo '<div class="star-rating"><span data-rating="' . floor($average * 2) / 2 . '"</span></div>';
+}
+
+ // Display 24 products per page. Goes in functions.php
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );
+
+// Move review tab single poroduct page.
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['reviews'] );  // Removes the reviews tab
+    unset( $tabs['description'] );  // Removes the additional information tab
+    return $tabs;
+}
+
+
+// Move single product reviews to under images.
+add_action( 'woocommerce_after_single_product', 'comments_template', 10 );
+function woocommerce_template_product_reviews() {
+  woocommerce_get_template( 'single-product-reviews.php' );
+}
+
+// Remove single product related 
+add_action( 'woocommerce_before_main_content', 'remove_single_product_related' );
+function remove_single_product_related(){
+   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+   //add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products' );
+  // Move you may like section to under product image
+   add_action( 'woocommerce_after_single_product', 'woocommerce_upsell_display' );
 }
 
 

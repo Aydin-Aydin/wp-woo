@@ -3,8 +3,8 @@ Contributors: RealMag777
 Donate link: http://codecanyon.net/item/woof-woocommerce-products-filter/11498469?ref=realmag777
 Tags: woocommerce filter, ajax products filter, woocommerce products filter, woocommerce product filter, products filter, ajax products filter, filter for woocommerce, filter, shortcode, widget, woocommerce, products, ajax
 Requires at least: 4.1.0
-Tested up to: 4.6.1
-Stable tag: 1.1.6
+Tested up to: 4.7
+Stable tag: 1.1.6.1
 
 WooCommerce Products Filter – flexible, easy and robust professional filter for products in the WooCommerce store
 
@@ -76,6 +76,9 @@ R: http://www.woocommerce-filter.com/documentation/ and http://www.woocommerce-f
 5. The plugin settings
 
 == Changelog ==
+
+= 1.1.6.1 =
+* 8 little fixes
 
 = 1.1.6 =
 * http://www.woocommerce-filter.com/update-woocommerce-products-filter-v-2-1-6/

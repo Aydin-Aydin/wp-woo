@@ -52,6 +52,7 @@
 
 // Hamburger
     .toggle-menu {
+      margin-top: 1rem;
       width: 40px;
       height: 40px;
       position: relative;
@@ -151,7 +152,7 @@
       &:hover{
         font-size: 18pt;
         font-weight: $lato-semi;
-        background-size: cover;
+        background-size: 150% 150%;
       }
     }
   }
@@ -235,11 +236,6 @@
     transition: all 0.3s ease-in-out;
     left: 0;
   }
-
-  .sidebar-widget {
-    margin-top: 1rem;
-  }
-
 
   #menu-primary {
 

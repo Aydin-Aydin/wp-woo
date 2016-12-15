@@ -4,5 +4,4 @@
     </p>
 <?php require( dirname( __FILE__ ) . '/searchpage.php' ); ?>
 <?php get_sidebar('SidebarOne'); ?>
-
 <?php get_footer(); ?>
