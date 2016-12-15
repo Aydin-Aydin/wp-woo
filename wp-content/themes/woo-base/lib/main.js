@@ -41,26 +41,52 @@ responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: false,
       }
     },
     {
       breakpoint: 800,
       settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 500
+      }
+    },
+    {
+      breakpoint: 680,
+      settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 2,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 500
       }
     }
+
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
@@ -90,7 +116,7 @@ options = {
 $('.equal-height').matchHeight(options);
 
 // Latest product widget
-$('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
+// $('#woocommerce_products-2 ul').addClass('grid').prepend('<div class="grid-sizer"></div><div class="gutter-sizer"></div>').find('li').addClass('grid-item');
 
 
 

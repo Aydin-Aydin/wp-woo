@@ -20,16 +20,8 @@ html {
   box-sizing: inherit; }
 
 @font-face {
-  font-family: 'lato-regular';
-  src: url("../../fonts/Lato/Lato-Regular.ttf"); }
-
-@font-face {
-  font-family: 'lato-light';
-  src: url("../../fonts/Lato/Lato-Light.ttf"); }
-
-@font-face {
-  font-family: 'lato-bold';
-  src: url("../../fonts/Lato/Lato-Bold.ttf"); }
+  font-family: spumante-regular;
+  src: url("../../fonts/spumante/spumante_regular.ttf"); }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -215,6 +207,9 @@ html, body {
   padding-left: 0;
   position: relative;
   z-index: 0; }
+  @media screen and (max-width: 799px) {
+    .container .slider-wrapper {
+      display: none; } }
   .container .slider-wrapper.woo-main-content {
     vertical-align: middle;
     height: 100%; }
@@ -287,7 +282,8 @@ html, body {
         background-size: 100% 100%;
         position: relative;
         bottom: 70px;
-        margin: auto; }
+        margin: auto;
+        transition: all 0.2s; }
         .container .slider-wrapper.woo-main-content .slider-content .take-me-down:hover {
           width: 50px;
           height: 50px; }
@@ -329,12 +325,125 @@ html, body {
     background-size: cover;
     background-position: 0 0; }
 
-.front-widget ul li {
-  float: left; }
-  .front-widget ul li:focus {
-    outline: none; }
-  .front-widget ul li a:focus {
-    outline: none; }
+.front-widget ul li:focus {
+  outline: none; }
+
+.front-widget ul li a:focus {
+  outline: none; }
+
+.front-widget h4, .front-widget h3, .latest-products h4, .latest-products h3 {
+  background-color: #000;
+  padding: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400; }
+
+.rated-widget li.grid-item {
+  height: 230px;
+  position: relative;
+  margin: 0; }
+  .rated-widget li.grid-item .img-wrapper {
+    height: 100%; }
+  .rated-widget li.grid-item .text-wrapper {
+    position: absolute;
+    height: 230px;
+    bottom: -230px;
+    text-align: center;
+    left: 50%;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+    padding: 5px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s; }
+    @media screen and (max-width: 880px) {
+      .rated-widget li.grid-item .text-wrapper {
+        bottom: -163px; } }
+    .rated-widget li.grid-item .text-wrapper .text-content {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      width: 100%; }
+      @media screen and (max-width: 880px) {
+        .rated-widget li.grid-item .text-wrapper .text-content {
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none; } }
+      .rated-widget li.grid-item .text-wrapper .text-content .woocommerce-product-rating {
+        padding: 3px;
+        overflow: auto; }
+  .rated-widget li.grid-item:hover .text-wrapper {
+    bottom: 0; }
+
+@media screen and (max-width: 880px) {
+  .rated-widget li.grid-item:hover .text-wrapper {
+    bottom: -163px; } }
+
+.rated-widget .slick-dots {
+  top: 5px; }
+  .rated-widget .slick-dots li {
+    margin: 0;
+    width: 15px; }
+    .rated-widget .slick-dots li button:before {
+      font-size: 9px; }
+
+@media screen and (max-width: 480px) {
+  .brand-widget {
+    display: none; } }
+
+.brand-widget div.yith-wcbr-thumbnail-list ul {
+  margin: 0; }
+  .brand-widget div.yith-wcbr-thumbnail-list ul li {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    float: none; }
+    .brand-widget div.yith-wcbr-thumbnail-list ul li a {
+      border: none !important;
+      height: 200px; }
+      .brand-widget div.yith-wcbr-thumbnail-list ul li a img {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 35%;
+        width: auto;
+        transition: all 0.5s; }
+
+.brand-widget .yith-wcbr-brand-thumbnail.default .yith-wcbr-thumbnail-list:before {
+  display: none; }
+
+.brand-widget .slick-dots {
+  top: 5px; }
+  .brand-widget .slick-dots li {
+    margin: 0;
+    width: 15px; }
+    .brand-widget .slick-dots li button:before {
+      font-size: 9px; }
+
+.latest-products .text-wrapper {
+  color: #000;
+  font-weight: 400; }
+  .latest-products .text-wrapper .text-content {
+    padding: 7px; }
+    .latest-products .text-wrapper .text-content .text-item {
+      padding: 2px;
+      display: block; }
+      .latest-products .text-wrapper .text-content .text-item.product-title {
+        font-weight: 700; }
+
+@media screen and (max-width: 880px) {
+  .woof_sid_auto_shortcode {
+    display: none; } }
+
+.primary-wrapper {
+  padding-left: 72px !important;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  overflow: hidden; }
 
 .front-widget ul:hover .slick-next {
   right: 0; }
@@ -372,6 +481,51 @@ html, body {
     .woo-content .grid-item .text-wrapper .star-rating div, .woo-content .grid-item .text-wrapper .star-rating .rating {
       margin: 0 auto; }
 
+#woocommerce_products-2 li.grid-item {
+  text-align: center;
+  margin: 0; }
+  #woocommerce_products-2 li.grid-item .img-wrapper {
+    height: 80%; }
+  #woocommerce_products-2 li.grid-item .text-wrapper {
+    width: 100%; }
+
+.home-post {
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  height: 100vh; }
+  @media screen and (min-width: 800px) {
+    .home-post {
+      display: none; } }
+  .home-post .post-wrapper {
+    color: #fff;
+    padding: 3rem 4%;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center; }
+    .home-post .post-wrapper h1 {
+      margin: 10px 0 30px 0;
+      font-size: 3.2rem;
+      font-family: 'spumante-regular'; }
+    .home-post .post-wrapper .scroll2 {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-image: url("../graphics/icons/Royal-Arrow-Down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 0 auto;
+      transition: all 0.2s; }
+    .home-post .post-wrapper .text-content {
+      margin-bottom: 40px;
+      text-align: left; }
+
 .woocommerce-pagination {
   width: 100%; }
   .woocommerce-pagination ul.page-numbers {
@@ -386,11 +540,20 @@ html, body {
       .woocommerce-pagination ul.page-numbers li span.current {
         color: #a14515; }
 
-.grid-item .text-wrapper .star-rating div, .grid-item .text-wrapper .star-rating .rating {
-  margin: 0 auto; }
+ul.products .grid-item a .imgLiquidFill.imgLiquid {
+  height: 80%; }
 
-.grid-item .text-wrapper a {
+.text-wrapper .star-rating div, .text-wrapper .star-rating .rating {
+  margin: 0 auto;
+  color: #fa5400; }
+
+.text-wrapper .yith-wcbr-brands-logo, .text-wrapper .yith-wcbr-brands {
+  display: none; }
+
+.text-wrapper a {
   color: #000; }
+  .text-wrapper a .imgLiquidFill.imgLiquid {
+    height: 80%; }
 
 #footer-sidebar {
   display: block;
@@ -572,7 +735,7 @@ input#yith-s.yith-s {
       height: 60px;
       text-align: center;
       position: relative;
-      top: 73vh;
+      top: 77vh;
       color: #000;
       background-color: transparent;
       background-image: url("../graphics/icons/tote-bag.svg");
@@ -776,6 +939,21 @@ form table.shop_table.shop_table_responsive.cart {
         display: inline-block;
         text-align: right;
         float: right; }
+
+.page-wrapper {
+  height: 90vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0; }
+  @media screen and (max-width: 880px) {
+    .page-wrapper {
+      width: 80%; } }
+  .page-wrapper h1 {
+    margin-bottom: 30px; }
+  .page-wrapper p {
+    line-height: 1.2em;
+    font-size: 19px;
+    font-weight: 400; }
 
 .woo-main-content .product {
   padding: 1rem; }

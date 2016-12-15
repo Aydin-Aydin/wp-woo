@@ -17,9 +17,8 @@ const masonGrid = {
 		// 	columnWidth: '.grid-sizer-2-columns',
 		// 	gutter: '.gutter-sizer',
 		// 	percentPosition: true
-		// });	
-			
-		// General grid
+		// });
+
 		$('.grid').masonry({
 			itemSelector: '.grid-item',
 			columnWidth: '.grid-sizer',
