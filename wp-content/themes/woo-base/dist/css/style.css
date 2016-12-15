@@ -329,6 +329,7 @@ html, body {
 .front-widget ul li:focus {
   outline: none; }
 
+<<<<<<< HEAD
 .front-widget ul li a:focus {
   outline: none; }
 
@@ -450,6 +451,8 @@ html, body {
       padding-left: 0 !important;
       margin-top: 70px; } }
 
+=======
+>>>>>>> sergio
 .front-widget ul:hover .slick-next {
   right: 0; }
 
@@ -623,6 +626,9 @@ input#yith-s.yith-s {
   letter-spacing: 17px;
   z-index: 99999;
   transition: all 1s; }
+  @media screen and (max-width: 880px) {
+    #site-name {
+      display: none; } }
   #site-name.move-right {
     transform: rotate(360deg);
     left: 400px;
@@ -806,18 +812,18 @@ input#yith-s.yith-s {
   transition: all 0.3s ease-in-out;
   left: 0; }
 
-#menu-primary li {
+#nav_menu-2 #menu-primary-1 li {
   padding: 10px 0; }
-  #menu-primary li a {
+  #nav_menu-2 #menu-primary-1 li a {
     display: block;
     font-weight: 300;
     font-size: 18pt;
     width: 100%;
     color: #fff;
     text-transform: uppercase; }
-    #menu-primary li a:hover {
+    #nav_menu-2 #menu-primary-1 li a:hover {
       color: #696969; }
-  #menu-primary li.current-menu-item a {
+  #nav_menu-2 #menu-primary-1 li.current-menu-item a {
     color: #27ae60;
     font-weight: 400; }
 
@@ -925,7 +931,21 @@ input#yith-s.yith-s {
     background-color: #000;
     transition: all 0.5s ease-in-out; }
     #mobilNavWrap .mobil-nav.open {
-      top: 50px; }
+      top: 49px; }
+    #mobilNavWrap .mobil-nav #nav_menu-2 #menu-primary li {
+      padding: 10px 0; }
+      #mobilNavWrap .mobil-nav #nav_menu-2 #menu-primary li a {
+        display: block;
+        font-weight: 300;
+        font-size: 18pt;
+        width: 100%;
+        color: #fff;
+        text-transform: uppercase; }
+        #mobilNavWrap .mobil-nav #nav_menu-2 #menu-primary li a:hover {
+          color: #696969; }
+      #mobilNavWrap .mobil-nav #nav_menu-2 #menu-primary li.current-menu-item a {
+        color: #27ae60;
+        font-weight: 400; }
     #mobilNavWrap .mobil-nav div.sidebar-widget {
       margin-bottom: 20px; }
       #mobilNavWrap .mobil-nav div.sidebar-widget.widget_search label.screen-reader-text {

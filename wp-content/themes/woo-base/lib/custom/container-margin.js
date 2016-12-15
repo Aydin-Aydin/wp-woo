@@ -7,7 +7,6 @@ const containerMargin = {
     $('.primary-wrapper').css({
       paddingLeft: $('.sidebar-left-container').outerWidth() + 'px'
     });
-    console.log($('.sidebar-left-container').outerWidth());
   }
 };
 export default containerMargin;

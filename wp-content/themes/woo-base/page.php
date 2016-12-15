@@ -49,16 +49,24 @@
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 
           <a class="take-me-down" href="#content-top"></a>
 
+=======
+          <a class="take-me-down" href="#content-top"></a>
+>>>>>>> sergio
         </div>
 
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
+<<<<<<< HEAD
 
     <div id="content-top" class="front-widget brand-widget">
+=======
+    <div class="front-widget brand-widget" id="frontWidgetBrands">
+>>>>>>> sergio
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 

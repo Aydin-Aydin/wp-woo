@@ -223,28 +223,29 @@
     left: 0;
   }
 
-  #menu-primary{
+  #nav_menu-2{
+    #menu-primary-1{
+      li {
+        padding: 10px 0;
 
-    li {
-      padding: 10px 0;
-
-      a{
-        display: block;
-        font-weight: $lato-light;
-        font-size: 18pt;
-        width: 100%;
-        color: $white;
-        text-transform: uppercase;
-
-        &:hover{
-          color: $nav-link-hover;
-        }
-      }
-
-      &.current-menu-item{
         a{
-          color: $nav-link-current;
-          font-weight: $lato-regular;
+          display: block;
+          font-weight: $lato-light;
+          font-size: 18pt;
+          width: 100%;
+          color: $white;
+          text-transform: uppercase;
+
+          &:hover{
+            color: $nav-link-hover;
+          }
+        }
+
+        &.current-menu-item{
+          a{
+            color: $nav-link-current;
+            font-weight: $lato-regular;
+          }
         }
       }
     }

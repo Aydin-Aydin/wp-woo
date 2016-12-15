@@ -409,6 +409,7 @@ html, body {
   }
 }
 
+<<<<<<< HEAD
 
 // Front page widget
 .front-widget, .latest-products {
@@ -574,6 +575,8 @@ html, body {
   }
 }
 
+=======
+>>>>>>> sergio
 .front-widget {
   ul {
     &:hover .slick-next {
@@ -859,6 +862,10 @@ input#yith-s.yith-s {
   letter-spacing: 17px;
   z-index: 99999;
   transition: all 1s;
+
+  @include media($breakpoint-medium){
+    display: none;
+  }
 
   &.move-right {
     transform: rotate(360deg);
