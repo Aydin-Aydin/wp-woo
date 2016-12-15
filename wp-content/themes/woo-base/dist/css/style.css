@@ -1639,6 +1639,9 @@ footer {
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow: hidden; }
+  @media screen and (max-width: 880px) {
+    .primary-wrapper {
+      padding-left: 0 !important; } }
 
 .front-widget ul:hover .slick-next {
   right: 0; }
