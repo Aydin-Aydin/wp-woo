@@ -176,7 +176,7 @@ html, body {
   width: 48% !important;
   @include media($breakpoint-small) {
    width: 100% !important;
-  } 
+  }
 }
 
 .grid-item-2-columns {
@@ -189,7 +189,7 @@ html, body {
 
   @include media($breakpoint-large) {
    width: 100% !important;
-  }    
+  }
 }
 
 .grid-item {
@@ -405,7 +405,6 @@ html, body {
   }
 }
 
-<<<<<<< HEAD
 // Top rated widget
 .front-widget {
   h4, h3 {
@@ -463,8 +462,6 @@ html, body {
   }
 }
 
-=======
->>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
 .front-widget {
   ul {
     &:hover .slick-next {
@@ -696,6 +693,6 @@ input#yith-s.yith-s {
       font-size: 1.5rem;
       letter-spacing: 20px;
       left: 350px;
-    }     
+    }
   }
 }

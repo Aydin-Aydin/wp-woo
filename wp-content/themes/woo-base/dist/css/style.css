@@ -325,7 +325,6 @@ html, body {
   .front-widget ul li a:focus {
     outline: none; }
 
-<<<<<<< HEAD
 .front-widget h4, .front-widget h3 {
   background-color: #000;
   padding: 20px;
@@ -364,8 +363,6 @@ html, body {
       padding-left: 0 !important;
       margin-top: 70px; } }
 
-=======
->>>>>>> b9497e101f5c7ad23adffe6f2fe1bd33dcd796c5
 .front-widget ul:hover .slick-next {
   right: 0; }
 
@@ -1089,6 +1086,37 @@ footer {
         display: none; }
       .cart-wrap div.checkout-form-wrap div.woocommerce #order_review {
         display: none; }
+
+.container .woo-main-content {
+  position: inherit;
+  right: 0;
+  padding-left: 1rem; }
+
+#animationbox {
+  border: 1px solid;
+  width: 90%;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 0px; }
+  #animationbox form {
+    margin: 0 auto;
+    width: 35%; }
+    #animationbox form p {
+      display: block;
+      padding: 1rem; }
+      #animationbox form p input {
+        float: right; }
+    #animationbox form #rememberme {
+      float: none; }
+  #animationbox h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem; }
+
+#cssanimation {
+  height: 100vh; }
 
 .woo-main-content .product {
   padding: 1rem; }
