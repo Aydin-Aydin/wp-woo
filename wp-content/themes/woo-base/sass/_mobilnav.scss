@@ -1,6 +1,6 @@
 
 #mobilNavWrap{
-  @include media($breakpoint-medium){
+  @include media($breakpoint-medium-min){
     display: block;
   }
   display: none;
@@ -129,8 +129,36 @@
     transition: all 0.5s ease-in-out;
 
     &.open{
-      top: 50px;
+      top: 49px;
     }
+
+    #nav_menu-2{
+    #menu-primary{
+      li {
+        padding: 10px 0;
+
+        a{
+          display: block;
+          font-weight: $lato-light;
+          font-size: 18pt;
+          width: 100%;
+          color: $white;
+          text-transform: uppercase;
+
+          &:hover{
+            color: $nav-link-hover;
+          }
+        }
+
+        &.current-menu-item{
+          a{
+            color: $nav-link-current;
+            font-weight: $lato-regular;
+          }
+        }
+      }
+    }
+  }
 
   div.sidebar-widget{
     margin-bottom: 20px;

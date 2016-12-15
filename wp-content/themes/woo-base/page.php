@@ -2,8 +2,35 @@
 	<?php get_sidebar('sidebar-first'); ?>
 <section class="primary-wrapper">
 
-  <?php if (is_front_page()): ?>
+    <?php if (is_front_page()):
+
+      $page = get_posts(
+        array(
+          'name'      => 'home',
+          'post_type' => 'page'
+        )
+      );
+
+      if ( $page )
+        {?>
+
+            <div class="home-post" style="background-image: url(<?php the_field("front_post_img"); ?>);">
+              <div class="post-wrapper">
+
+                <h1><?php bloginfo('name'); ?></h1>
+
+                <div class="text-content"><?php echo $page[0]->post_content ?></div>
+
+                <a class="scroll2" href="#ratedWidget"></a>
+
+              </div>
+            </div>
+
+        <?php }
+    ?>
     <div class="slider-wrapper woo-main-content">
+
+
       <?php
         $args = ['post_type' => 'slider'];
         $loop = new WP_Query( $args );
@@ -30,12 +57,11 @@
       <?php endwhile; ?>
     </div><!-- end slider-wrapper woo-main-content -->
 
-
     <div id="content-top" class="front-widget brand-widget">
       <?php dynamic_sidebar( 'top-brands' ); ?>
     </div>
 
-    <div class="front-widget rated-widget" id="scroll2">
+    <div class="front-widget rated-widget" id="ratedWidget">
       <?php dynamic_sidebar( 'top-rated' ); ?>
     </div>
 

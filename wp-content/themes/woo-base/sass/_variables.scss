@@ -17,5 +17,10 @@ $sidebar-main-menu-medium: max-width 1300px;
 $sidebar-main-menu-small: max-width 1100px;
 $breakpoint-xlarge: max-width 1400px;
 $breakpoint-large: max-width 1100px;
-$breakpoint-medium: max-width 880px;
+$breakpoint-medium: max-width 879px;
+$breakpoint-medium-min: min-width 880px;
+$breakpoint-xmedium: max-width 799px;
+$breakpoint-xmedium-min: min-width 800px;
 $breakpoint-small: max-width 600px;
+$breakpoint-xsmall: max-width 480px;
+
