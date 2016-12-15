@@ -2,6 +2,7 @@ import $ from 'jquery';
 import toggleMenu from './custom/toggle-main-menu';
 import masonGrid from './custom/masonry-grid';
 import containerMargin from './custom/container-margin';
+import toggleMobilNav from './custom/toggle-mobil-nav';
 import scroll from './custom/scroll-2-element';
 import niceSelect from './custom/niceSelect';
 import toggleReviewForm from './custom/toggle-review-form';
@@ -12,12 +13,15 @@ import toggleReviewForm from './custom/toggle-review-form';
     toggleMenu.init();
     masonGrid.init();
     containerMargin.init();
+
+    toggleMobilNav.init();
     scroll.init();
     niceSelect.init();
     toggleReviewForm.init();
 
 	$('.grid-item.product').matchHeight();
 
+		$('.grid-item.product').matchHeight();
 
 $(".slider-wrapper").slick({
   dots: true,
