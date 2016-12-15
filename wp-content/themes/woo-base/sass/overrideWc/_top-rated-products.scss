@@ -51,6 +51,10 @@
   transition: all 0.3s ease-in-out;
   height: 100%;
   overflow:hidden;
+
+  @include media($breakpoint-medium){
+    padding-left: 0 !important;
+  }
 }
 
 
