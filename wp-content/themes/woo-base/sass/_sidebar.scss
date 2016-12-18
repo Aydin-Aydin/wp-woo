@@ -164,53 +164,56 @@
     margin: 1rem;
 
     div.sidebar-widget{
-      &.widget_search{
-        label.screen-reader-text{
-          display: none;
-        }
-
-        #searchsubmit{
-          width: 30px;
-          height: 30px;
-          position: absolute;
-          top: 40px;
-          left: 190px;
-          border: none;
-          background-color: #000000;
-          background-repeat: no-repeat;
-          background-image: url("../graphics/icons/Search.svg");
-          background-size: 50% 50%;
-          background-position: center;
-          font-size: 100vw;
-          overflow: hidden;
-
-          &:focus{
-            outline: !important;
+      &.yith_woocommerce_ajax_search{
+        div.yith-ajaxsearchform-container{
+          width: 100%;
+          label.screen-reader-text{
+            display: none;
           }
-        }
 
-        input[type="text"]{
-          font-size: 18px;
-          padding: 10px 10px 10px 5px;
-          display: block;
-          border: none;
-          border-bottom: 1px solid $white;
-          width: 200px;
-          background-color: transparent;
-          color: $white;
-          -webkit-transition: .1s ease-in-out;
-          -moz-transition: .1s ease-in-out;
-          -o-transition: .1s ease-in-out;
-          transition: .1s ease-in-out;
+          #searchsubmit{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            left: 190px;
+            border: none;
+            background-color: #000000;
+            background-repeat: no-repeat;
+            background-image: url("../graphics/icons/Search.svg");
+            background-size: 50% 50%;
+            background-position: center;
+            font-size: 100vw;
+            overflow: hidden;
 
             &:focus{
-              outline:none;
-              border-bottom: 2px solid $nav-link-current;
+              outline: !important;
             }
           }
 
-          input[type="submit"]{
-            font-size: 30pt;
+          input[type="text"]{
+            font-size: 18px;
+            padding: 10px 10px 10px 5px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid $white;
+            width: 200px;
+            background-color: transparent;
+            color: $white;
+            -webkit-transition: .1s ease-in-out;
+            -moz-transition: .1s ease-in-out;
+            -o-transition: .1s ease-in-out;
+            transition: .1s ease-in-out;
+
+              &:focus{
+                outline:none;
+                border-bottom: 2px solid $nav-link-current;
+              }
+            }
+
+            input[type="submit"]{
+              font-size: 30pt;
+            }
           }
         }
       }

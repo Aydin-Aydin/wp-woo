@@ -24,6 +24,11 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
+<div class="cart-nav-wrap">
+	<input type="button" name="cart-trigger" value="Cart">
+	<input type="button" name="checkout-trigger" value="Checkout">
+</div>
+
 <div class="cart-wrap">
 	<div class="checkout-cart-wrap">
 		<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
@@ -168,7 +173,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<!--  -->
 
 	<div class="checkout-form-wrap">
-		<h3 class="title">Checkout</h3>
 		<span class="form-info"><abbr>*</abbr>  Fields are required!</span>
 		<?php echo do_shortcode('[woocommerce_checkout]'); ?>
 	</div>

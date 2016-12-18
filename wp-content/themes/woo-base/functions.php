@@ -137,7 +137,7 @@ function woocommerce_template_product_reviews() {
   woocommerce_get_template( 'single-product-reviews.php' );
 }
 
-// Remove single product related 
+// Remove single product related
 add_action( 'woocommerce_before_main_content', 'remove_single_product_related' );
 function remove_single_product_related(){
    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );

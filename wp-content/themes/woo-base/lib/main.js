@@ -6,6 +6,7 @@ import toggleMobilNav from './custom/toggle-mobil-nav';
 import scroll from './custom/scroll-2-element';
 import niceSelect from './custom/niceSelect';
 import toggleReviewForm from './custom/toggle-review-form';
+import cartJS from './custom/cart';
 
 (function() {
   //   Run when DOM is ready
@@ -18,6 +19,8 @@ import toggleReviewForm from './custom/toggle-review-form';
     scroll.init();
     niceSelect.init();
     toggleReviewForm.init();
+
+    cartJS.init();
 
 	$('.grid-item.product').matchHeight();
 

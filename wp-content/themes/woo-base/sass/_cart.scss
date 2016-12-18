@@ -1,7 +1,58 @@
+.woocommerce{
+  &.slick-active{
+    p{
+      &.cart-empty,&.return-to-shop{
+        width: 100%;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        font-size: 30pt;
+        font-weight: $lato-light;
+      }
+      &.return-to-shop{
+        height: 50px;
+        line-height: 0px;
+        a{
+          color: $sidebar-icon-text;
+          font-weight: $lato-light;
+          &:hover{
+            font-weight: $lato-regular;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cart-nav-wrap{
+  width: 100%;
+  height: 50px;
+
+  input[type="button"]{
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    line-height: 50px;
+    background-color: $black;
+    color: $white;
+    font-weight: $lato-light;
+    font-size: 18pt;
+    border: none;
+    padding: 0;
+
+    &:hover{
+      background-color: $nav-link-hover;
+    }
+
+    &:last-of-type{
+      float: right;
+    }
+  }
+}
+
 .cart-wrap{
-  display: flex;
   div.checkout-cart-wrap{
-    flex: 2;
     form{
       table.shop_table.shop_table_responsive.cart{
         width: 100%;
