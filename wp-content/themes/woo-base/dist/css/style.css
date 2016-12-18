@@ -1291,35 +1291,35 @@ footer {
     .cart-wrap div.checkout-form-wrap div.woocommerce #order_review {
       display: none; }
 
-.container .woo-main-content {
+#my-account .woo-main-content {
   position: inherit;
   right: 0;
   padding-left: 1rem; }
 
-#animationbox {
+#my-account #animationbox {
   border: 1px solid;
   width: 90%;
   margin: 3rem auto;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 0 2px 0px; }
-  #animationbox form {
+  #my-account #animationbox form {
     margin: 0 auto;
     width: 35%; }
-    #animationbox form p {
+    #my-account #animationbox form p {
       display: block;
       padding: 1rem; }
-      #animationbox form p input {
+      #my-account #animationbox form p input {
         float: right; }
-    #animationbox form #rememberme {
+    #my-account #animationbox form #rememberme {
       float: none; }
-  #animationbox h2 {
+  #my-account #animationbox h2 {
     font-weight: 800;
     font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem; }
 
-#cssanimation {
+#my-account #cssanimation {
   height: 100vh; }
 
 .page-wrapper {
