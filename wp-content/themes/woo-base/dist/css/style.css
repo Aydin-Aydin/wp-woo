@@ -128,8 +128,7 @@ html, body {
   overflow: auto; }
   .container .woo-main-content {
     position: absolute;
-    right: 0;
-    padding-left: 1rem; }
+    right: 0; }
   .container .sidebar-left-container {
     position: absolute;
     top: 0;
