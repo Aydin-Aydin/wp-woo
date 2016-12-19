@@ -293,6 +293,9 @@ html, body {
   background-repeat: no-repeat;
   background-position: center; }
 
+.front-widget ul.slick-dots {
+  height: 0; }
+
 .front-widget .slick-prev, .front-widget .slick-next {
   z-index: 1;
   height: 100%;
